@@ -1,0 +1,11 @@
+	../src/callbacks.c \
+	../src/commandline.c \
+	../src/gallery.c \
+	../src/gphoto.c \
+	../src/information.c \
+	../src/img_edit.c \
+	../src/live.c \
+	../src/main.c \
+	../src/menu.c \
+	../src/toolbar.c \
+	../src/util.c

@@ -1,0 +1,14 @@
+Here are a couple of troubleshooting tips to start out:
+
+	1) As root run:
+		/sbin/setserial <camera port> auto_irq autoconfig
+	   If it's a high speed serial port, add spd_vhi to the command
+
+	2) shutting off the camera and turning it back on resets the
+	   camera to a known good state. If you get timeout errors
+	   this is the first thing to try.
+
+	3) If you get problems during download try setting the connection
+	   speed to a lower rate. The default speed, 9600 baud, is the
+	   lowest speed setting and should work if evrything else is
+	   configured properly.

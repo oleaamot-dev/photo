@@ -1,0 +1,92 @@
+2026-07-22  gettextize  <bug-gnu-gettext@gnu.org>
+
+	* Makefile.am (SUBDIRS): Remove intl.
+	(ACLOCAL_AMFLAGS): New variable.
+	(EXTRA_DIST): Add m4/ChangeLog.
+
+2001-01-19  Ole Aamot  <ole@gnu.org>
+
+  * gphoto.spec.in: Install man page
+  * gphoto.desktop: Capitalize the G
+	
+2001-01-19  Ole Aamot  <ole@gnu.org>
+
+  * sony/dscf55/rsony.c, src/callbacks.c: Patch by twaugh@redhat.com
+  * kodak/Makefile.am: Add standalone dc21x utility back in SUBDIRS.
+  * man/dc21x_cam.1: Add manual page.  Probably needs nroff massage.
+  * TODO: Remove feature bloat from roadmap.
+
+2001-01-19  Fabrice Bellet <fabrice@gnu.org>
+
+  * src/camera.h : Added support for the Nikon 880 USB.
+  * photopc/eph_io.c: Disabled crc verification 
+    for usb frames in the photopc driver. Nikon 880 USB
+    camera doesn't put a valid crc in its frames. This
+    motivated the move. crc is handled at the kernel 
+    level ? [gphoto2 sierra driver disabled crc computation
+    when reading frames anyway].
+
+2001-01-19  Ole Kristian Aamot  <oka@eftirmatur.ifi.uio.no>
+
+  * src/cameras.h: Add Canon PowerShot Pro70 and Casio QV-300
+  * src/main.c, src/gphoto.h: Add ops for power-off operation
+  * casio/casio_qv.c, casio/sdComm.c: Fixes from Erik Thiele.
+  
+2001-01-17  Ole Kristian Aamot  <oka@mizar.ping.uio.no>
+
+  * MAINTAINERS: New entry with maintainers of GPhoto camera
+    libraries with a clearly stated license.
+
+2001-01-05  Ole Aamot  <ole@linpro.no>
+
+  * configure.in, src/Makefile.am: Add check for libgphoto2.
+  * canon/serial.h, canon/canon.h, canon/psa50.h: Prototypes
+	
+2000-12-02  Szabolcs Ban <shooby@gnome.hu>
+
+  * src/menu.c: added gettext support to menus
+
+2000-11-28  Fabrice Bellet <fabrice@gnu.org>
+
+  * src/callbacks.c: add usb_init(), usb_find_busses() and
+    usb_find_devices() prior bus enumeration if we want a successful
+    usb devices autodetection.
+  * .cvsignore, ChangeLog: resurrected ChangeLog.
+
+2000-11-28  Fabrice Bellet <fabrice@gnu.org>
+
+  * src/callbacks.c
+  * src/gphoto.h
+  * src/main.c
+  * src/util.c:
+    Removed the misused DEBUG(); macro. Use g_message() 
+    instead.
+  
+2000-11-27  Fabrice Bellet <fabrice@gnu.org>
+
+  * configure.in : gphoto needs libgpio-0.0.3 from Gnome CVS
+    (usb_clear_halt() in photopc driver).
+  * photopc/photopc-usb.c : fixed prototype warnings. 
+
+2000-11-20  Fabrice Bellet <fabrice@gnu.org>
+
+  * src/callbacks.c (appendpic), (makeindex) : Initialize picture
+    pointers to NULL, to avoid obvious crashes when removing notebook
+    pages.
+
+2000-11-19  Fabrice Bellet <fabrice@gnu.org>
+
+  * Makefile.am : removed subdir libgpio.
+  * configure.in : autodetection of libgpio.
+  * */Makefile.am : GTK_CFLAGS --> GNOME_INCLUDEDIR
+  * canon/serial.c (canon_serial_init),
+    digita/usb.c (digita_usb_probe),
+    photopc/photopc-usb.c (olympus_usb_probe) : conformance with latest
+    libgpio. API changed for gpio_usb_find_device().
+  * digita/serial.c : FIXME! gpio_serial_set_baudrate() is no longer
+    in libgpio but in libgpio_serial, which is dlopen()ed at runtime.
+  * konica_qmxxx/{dcx.c, log.c, log.h, os.c, qm.c} : fixed namespace
+    conflict.
+  * src/canvas.[hc] : backported canvas stuff from devel branch.
+  * src/callbacks.[hc], src/gphoto.[hc], src/main.c :
+    more backported stuff from devel branch.

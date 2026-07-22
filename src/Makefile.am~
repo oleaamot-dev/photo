@@ -1,0 +1,77 @@
+## Process this file with automake to create a GNU Makefile
+
+CFLAGS = @CFLAGS@ \
+	$(GPHOTO2_CFLAGS) \
+	-DCOMPILE_HOST='"'`hostname`'"' \
+        -DCOMPILE_WHOAMI='"'`whoami`'"'
+
+SUBDIRS = icons
+
+INCLUDES = -I$(srcdir/icons) $(GNOME_INCLUDEDIR)
+
+bin_PROGRAMS = gphoto
+
+gphoto_SOURCES = \
+	callbacks.c \
+	callbacks.h \
+	canvas.c \
+	canvas.h \
+	cameras.h \
+	commandline.c \
+	commandline.h \
+	exif.c \
+	exif.h \
+	gallery.c \
+	gallery.h \
+	gphoto.c \
+	gphoto.h \
+	gphoto-debug.c \
+	gphoto-debug.h \
+	information.c \
+	information.h \
+	img_edit.c \
+	live.c \
+	live.h \
+	main.c \
+	main.h \
+	menu.c \
+	menu.h \
+	toolbar.c \
+	toolbar.h \
+	util.c \
+	util.h
+
+gphoto_LDFLAGS = -export-dynamic 
+
+gphoto_libs = \
+	../barbie/libgphoto_barbie.la \
+	../canon/libgphoto_canon.la \
+	../casio/libgphoto_casio_qv.la \
+	../digita/libgphoto_digita.la \
+	../dimera/libgphoto_dimera3500.la \
+	../directory/libgphoto_dir.la \
+	../fuji/libgphoto_fuji.la \
+	../jd11/libgphoto_jd11.la \
+	../kodak/libgphoto_kodak_dc2x.la \
+	../kodak_generic/libgphoto_kodak_generic.la \
+	../konica/libgphoto_konica_qm100.la \
+	../konica_qmxxx/libgphoto_konica_qmxxx.la \
+	../minolta/libgphoto_dimage_v.la \
+	../mustek/libgphoto_mustek_mdc800.la \
+	../nikon/libgphoto_coolpix600.la \
+	../philips/libgphoto_philips.la \
+	../photopc/libgphoto_photopc.la \
+	../polaroid/libgphoto_polaroid_pdc700.la \
+	../ricoh/libgphoto_ricoh300z.la \
+	../samsung/libgphoto_samsung.la \
+	../sony/dscf55/libgphoto_sony_dscf55.la \
+	../sony/libgphoto_sony_dscf1.la
+
+gphoto_LDADD = \
+	$(gphoto_libs) \
+	$(GPHOTO2_LIBS) \
+	$(GNOME_LIBDIR) \
+	-ljpeg -lgpio \
+	$(GDK_IMLIB_LIBS) \
+	$(GNOME_INCLUDEDIR) \
+	$(GNOMEUI_LIBS)

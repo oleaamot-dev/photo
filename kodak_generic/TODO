@@ -1,0 +1,12 @@
+Things to do for the DC240 Driver:
+----------------------------------
+
+   Commands:
+
+      - ...get_status() could be changed to return more information.
+
+      - ...configure() needs to be implemented.
+
+Things to do for the generic Kodak support:
+-------------------------------------------
+   Nothing (yet).

@@ -1,0 +1,32 @@
+<!-- 
+body { background-image: url(tile.png); background-color: #3c4059; background-repeat: repeat-y }
+body.picture { background-image: url(tile.png); background-repeat: repeat }
+table.thumb { 
+        background: #dddddd;
+        border-top: solid black;
+        border-bottom: solid black;
+        border-width: 1px;
+ }
+hr { color: #3c4059 }
+td { 
+     align: center;
+     vertical-align: top;
+     color: #000000; 
+     font-family: Verdana, Lucida, Helvetica, Arial; 
+     font-size: 11px }
+td.nav { background-color: #868699 }
+a:link { color: #4444ff; font-weight: bold }
+a:visited { color: #333377 }
+a:active  { color: #0000dd }
+a:hover  { color: #ffffff; background-color: #000000 }
+i, p, blockquote, ul li, ul, dl {font-family: Verdana, Lucida, Helvetica, Arial; font-size: 10pt; color: #000000}
+b {font-family: Verdana, Lucida, Helvetica, Arial; font-size: 10pt; color: #000000}
+cite, small {font-family: Verdana, Lucida, Helvetica, Arial; font-size: 10px; color: #3c4059 }
+h4, smaller { font-family:  Verdana, Lucida, Helvetica, Arial; font-size: 12px; color: #3c4059}
+h3, big { font-family: Verdana, Lucida, Helvetica, Arial; font-size: 14px; color: #3c4059}
+h2 { font-family: Verdana, Lucida, Helvetica, Arial; font-size: 18px; color: #3c4059}
+h1 { font-family: Verdana, Lucida, Helvetica, Arial; font-size: 20px; color: #3c4059}
+tt, pre { font-family: Courier, Lucidatypewriter; font-size: 10pt; color: #006600} 
+em { font-family: Verdana, Lucida, Helvetica, Arial; font-size: 11px }
+p.copy { font-family: Verdana, Lucida, Helvetica, Arial; font-size: 10px }
+-->

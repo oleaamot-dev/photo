@@ -1,0 +1,1090 @@
+# Swedish translation of GPhoto
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Andreas Hyden <a.hyden@cyberpoint.se> 2000.
+# Christian Rose <menthos@menthos.com>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gphoto\n"
+"POT-Creation-Date: 2001-02-13 21:59+0100\n"
+"PO-Revision-Date: 2000-12-05 17:41+0100\n"
+"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/callbacks.c:135 src/callbacks.c:150 src/callbacks.c:173
+#: src/callbacks.c:197 src/callbacks.c:234 src/callbacks.c:348
+#: src/callbacks.c:490 src/callbacks.c:1191 src/callbacks.c:1225
+#: src/callbacks.c:1250 src/callbacks.c:1920 src/gallery.c:755
+#: src/gallery.c:797
+msgid "Camera is already busy"
+msgstr "Kameran är redan upptagen"
+
+#: src/callbacks.c:157
+msgid "No configuration options."
+msgstr "Inga konfigurationsalternativ."
+
+#: src/callbacks.c:162
+msgid "Mail image needs to be implemented!"
+msgstr "E-postande av bild måste implementeras!"
+
+#: src/callbacks.c:170
+msgid "Taking picture..."
+msgstr "Tar bild..."
+
+#: src/callbacks.c:181
+msgid "Could not take a picture."
+msgstr "Kunde inte ta en bild."
+
+#: src/callbacks.c:186
+#, c-format
+msgid "New picture is #%03i"
+msgstr "Nya bilden är #%03i"
+
+#: src/callbacks.c:211
+#, c-format
+msgid "Deleting %i...\n"
+msgstr "Tar bort %i...\n"
+
+#: src/callbacks.c:216
+#, c-format
+msgid "Could not delete #%i\n"
+msgstr "Kunde inte ta bort #%i\n"
+
+#: src/callbacks.c:239
+msgid "Deleting selected pictures..."
+msgstr "Tar bort markerade bilder..."
+
+#: src/callbacks.c:250
+#, c-format
+msgid "Could not delete #%i"
+msgstr "Kunde inte ta bort #%i"
+
+#: src/callbacks.c:298 src/util.c:120
+msgid "Yes"
+msgstr "Ja"
+
+#: src/callbacks.c:313 src/util.c:125
+msgid "No"
+msgstr "Nej"
+
+#: src/callbacks.c:355
+#, c-format
+msgid "Could not save #%i"
+msgstr "Kunde inte spara #%i"
+
+#: src/callbacks.c:404
+msgid "Filename prefix:"
+msgstr "Filnamnsprefix:"
+
+#: src/callbacks.c:453
+#, c-format
+msgid "Done. Images saved in %s"
+msgstr "Klar. Bilderna sparades i %s"
+
+#: src/callbacks.c:497 src/callbacks.c:1119 src/gallery.c:766
+#: src/gallery.c:808
+#, c-format
+msgid "Could not retrieve #%i"
+msgstr "Kunde inte hämta #%i"
+
+#: src/callbacks.c:514
+#, c-format
+msgid "Could not load image %s to memory"
+msgstr "Kunde inte spara bilden %s till minnet"
+
+#: src/callbacks.c:523 src/callbacks.c:537 src/callbacks.c:1138
+#, c-format
+msgid "Could not load image #%i to memory"
+msgstr "Kunde inte läsa in bild #%i i minnet"
+
+#: src/callbacks.c:1050
+msgid "Could not open $HOME/.gphoto/gphotorc for writing."
+msgstr "Kunde inte öppna $HOME/.gphoto/gphotorc för skrivning."
+
+#: src/callbacks.c:1064
+#, c-format
+msgid "%s is not yet implemented"
+msgstr "%s är ännu inte implementerat"
+
+#: src/callbacks.c:1144
+#, c-format
+msgid "Could not open #%i"
+msgstr "Kunde inte öppna #%i"
+
+#: src/callbacks.c:1219
+msgid "Getting Index..."
+msgstr "Hämtar index..."
+
+#: src/callbacks.c:1237
+msgid "Could not get the number of pictures"
+msgstr "Kunde inte få antalet bilder"
+
+#: src/callbacks.c:1260
+msgid "Download cancelled."
+msgstr "Hämtning avbruten."
+
+#: src/callbacks.c:1326
+msgid "Done getting index."
+msgstr "Hämtning av index klart."
+
+#: src/callbacks.c:1443
+msgid ""
+"Could not save image. Please make\n"
+"sure that you typed the image\n"
+"extension and that permissions for\n"
+"the directory are correct."
+msgstr ""
+"Kunde inte psara bilden. Var vänllig\n"
+"och försäkra dig om att du angav\n"
+"bildens filändelse och att\n"
+"rättigheterna för katalogen är rätt."
+
+#: src/callbacks.c:1503
+msgid "Saving the index is not yet supported"
+msgstr "Sparande av index stöds inte än"
+
+#: src/callbacks.c:1557
+msgid "Print Image..."
+msgstr "Skriv ut bild..."
+
+#: src/callbacks.c:1564
+msgid "Print Command:"
+msgstr "Utskriftskommando:"
+
+#: src/callbacks.c:1586
+msgid "Print"
+msgstr "Skriv ut"
+
+#: src/callbacks.c:1592 src/callbacks.c:1833 src/callbacks.c:2063
+#: src/gallery.c:647
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/callbacks.c:1610
+msgid "Now spooling..."
+msgstr "Mellanlagrar (spooling)..."
+
+#: src/callbacks.c:1615
+msgid "Spooling done. Printing may take a minute."
+msgstr "Mellanlagring (spooling) klar. Utskrivningen kan ta någon minut."
+
+#: src/callbacks.c:1774
+msgid "Resize Image..."
+msgstr "Ändra bildens storlek..."
+
+#: src/callbacks.c:1781
+msgid "Width:"
+msgstr "Bredd:"
+
+#: src/callbacks.c:1803
+msgid "Height:"
+msgstr "Höjd:"
+
+#: src/callbacks.c:1828 src/toolbar.c:143 src/toolbar.c:145
+msgid "Resize"
+msgstr "Ändra storlek"
+
+#: src/callbacks.c:1854 src/callbacks.c:1973
+msgid "Could not scale the image"
+msgstr "Kunde inte skala bilden"
+
+#: src/callbacks.c:1924
+msgid "Camera Summary"
+msgstr "Kamerabeskrivning"
+
+#: src/callbacks.c:2056
+msgid "Post-Processing Options"
+msgstr "Inställningar för efterbearbetning"
+
+#: src/callbacks.c:2058 src/util.c:87
+msgid "OK"
+msgstr "OK"
+
+#: src/callbacks.c:2068
+msgid "Enable post-processing"
+msgstr "Slå på efterbearbetning"
+
+#: src/callbacks.c:2075
+msgid "Post-processing command-line:"
+msgstr "Kommandorad för efterbearbetning:"
+
+#: src/callbacks.c:2087
+#, c-format
+msgid ""
+"Note: gPhoto will replace \"%s\"\n"
+"in the script command-line with\n"
+"the full path to the selected image.\n"
+"See the User's Manual\\in the Help menu\n"
+"for more information. "
+msgstr ""
+"Observera: gPhoto kommer att ersätta\n"
+"\"%s\" i kommandoraden för skriptet med\n"
+"den fullständiga sökvägen till den\n"
+"markerade bilden. Se användarmanualen\\i\n"
+"hjälpmenyn för mer information. "
+
+#: src/callbacks.c:2105
+#, c-format
+msgid ""
+"Missing \"%s\" in the post-processing entry. This is required so the "
+"post-processing program knows where the image is located."
+msgstr ""
+"Saknat \"%s\" i efterbearbetningsposten. Detta krävs för att "
+"efterbearbetningsprogrammet ska kunna veta var bilden befinner sig."
+
+#: src/gallery.c:280
+msgid "Select an Output Directory..."
+msgstr "Välj en utdatakatalog..."
+
+#: src/gallery.c:471
+msgid ""
+"Please retrieve the index first,\n"
+"and select the images to include\n"
+"in the gallery by clicking on them.\n"
+"\n"
+"Then, re-run the HTML Gallery."
+msgstr ""
+"Var vänlig och hämta indexet först,\n"
+"ovh välj de bilder som ska inkluderas\n"
+"i galleriet genom att klicka på dem.\n"
+"\n"
+"Sedan kan du köra HTML-galleriet igen."
+
+#: src/gallery.c:487
+msgid ""
+"You need to select images to add\n"
+"to the gallery."
+msgstr ""
+"Du måste välja bilder att lägga\n"
+"till i galleriet."
+
+#: src/gallery.c:500
+msgid "Gallery Name:"
+msgstr "Gallerinamn:"
+
+#: src/gallery.c:513
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/gallery.c:526
+#, c-format
+msgid ""
+"HTML gallery themes do not exist at %s.\n"
+"Please install/move gallery themes there."
+msgstr ""
+"HTML-galleriteman finns inte på %s.\n"
+"Var vänlig och installera galleriteman där."
+
+#: src/gallery.c:572
+msgid "Output Directory:"
+msgstr "Utdatakatalog:"
+
+#: src/gallery.c:583
+msgid "Change..."
+msgstr "Ändra..."
+
+#: src/gallery.c:641
+msgid "Create"
+msgstr "Skapa"
+
+#: src/gallery.c:664
+msgid "You must select a theme!"
+msgstr "Du måste välja ett tema!"
+
+#. Get the current thumbnail
+#: src/gallery.c:752
+#, c-format
+msgid "Getting Thumbnail #%i..."
+msgstr "Hämtar miniatyrbild #%i..."
+
+#: src/gallery.c:769 src/gallery.c:810
+msgid "Not Available"
+msgstr "Inte tillgänglig"
+
+#. Get the current image
+#: src/gallery.c:793
+#, c-format
+msgid "Getting Image #%i..."
+msgstr "Hämtar bild #%i..."
+
+#: src/gallery.c:814
+#, c-format
+msgid "<img alt=\"%03i\" src=\"picture-%03i.%s\">"
+msgstr "<img alt=\"%03i\" src=\"picture-%03i.%s\">"
+
+#: src/gallery.c:816
+#, c-format
+msgid "picture-%03i.%s"
+msgstr "bild-%03i.%s"
+
+#: src/gallery.c:832 src/gallery.c:837
+#, c-format
+msgid "picture-%03i.html"
+msgstr "bild-%03i.html"
+
+#: src/gallery.c:849
+#, c-format
+msgid "%spicture-%03i.html"
+msgstr "%sbild-%o3i.html"
+
+#: src/gallery.c:875
+#, c-format
+msgid "Gallery saved in: %s"
+msgstr "Galleriet sparat i: %s"
+
+#: src/information.c:10
+#, c-format
+msgid ""
+"This is GPhoto version %s.\n"
+"Built %s by %s on %s.\n"
+"Report bugs to gphoto-devel@gphoto.org"
+msgstr ""
+"Det här är GPhoto version %s.\n"
+"Byggd %s av %s på %s.\n"
+"Rapportera buggar till gphoto-devel@gphoto.org"
+
+#: src/information.c:14
+msgid "GPhoto Release"
+msgstr "GPhoto-version"
+
+#: src/information.c:24
+msgid "User manual"
+msgstr "Användarmanual"
+
+#: src/information.c:43
+msgid "GPhoto License"
+msgstr "GPhoto-licens"
+
+#: src/information.c:44
+msgid ""
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"\n"
+"See http://www.gnu.org for more details on the GNU project.\n"
+msgstr ""
+"Följande text är en informell översättning som enbart tillhandahålls i\n"
+"informativt syfte. För alla juridiska tolkningar gäller den engelska\n"
+"originaltexten.\n"
+"\n"
+"Detta program är fri programvara. Du kan distribuera det och/eller\n"
+"modifiera det under villkoren i GNU General Public License, publicerad\n"
+"av Free Software Foundation, antingen version 2 eller (om du så vill)\n"
+"någon senare version.\n"
+"\n"
+"Detta program distribueras i hopp om att det ska vara användbart, men\n"
+"UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti om\n"
+"SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General\n"
+"Public License för ytterligare information.\n"
+"\n"
+"Du bör ha fått en kopia av GNU General Public License tillsammans med\n"
+"detta program. Om inte, skriv till Free Software Foundation, Inc., 675\n"
+"Mass Ave, Cambridge, MA 02139, USA.\n"
+"\n"
+"Se http://www.gnu.org för fler detaljer om GNU-projektet.\n"
+
+#: src/information.c:78
+msgid "Scott Fritzinger, original implementation."
+msgstr "Scott Fritzinger, originalimplementation."
+
+#: src/information.c:79
+msgid "Eugene Crosser, Fujitsu chipset protocol."
+msgstr "Eugene Crosser, protokoll för Fujitsu-kretsar."
+
+#: src/information.c:80
+msgid "Matt Martin, Fuji library, bug fixing."
+msgstr "Matt Martin, Fuji-biblioteket, felrättelser."
+
+#: src/information.c:81
+msgid "Mike Labriola, HTML gallery options."
+msgstr "Mike Labriola, alternativ för HTML-galleri."
+
+#: src/information.c:82
+msgid "Werner Almesberger, Canon library."
+msgstr "Werner Almesberger, Canon-biblioteket."
+
+#: src/information.c:83
+msgid "Ole W. Saastad, Canon library."
+msgstr "Ole W. Saastad, Canon-biblioteket."
+
+#: src/information.c:84
+msgid "Wolfgang Reissnegger, Canon library."
+msgstr "Wolfgang Reissnegger, Canon-biblioteket."
+
+#: src/information.c:85
+msgid "Ray Newman, Canon PS350 protocol."
+msgstr "Ray Newman, protokoll för Canon PS350."
+
+#: src/information.c:86
+msgid "Anne Bezemer, Canon PS350 protocol."
+msgstr "Anne Bezemer, protokoll för Canon PS350."
+
+#: src/information.c:87
+msgid "Philippe Marzouk, Canon library."
+msgstr "Philippe Marzouk, Canon-biblioteket."
+
+#: src/information.c:88
+msgid "Edouard Lafargue, Canon library."
+msgstr "Edouard Lafargue, Canon-biblioteket."
+
+#: src/information.c:89
+msgid "Rasmus Andersen, Canon library, bugfixing"
+msgstr "Rasmus Andersen, Canon-biblioteket, felrättelser."
+
+#: src/information.c:90
+msgid "Gary Ross, Casio QV library."
+msgstr "Gary Ross, Casio QV-biblioteket."
+
+#: src/information.c:91
+msgid "Del Simmons, Kodak DC20/25 library."
+msgstr "Del Simmons, Kodak DC20/25-biblioteket."
+
+#: src/information.c:92
+msgid "Timecop, Kodak DC21x library and dc21x_cam utility."
+msgstr "Timecop, Kodak DC21x-biblioteket och dc21x_cam-verktygen."
+
+#: src/information.c:93
+msgid "Brent D. Metz, Kodak 200/210 library"
+msgstr "Brent D. Metz, Kodak 200/210-biblioteket"
+
+#: src/information.c:94
+msgid "Brian Hirt, original Kodak DC210 library"
+msgstr "Brian Hirt, originalbiblioteket för Kodak DC210"
+
+#: src/information.c:95
+msgid "Randy D. Scott, Kodak Generic serial library"
+msgstr "Randy D. Scott, det generella seriella bliblioteket för Kodak"
+
+#: src/information.c:96
+msgid "David Brownell, Kodak Generic USB patch and Linux driver"
+msgstr ""
+"David Brownell, programfixen och Linuxdrivrutinen för generell Kodak-USB"
+
+#: src/information.c:97
+msgid "Phill Hugo, Original Konica Q-M100, HP-C20/30 library"
+msgstr "Phill Hugo, originalbiblioteket för Konica Q-M100 och HP-C20/30"
+
+#: src/information.c:98
+msgid "Ed Legowski, Konica Q-M100, HP-C20/30 library hacking"
+msgstr "Ed Legowski, hackande på biblioteket för Konica Q-M100 och HP-C20/30"
+
+#: src/information.c:99
+msgid "Toshiki Fujisawa, Konica Q-M200, FreeBSD patches"
+msgstr "Toshiki Fujisawa, programfixar för Konica Q-M200 och FreeBSD"
+
+#: src/information.c:100
+msgid "Gus Hartmann, Minolta Dimage V library"
+msgstr "Gus Hartmann, Minolta Dimage V-biblioteket"
+
+#: src/information.c:101
+msgid "Mark Davies, Sony DSC-F55E/505 library"
+msgstr "Mark Davies, Sony DSC-F55E/505-biblioteket"
+
+#: src/information.c:102
+msgid "Michael McCormack, Nikon CoolPix 600 library"
+msgstr "Michael McCormack, Nikon CoolPix 600-biblioteket"
+
+#: src/information.c:103
+msgid "Henning Zabel, Mustek MDC800 library and Linux driver"
+msgstr "Henning Zabel, biblioteket och Linuxdrivrutinen för Mustek MDC800"
+
+#: src/information.c:104
+msgid "Pedro Caria, Original Mustek MDC800 library"
+msgstr "Pedro Caria, originalbiblioteket för Mustek MDC800"
+
+#: src/information.c:105
+msgid "Bob Paauwe, Philips library"
+msgstr "Bob Paauwe, Philips-biblioteket"
+
+#: src/information.c:106
+msgid "Cliff Wright, Ricoh RDC 300/300Z library"
+msgstr "Cliff Wright, Ricoh RDC 300/300Z-biblioteket"
+
+#: src/information.c:107
+msgid "James McKenzie, Samsung Digimax 800k library"
+msgstr "James McKenzie, Samsung Digimax 800k-biblioteket"
+
+#: src/information.c:108
+msgid "M. Adam Kendall, Sony DSC-F1 library"
+msgstr "M. Adam Kendall, Sony DSC-F1-biblioteket"
+
+#: src/information.c:109
+msgid "Warren Baird, Canon G1, bugfixes"
+msgstr "Warren Baird, Canon G1-felrättelser"
+
+#: src/information.c:110
+msgid "Paul S. Jenner, initial GNU autoconf/automake scripts."
+msgstr "Paul S. Jenner, de ursprungliga GNU autoconf/automake-skripten."
+
+#: src/information.c:111
+msgid "Tuomas Kuosmanen, toolbar icons"
+msgstr "Tuomas Kuosmanen, verktygsradsikoner"
+
+#: src/information.c:112
+msgid "Ole Aamot, bug fixing."
+msgstr "Ole Aamot, felrättning."
+
+#: src/information.c:113
+msgid "Fabrice Bellet, Olympus C3030Z USB support, Index Canvas."
+msgstr "Fabrice Bellet, Olympus C3030Z USB-stöd, indexduk."
+
+#: src/information.c:126
+msgid "GPhoto"
+msgstr "GPhoto"
+
+#: src/information.c:127
+msgid "(C) 1998-2000 Scott Fritzinger and many others"
+msgstr "© 1998-2000 Scott Fritzinger och många andra"
+
+#: src/information.c:129
+msgid "The GNOME Digital Camera client"
+msgstr "Digitalkameraklienten för GNOME"
+
+#: src/information.c:133
+msgid "GNU Project"
+msgstr "GNU-projektet"
+
+#: src/information.c:134
+msgid "GNOME Project"
+msgstr "GNOME-projektet"
+
+#: src/information.c:135
+msgid "GPhoto Project"
+msgstr "GPhoto-projektet"
+
+#: src/img_edit.c:1125
+msgid "Color Adjustment"
+msgstr "Färgjustering"
+
+#: src/img_edit.c:1126
+msgid "gPhoto - Color Adjustment"
+msgstr "gPhoto - Färgjustering"
+
+#: src/img_edit.c:1141
+msgid "Colour Settings"
+msgstr "Färginställningar"
+
+#: src/img_edit.c:1247
+msgid "Gray Controls"
+msgstr "Gråa kontroller"
+
+#: src/img_edit.c:1287
+msgid "Red Controls"
+msgstr "Röda kontroller"
+
+#: src/img_edit.c:1327
+msgid "Green Controls"
+msgstr "Gröna kontroller"
+
+#: src/img_edit.c:1367
+msgid "Blue Controls"
+msgstr "Blåa kontroller"
+
+#: src/img_edit.c:1408
+msgid "Colour Modifications:"
+msgstr "Färgmodifieringar:"
+
+#: src/img_edit.c:1415
+msgid "Apply"
+msgstr "Verkställ"
+
+#: src/img_edit.c:1419
+msgid "Keep"
+msgstr "Behåll"
+
+#: src/img_edit.c:1423
+msgid "Reset"
+msgstr "Återställ"
+
+#: src/img_edit.c:1424 src/img_edit.c:1425
+msgid "Reset all the color changes to normal values"
+msgstr "Återställ alla färgändringar till normala värden"
+
+#: src/img_edit.c:1427
+msgid "Always Apply"
+msgstr "Verkställ alltid"
+
+#: src/img_edit.c:1436
+msgid "Close"
+msgstr "Stäng"
+
+#: src/live.c:41 src/live.c:148
+msgid "Done."
+msgstr "Klar."
+
+#: src/live.c:80
+msgid "Getting live image..."
+msgstr "Hämtar nuvarande bild..."
+
+#: src/live.c:82
+msgid "Live Camera!"
+msgstr "Direktsänd kamera!"
+
+#: src/live.c:121
+msgid "Could not get preview"
+msgstr "Kunde inte få tag på förhandsgranskning"
+
+#: src/live.c:142
+msgid "Live Preview Error"
+msgstr "Live-förhandsgranskingsfel"
+
+#: src/live.c:143
+msgid ""
+"Could not retrieve the live preview.\n"
+"The camera either couldn't be accessed\n"
+" or it doesn't support live previews."
+msgstr ""
+"Kunde inte hämta live-förhandsgranskningen.\n"
+"Kameran kunde inte nås, eller så stöder\n"
+" den inte live-förhandsgranskningar."
+
+#: src/main.c:193
+msgid "Image Index"
+msgstr "Bildindex"
+
+#: src/main.c:286
+msgid ""
+"Could not load config file.\n"
+"Resetting to defaults.\n"
+"Click on \"Select Port-Camera Model\"\n"
+"in the Configure menu to set your\n"
+"camera model and serial port"
+msgstr ""
+"Kunde inte läsa in konfigurationsfilen.\n"
+"Återställer till standardinställningar.\n"
+"Klicka på \"Välj port-kameramodell\" i\n"
+"Konfigurera-menyn för att välja din\n"
+"kameramodell och serieport"
+
+#: src/menu.c:188
+msgid "/_File"
+msgstr "/_Arkiv"
+
+#: src/menu.c:189
+msgid "/File/_Open"
+msgstr "/Arkiv/_Öppna"
+
+#: src/menu.c:190
+msgid "/File/Open/Directory..."
+msgstr "/Arkiv/Öppna/Katalog..."
+
+#: src/menu.c:191
+msgid "/File/Open/File..."
+msgstr "/Arkiv/Öppna/Fil..."
+
+#: src/menu.c:193
+msgid "/File/_Save"
+msgstr "/Arkiv/_Spara"
+
+#: src/menu.c:194
+msgid "/File/Save/Opened Image(s)..."
+msgstr "/Arkiv/Spara/Öppnade bilder..."
+
+#: src/menu.c:195
+msgid "/File/Save/Selected Thumbnails..."
+msgstr "/Arkiv/Spara/Markerade miniatyrbilder..."
+
+#: src/menu.c:196
+msgid "/File/Save/Selected Images..."
+msgstr "/Arkiv/Spara/Markerade bilder..."
+
+#: src/menu.c:197
+msgid "/File/Save/Selected Thumbnails and Images..."
+msgstr "/Arkiv/Spara/Markerade miniatyrbilder och bilder..."
+
+#: src/menu.c:199
+msgid "/File/_Export"
+msgstr "/Arkiv/_Exportera"
+
+#: src/menu.c:200
+msgid "/File/Export/HTML _Gallery"
+msgstr "/Arkiv/Exportera/HTML-galleri"
+
+#: src/menu.c:202
+msgid "/File/_Print"
+msgstr "/Arkiv/Skriv _ut"
+
+#: src/menu.c:204
+msgid "/File/_Close"
+msgstr "/Arkiv/Stän_g"
+
+#: src/menu.c:205
+msgid "/File/_Quit"
+msgstr "/Arkiv/_Avsluta"
+
+#: src/menu.c:206
+msgid "/_Camera"
+msgstr "/_Kamera"
+
+#: src/menu.c:207
+msgid "/Camera/_Summary"
+msgstr "/Kamera/_Beskrivning"
+
+#: src/menu.c:208
+msgid "/Camera/Download _Index"
+msgstr "/Kamera/Hämta _index"
+
+#: src/menu.c:209
+msgid "/Camera/Download Index/_Thumbnails"
+msgstr "/Kamera/Hämta index/_Miniatyrbilder"
+
+#: src/menu.c:210
+msgid "/Camera/Download Index/_No Thumbnails"
+msgstr "/Kamera/Hämta index/_Inga miniatyrbilder"
+
+#: src/menu.c:211
+msgid "/Camera/Download _Selected"
+msgstr "/Kamera/Hämta _markerade"
+
+#: src/menu.c:212
+msgid "/Camera/Download Selected/_Images"
+msgstr "/Kamera/Hämta markerade/_Bilder"
+
+#: src/menu.c:213
+msgid "/Camera/Download Selected/Images/_Open in window"
+msgstr "/Kamera/Hämta markerade/Bilder/_Öppna i fönster"
+
+#: src/menu.c:214
+msgid "/Camera/Download Selected/Images/_Open in window (scale 50%)"
+msgstr "/Kamera/Hämta markerade/Bilder/_Öppna i fönster (skala 50%)"
+
+#: src/menu.c:215
+msgid "/Camera/Download Selected/Images/_Open in window (scale 25%)"
+msgstr "/Kamera/Hämta markerade/Bilder/_Öppna i fönster (skala 25%)"
+
+#: src/menu.c:216
+msgid "/Camera/Download Selected/Images/_Save to disk..."
+msgstr "/Kamera/Hämta markerade/Bilder/_Spara på disk..."
+
+#: src/menu.c:217
+msgid "/Camera/Download Selected/_Thumbnails"
+msgstr "/Kamera/Hämta markerade/_Miniatyrbilder"
+
+#: src/menu.c:218
+msgid "/Camera/Download Selected/Thumbnails/_Open in window"
+msgstr "/Kamera/Hämta markerade/Miniatyrbilder/_Öppna i fönster"
+
+#: src/menu.c:219
+msgid "/Camera/Download Selected/Thumbnails/_Save to disk..."
+msgstr "/Kamera/Hämta markerade/Miniatyrbilder/_Spara på disk..."
+
+#: src/menu.c:220
+msgid "/Camera/Download Selected/_Both"
+msgstr "/Kamera/Hämta markerade/_Både"
+
+#: src/menu.c:221
+msgid "/Camera/Download Selected/Both/_Open in window"
+msgstr "/Kamera/Hämta markerade/Både/_Öppna i fönster"
+
+#: src/menu.c:222
+msgid "/Camera/Download Selected/Both/_Save to disk..."
+msgstr "/Kamera/Hämta markerade/Både/_Spara på disk..."
+
+#: src/menu.c:223
+msgid "/Camera/_Delete"
+msgstr "/Kamera/_Ta bort"
+
+#: src/menu.c:224
+msgid "/Camera/Delete/Selected Images"
+msgstr "/Kamera/Ta bort/Markerade bilder"
+
+#: src/menu.c:225
+msgid "/Camera/Delete/All Images"
+msgstr "/Kamera/Ta bort/Alla bilder"
+
+#: src/menu.c:226
+msgid "/Camera/_Live Preview!"
+msgstr "/Kamera/_Live-förhandsgransking!"
+
+#: src/menu.c:227
+msgid "/Camera/_Take Picture"
+msgstr "/Kamera/Ta bil_d"
+
+#: src/menu.c:229
+msgid "/_Edit"
+msgstr "/R_edigera"
+
+#: src/menu.c:230
+msgid "/Edit/_Size"
+msgstr "/Redigera/_Storlek"
+
+#: src/menu.c:231
+msgid "/Edit/Size/Scale _Half"
+msgstr "/Redigera/Storlek/Skala till _halv"
+
+#: src/menu.c:232
+msgid "/Edit/Size/Scale _Double"
+msgstr "/Redigera/Storlek/Skala till _dubbel"
+
+#: src/menu.c:233
+msgid "/Edit/Size/_Scale"
+msgstr "/Redigera/Storlek/_Skala"
+
+#: src/menu.c:235
+msgid "/Edit/_Color Balance"
+msgstr "/Redigera/_Färgbalans"
+
+#: src/menu.c:237
+msgid "/_Go"
+msgstr "/_Gå"
+
+#: src/menu.c:238
+msgid "/Go/_Index page"
+msgstr "/Gå/_Indexsida"
+
+#: src/menu.c:239
+msgid "/Go/_Next page"
+msgstr "/Gå/_Nästa sida"
+
+#: src/menu.c:240
+msgid "/Go/_Previous page"
+msgstr "/Gå/_Föregående sida"
+
+#: src/menu.c:241
+msgid "/_Select"
+msgstr "/_Markera"
+
+#: src/menu.c:242
+msgid "/Select/_All images"
+msgstr "/Markera/_Alla bilder"
+
+#: src/menu.c:243
+msgid "/Select/_Inverse"
+msgstr "/Markera/_Omvänd"
+
+#: src/menu.c:244
+msgid "/Select/_None"
+msgstr "/Markera/_Ingen"
+
+#: src/menu.c:246
+msgid "/_Orientation"
+msgstr "/_Orientering"
+
+#: src/menu.c:247
+msgid "/Orientation/Rotate Clockwise"
+msgstr "/Orientering/Rotera medurs"
+
+#: src/menu.c:248
+msgid "/Orientation/Rotate Counter-Clockwise"
+msgstr "/Orientering/Rotera moturs"
+
+#: src/menu.c:250
+msgid "/Orientation/Flip Horizontal"
+msgstr "/Orientering/Vänd horisontellt"
+
+#: src/menu.c:251
+msgid "/Orientation/Flip Vertical"
+msgstr "/Orientering/Vänd vertikalt"
+
+#: src/menu.c:252
+msgid "/Configu_re"
+msgstr "/Konfigure_ra"
+
+#: src/menu.c:253
+msgid "/Configure/_Select Port-Camera Model"
+msgstr "/Konfigurera/_Välj port-kameramodell"
+
+#: src/menu.c:254
+msgid "/Configure/_Configure Camera..."
+msgstr "/Konfigurera/_Konfigurera kamera..."
+
+#: src/menu.c:255
+msgid "/_Help"
+msgstr "/_Hjälp"
+
+#: src/menu.c:256
+msgid "/Help/_Authors"
+msgstr "/Hjälp/_Författare"
+
+#: src/menu.c:257
+msgid "/Help/_License"
+msgstr "/Hjälp/_Licens"
+
+#: src/menu.c:258
+msgid "/Help/_Version"
+msgstr "/Hjälp/_Version"
+
+#: src/menu.c:259
+msgid "/Help/_User's Manual"
+msgstr "/Hjälp/_Användarmanual"
+
+#: src/menu.c:261
+msgid "/Help/_www.gphoto.org"
+msgstr "/Hjälp/_www.gphoto.org"
+
+#: src/menu.c:262
+msgid "/Help/www.gphoto.org/Hel_p"
+msgstr "/Hjälp/www.gphoto.org/Hjäl_p"
+
+#: src/menu.c:263
+msgid "/Help/www.gphoto.org/Ne_ws"
+msgstr "/Hjälp/www.gphoto.org/_Nyheter"
+
+#: src/menu.c:264
+msgid "/Help/www.gphoto.org/Updates_"
+msgstr "/Hjälp/www.gphoto.org/Uppdateringar_"
+
+#: src/menu.c:265
+msgid "/Help/www.gphoto.org/Cameras_"
+msgstr "/Hjälp/www.gphoto.org/Kameror_"
+
+#: src/menu.c:266
+msgid "/Help/www.gphoto.org/Supporting_"
+msgstr "/Hjälp/www.gphoto.org/Support_"
+
+#: src/menu.c:267
+msgid "/Help/www.gphoto.org/Di_scussion"
+msgstr "/Hjälp/www.gphoto.org/Di_skussion"
+
+#: src/menu.c:268
+msgid "/Help/www.gphoto.org/Devel. Team_"
+msgstr "/Hjälp/www.gphoto.org/Utvecklingsteam_"
+
+#: src/menu.c:269
+msgid "/Help/www.gphoto.org/Themes_"
+msgstr "/Hjälp/www.gphoto.org/Teman_"
+
+#: src/menu.c:270
+msgid "/Help/www.gphoto.org/Lin_ks"
+msgstr "/Hjälp/www.gphoto.org/Län_kar"
+
+#: src/menu.c:271
+msgid "/Help/www.gphoto.org/To Do_"
+msgstr "/Hjälp/www.gphoto.org/Att göra_"
+
+#: src/menu.c:272
+msgid "/Help/www.gphoto.org/Feed_back"
+msgstr "/Hjälp/www.gphoto.org/Feed_back"
+
+#: src/toolbar.c:110
+msgid "Open Image"
+msgstr "Öppna bild"
+
+#: src/toolbar.c:112
+msgid "Save Opened Image(s)"
+msgstr "Spara öppnad(e) bild(er)"
+
+#: src/toolbar.c:114
+msgid "Print Image"
+msgstr "Skriv ut bild"
+
+#: src/toolbar.c:116
+msgid "Close Image"
+msgstr "Stäng bild"
+
+#: src/toolbar.c:135
+msgid "Rotate Clockwise"
+msgstr "Rotera medurs"
+
+#: src/toolbar.c:137
+msgid "Rotate Counter-Clockwise"
+msgstr "Rotera moturs"
+
+#: src/toolbar.c:139
+msgid "Flip Horizontal"
+msgstr "Vänd horisontellt"
+
+#: src/toolbar.c:141
+msgid "Flip Vertical"
+msgstr "Vänd vertikalt"
+
+#: src/toolbar.c:146 src/toolbar.c:148
+msgid "Colors"
+msgstr "Färger"
+
+#: src/toolbar.c:154
+msgid "Camera Configuration"
+msgstr "Kamerakonfiguration"
+
+#. add_to_toolbar(mainWin, HELP_BUTTON, N_("Help"), help_xpm,
+#. GTK_SIGNAL_FUNC(usersmanual_dialog), NULL, box, 1);
+#: src/toolbar.c:159
+msgid "Exit gPhoto"
+msgstr "Avsluta gPhoto"
+
+#: src/util.c:53
+msgid "GPhoto Error"
+msgstr "GPhoto-fel"
+
+#: src/util.c:111
+msgid "Confirm"
+msgstr "Bekräfta"
+
+#: src/util.c:150
+#, c-format
+msgid "File %s exists. Overwrite?"
+msgstr "Filen %s existerar. Skriva över?"
+
+#: src/util.c:261
+#, c-format
+msgid ""
+"The image couldn't be saved to %s because of the following error:\n"
+"%s"
+msgstr ""
+"Bilden kunde inte sparas i %s på grund av följande fel:\n"
+"%s"
+
+#: src/util.c:351
+msgid "load_image_mem: could not load image\n"
+msgstr "load_image_mem: kunde inte läsa in bild\n"
+
+#: src/util.c:474
+msgid "Fork failed. Exiting. \n"
+msgstr "Grening misslyckades. Avslutar. \n"
+
+#~ msgid ""
+#~ "Version Information\n"
+#~ "-------------------\n"
+#~ "Current Version: %s\n"
+#~ "As always, report bugs to \n"
+#~ "gphoto-devel@gphoto.net"
+#~ msgstr ""
+#~ "Versionsinformation\n"
+#~ "-------------------\n"
+#~ "Aktuell version: %s\n"
+#~ "Som alltid, rapportera fel\n"
+#~ "till gphoto-devel@gphoto.net"
+
+#~ msgid "gPhoto release %s was brought to you by"
+#~ msgstr "gPhoto version %s presenteras av"
+
+#~ msgid "Web Page"
+#~ msgstr "Webbsida"
+
+#~ msgid "Next"
+#~ msgstr "Nästa"
+
+#~ msgid ""
+#~ "The gPhoto AUTHORS file appears to be missing!\n"
+#~ "\t      There should be a file called "
+#~ msgstr ""
+#~ "gPhoto's AUTHORS-fil verkar saknas!\n"
+#~ "\t      Där borde finnas en fil kallad "
+
+#~ msgid "Error: $DISPLAY variable is not set\n"
+#~ msgstr "Fel: Miljövariabeln $DISPLAY är inte satt\n"
+
+#~ msgid "Please run \"gphoto -h\" for command-line options.\n"
+#~ msgstr "Var vänlig och kör \"gphoto -h\" för kommandoradsalternativ.\n"
+
+#~ msgid "gPhoto %s (%s)\n"
+#~ msgstr "gPhoto %s (%s)\n"
+
+#~ msgid "Usage: gphoto [-h] [-c] [-n] [-s # filename] [-t # filename]\n"
+#~ msgstr "Användning: gphoto [-h] [-c] [-n] [-s # filnamn] [-t # filnamn]\n"
+
+#~ msgid "              [-d #] [-p filename] [-l filename]\n"
+#~ msgstr "                 [-d #] [-p filnamn] [-l filnamn]\n"

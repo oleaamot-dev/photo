@@ -1,0 +1,100 @@
+$Id: THEMES,v 1.2 1999/06/25 18:19:20 ole Exp $
+
+HTML gallery engine specs in gPhoto
+For updates of this document, see http://www.gphoto.org/themes.php3
+
+*************************************************************************
+
+Introduction
+
+When a user selects to make an HTML gallery, they must
+first have the index opened, and the images they want
+in the gallery selected.  Then, they type in the name of
+the gallery in a text entry, select a gallery theme,
+and specify the output directory.
+
+Here are the gPhoto HTML engine tags:
+                
+	#GALLERY_NAME#          the name of the gallery
+        #GALLERY_INDEX#         page name of the thumbnail index
+        #DATE#                  current date
+        #THUMBNAIL#             thumbnail image w/link to picture
+        #THUMBNAIL_FILENAME#    name of thumbnail image
+        #THUMBNAIL_NUMBER#      number of the thumbnail
+        #PICTURE#               <img> tag w/picture
+        #PICTURE_FILENAME#      filename of picture
+        #PICTURE_NUMBER#        number of the picture
+        #PICTURE_NEXT#          next picture's html filename
+        #PICTURE_PREVIOUS#      previous picture's html filename
+
+Here are the 4 files that make up a gPhoto Gallery "Theme":
+
+        /usr/share/gphoto/gallery/<theme name>/index_top.html
+        /usr/share/gphoto/gallery/<theme name>/index_bottom.html
+        /usr/share/gphoto/gallery/<theme name>/thumbnail.html
+        /usr/share/gphoto/gallery/<theme name>/picture.html
+
+Any other files that are in the /usr/share/gphoto/gallery/<theme name>
+directory are copied directly to the output directory specified by the
+user, so you can place "button" images, and background images in
+the theme .html files, and it will be preserved in the gallery
+output... java, images, javascript... you can use any of that in the
+gallery theme..
+
+*************************************************************************
+
+Here are some examples:
+--- index_top.html ---
+(printed at the top of the index page)
+        <html><title>Default Gallery Theme</title>
+        <body>
+        <h1>Welcome to the #GALLERY_NAME# HTML gallery.</h1>
+        <p>Yes! this is extremely bland and boring, but is just an example of
+        how to create gallery themes in gPhoto!
+        <p>
+        The following gallery was created on #DATE#:
+        <p>
+
+--- index_bottom.html ---
+(printed at the bottom of the index page)
+        <p>
+        Please click on one of the images to view it, and then you can use
+        the previous/next links to move between images.
+        <hr>
+        <i>name of this page: #GALLERY_INDEX#
+        <br>gPhoto development team
+        </body></html>
+
+--- thumbnail.html ---
+(this is placed in each thumbnail "cell" in the index table)
+
+        <table>
+        <tr><td>#THUMBNAIL#</td></tr>
+        <tr><td>This is thumbnail #THUMBNAIL_NUMBER#</td></tr>
+        <tr><td>Filename: #THUMBNAIL_FILENAME#</td></tr>
+        </table>
+
+--- picture.html ---
+(printed in each of the pictures' individual full-size pages...)
+(notice how next/previous use .jpg images as links. they are copied from
+the theme directory to the output directory automatically)
+        <html><title>Picture #PICTURE_NUMBER# in #GALLERY_NAME#</title>
+        <body>
+        <a href="#PICTURE_PREVIOUS#"><img src="previous.jpg"></a>
+        <a href="#PICTURE_NEXT#"><img src="next.jpg"></a>
+        <a href="#GALLERY_INDEX#"><img src="index.jpg"></a>
+        <p>
+        #PICTURE#
+        <p>
+        Image Filename: #PICTURE_FILENAME#
+        <p>
+        <a href="#PICTURE_PREVIOUS#"><img src="previous.jpg"></a>
+        <a href="#PICTURE_NEXT#"><img src="next.jpg"></a>
+        <a href="#GALLERY_INDEX#"><img src="index.jpg"></a>
+        <hr>
+        <i>The default gPhoto Gallery
+        </body></html>
+
+*************************************************************************
+
+Please report new HTML themes to gphoto-devel@gphoto.org.  Thanks.

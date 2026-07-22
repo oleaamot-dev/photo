@@ -1,0 +1,19 @@
+
+1) Macro off command doesn't seem to actually turn off the macro
+   mode even though the camera reports OK.  Verify this happens
+   with philips code too.
+
+2) Is there any difference in the protocol when transferring
+   image+sound data?
+
+3) Fix picture uploading so that it isn't so darn slooooow.
+
+4) Re-write philips_get_picture interface code that that it works
+   and does what gPhoto wants it to.
+
+5) Fix memo writing so that it works.
+
+6) Finish configuration dialog box code so that it sets the
+   controls based on the camera settings and then reads the
+   controls and sets the camera when exiting.
+

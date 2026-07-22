@@ -1,0 +1,202 @@
+/*
+	$Id: README,v 1.3 2000/09/25 19:37:36 ole Exp $
+*/
+
+/*
+	Copyright (c) 1997-1999 Eugene G. Crosser
+	Copyright (c) 1998,1999 Bruce D. Lightner (DOS/Windows support)
+
+	You may distribute and/or use for any purpose modified or unmodified
+	copies of this software if you preserve the copyright notice above.
+
+	THIS SOFTWARE IS PROVIDED AS IS AND COME WITH NO WARRANTY OF ANY
+	KIND, EITHER EXPRESSED OR IMPLIED.  IN NO EVENT WILL THE
+	COPYRIGHT HOLDER BE LIABLE FOR ANY DAMAGES RESULTING FROM THE
+	USE OF THIS SOFTWARE.
+*/
+
+/*
+	$Log: README,v $
+	Revision 1.3  2000/09/25 19:37:36  ole
+	Merge with sf HEAD branch
+	
+	Revision 1.2  2000/08/24 05:04:27  scottf
+	adding language support
+	
+	Revision 1.1.1.1.2.1  2000/07/05 11:07:49  ole
+	Preliminary support for the Olympus C3030-Zoom USB by
+	Fabrice Bellet <Fabrice.Bellet@creatis.insa-lyon.fr>.
+	(http://lists.styx.net/archives/public/gphoto-devel/2000-July/003858.html)
+	
+	Revision 2.19  2000/01/24 20:25:23  crosser
+	do better job in walking thru folder tree; credit to Sergey I. Panov
+	
+	Revision 2.18  1999/11/24 21:51:25  crosser
+	instruction about building from cvs source
+	
+	Revision 2.17  1999/09/19 12:33:11  crosser
+	Mention comlite32 in the README
+	
+	Revision 2.16  1999/08/26 16:11:57  crosser
+	Change README to reflect new directory structure
+	
+	Revision 2.15  1999/08/01 22:13:10  crosser
+	mention reltime priority things
+
+	Revision 2.14  1999/08/01 21:36:54  crosser
+	Modify source to suit ansi2knr
+	(I hate the style that ansi2knr requires but you don't expect me
+	to write another smarter ansi2knr implementation, right?)
+
+	Revision 2.13  1999/04/28 08:28:53  crosser
+	just don't like long copyrights
+
+	Revision 2.12  1999/04/27 20:55:35  lightner
+	Fix MS-DOS/Win32 makefile instructions
+
+	Revision 2.11  1999/03/22 05:59:31  lightner
+	Fix docs: Windows binaries go to win32/
+
+	Revision 2.10  1999/03/21 20:21:04  crosser
+	mention configure
+
+	Revision 2.9  1999/01/17 09:51:16  crosser
+	change Bruce's address
+
+	Revision 2.8  1998/10/18 13:18:27  crosser
+	Put RCS logs and I.D. into the source
+
+	Revision 2.7  1998/07/21 22:56:52  crosser
+	fix CP 900
+	
+	Revision 2.6  1998/06/07 13:55:20  crosser
+	compatibilities and credits
+	
+	Revision 2.5  1998/05/09 18:22:42  crosser
+	say that devices with modem control are allowable,
+	minor fixes
+	
+	Revision 2.4  1998/03/01 18:57:04  crosser
+	more credits
+	
+	Revision 2.3  1998/02/06 09:04:59  crosser
+	mention DOS version
+	
+	Revision 2.2  1998/01/18 02:22:28  crosser
+	change copyright
+	
+	Revision 2.1  1998/01/05 22:02:14  crosser
+	add reference to Bruce's site
+	
+	Revision 2.0  1998/01/02 19:20:11  crosser
+	Added support for Win32
+	
+	Revision 1.4  1997/12/24 00:30:14  crosser
+	add vendors, add url, add credits.
+	
+	Revision 1.3  1997/11/15 19:29:47  crosser
+	update for release 1.7
+	
+	Revision 1.2  1997/11/12 09:50:27  crosser
+	mention photopc600, minor changes
+	
+	Revision 1.1  1997/08/17 09:06:54  crosser
+	Initial revision
+	
+*/
+
+This is a library and a command-line frontend to manipulate digital
+still cameras based on Fujitsu chipset and Sierra Imaging firmware.  The
+program is known to work with Agfa, Epson, Olympus, Sanyo and Nikon (at
+least CoolPix 900, but not CoolPix 600!) cameras.
+
+The cameras typically come with software for Windows and for Mac, and no
+description of the protocol.  With this tool, they are managable from a
+UNIX box.  Bruce D. Lightner <lightner@lightner.net> has added support
+for Win32 and DOS platforms.  Note that the program does not have any
+GUI, it is plain command-line even on Windows.
+
+I tried it under Linux/x86, FreeBSD and Solaris/SPARC, and it should be
+straightforward for other UNIX systems.
+
+Generally, UNIX system requirements are:
+- ANSI C compiler (theoretically should work with K&R but unchecked)
+- select() system call
+- POSIX termios
+- presence of a 16bit integer type
+- serial port (with or without `modem control').
+
+On UNIX, first run "./configure".  Then, typing `make' will result
+in building the library and executables in the current directory.
+`make install' will install the executables, library and manual pages.
+If your `make' supports VPATH (e.g. GNU make), it is possible to build
+objects and executables in a different directory; create target directory
+and run /path/to/photopc/configure.  If you are building from CVS source
+see instructions at the end of this file.
+
+To build for DOS and WIN32, chdir to "dos" or "win32" directories
+respectively and there type "make".
+
+The executable parameters are rather clear (hopefully).  Running
+`photopc -h | more' will print the list of options and commands.
+If you are going to use the library for your own application and need
+the docs, tell me and I will write them.
+
+On UNIX systems that have sched_setcheduler() function the program
+can set itself "realtime priority".  That makes it less vulnerable to
+possible timeouts caused by high system load, and, more important,
+use high-resolution mode of nanosleep() function.  That means that
+it may run a bit quicker (but you probably will not notice anyway).
+Make the progrem setuid root to use this mode.  There is hopefully no
+danger because it revokes root privileges really quickly (even before
+processing command-line options).
+
+Included file `protocol.htm' contains description of the protocol used
+by the camera.
+
+`usage.htm' is a "casual" user's guide, full description is in the man
+pages.
+
+If you run the program on a DOS box, you may want a JPEG viewer;
+I've been told that a good free viewer `LXPIC' can be found at
+http://home.t-online.de/home/stefan.peichl.  Also, there is a
+tool that may help in discovering serial protocols (although
+*I* did not use it when I examined that camera's protocol):
+http://www.endymion.com/portfolio/software/comlite32.htm
+
+Many commands may be unimplemented, esp. those specific for newer models.
+If you know how to do things that the program currently cannot do,
+please let me know.
+
+I can be contacted at <crosser@average.org>, fresh version of this tool
+(if any) is at ftp://ftp.average.org/pub/photopc/, related information
+is at http://www.average.org/digicam/.  The same code accompanied by
+Win32 and DOS executables and archived in .zip format can be found at
+http://www.lightner.net/lightner/bruce/photopc/
+
+Thanks to Jeff Tranter for contributing the man page and a few bugfixes,
+Bruce Lightner for Windows and DOS support, Thierry Bousch for many
+details of the protocol and advice, Sergey I. Panov for invaluable
+investigation of the folder navigation means and other people who helped
+me to track down problems and learn more about the protocol.
+
+
+Trademarks are properties of their respective respected owners.
+---
+
+APPENDIX: Building from CVS source.
+
+You must have cvs, autoconf and automake installed on your system.
+
+$ cd $your_src_dir
+$ cvs -d :pserver:cvs@cvs.average.org:/var/cvs login
+Password: cvs
+$ cvs -d :pserver:cvs@cvs.average.org:/var/cvs checkout photopc
+$ cd photopc
+$ aclocal
+$ autoheader
+$ automake --add-missing
+$ autoconf
+$ ./configure --$various_options
+$ make
+

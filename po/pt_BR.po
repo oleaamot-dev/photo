@@ -1,0 +1,1374 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gphoto\n"
+"POT-Creation-Date: 2001-02-13 21:59+0100\n"
+"PO-Revision-Date: 2000-10-23 22:04 GMT-0300\n"
+"Last-Translator: E. A. Tacão <tacao@conectiva.com.br>\n"
+"Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: src/callbacks.c:135 src/callbacks.c:150 src/callbacks.c:173
+#: src/callbacks.c:197 src/callbacks.c:234 src/callbacks.c:348
+#: src/callbacks.c:490 src/callbacks.c:1191 src/callbacks.c:1225
+#: src/callbacks.c:1250 src/callbacks.c:1920 src/gallery.c:755
+#: src/gallery.c:797
+msgid "Camera is already busy"
+msgstr ""
+
+#: src/callbacks.c:157
+msgid "No configuration options."
+msgstr "Nenhuma opção de configuração."
+
+#: src/callbacks.c:162
+msgid "Mail image needs to be implemented!"
+msgstr "Enviar mensagem precisa ser implementado!"
+
+#: src/callbacks.c:170
+msgid "Taking picture..."
+msgstr "Obtendo figura..."
+
+#: src/callbacks.c:181
+msgid "Could not take a picture."
+msgstr "Impossível obter figura."
+
+#: src/callbacks.c:186
+#, c-format
+msgid "New picture is #%03i"
+msgstr "Nova figura é #%03i"
+
+#: src/callbacks.c:211
+#, c-format
+msgid "Deleting %i...\n"
+msgstr "Excluindo %i...\n"
+
+#: src/callbacks.c:216
+#, fuzzy, c-format
+msgid "Could not delete #%i\n"
+msgstr "Impossível resgatar #%i"
+
+#: src/callbacks.c:239
+msgid "Deleting selected pictures..."
+msgstr "Excluindo figuras selecionadas..."
+
+#: src/callbacks.c:250
+#, fuzzy, c-format
+msgid "Could not delete #%i"
+msgstr "Impossível resgatar #%i"
+
+#: src/callbacks.c:298 src/util.c:120
+msgid "Yes"
+msgstr "Sim"
+
+#: src/callbacks.c:313 src/util.c:125
+msgid "No"
+msgstr "Não"
+
+#: src/callbacks.c:355
+#, c-format
+msgid "Could not save #%i"
+msgstr "Impossível salvar #%i"
+
+#: src/callbacks.c:404
+msgid "Filename prefix:"
+msgstr "Prefixo do nome do arquivo:"
+
+#: src/callbacks.c:453
+#, c-format
+msgid "Done. Images saved in %s"
+msgstr "Feito. Imagens salvas em %s"
+
+#: src/callbacks.c:497 src/callbacks.c:1119 src/gallery.c:766
+#: src/gallery.c:808
+#, c-format
+msgid "Could not retrieve #%i"
+msgstr "Impossível resgatar #%i"
+
+#: src/callbacks.c:514
+#, c-format
+msgid "Could not load image %s to memory"
+msgstr ""
+
+#: src/callbacks.c:523 src/callbacks.c:537 src/callbacks.c:1138
+#, fuzzy, c-format
+msgid "Could not load image #%i to memory"
+msgstr "Impossível salvar #%i"
+
+#: src/callbacks.c:1050
+msgid "Could not open $HOME/.gphoto/gphotorc for writing."
+msgstr "Impossível abrir HOME/.gphoto/gphotorc para escrita."
+
+#: src/callbacks.c:1064
+#, c-format
+msgid "%s is not yet implemented"
+msgstr "%s ainda não está implementado"
+
+#: src/callbacks.c:1144
+#, fuzzy, c-format
+msgid "Could not open #%i"
+msgstr "Impossível salvar #%i"
+
+#: src/callbacks.c:1219
+msgid "Getting Index..."
+msgstr "Obtendo Índice..."
+
+#: src/callbacks.c:1237
+msgid "Could not get the number of pictures"
+msgstr "Impossível obter o número de figuras"
+
+#: src/callbacks.c:1260
+msgid "Download cancelled."
+msgstr "Download cancelado."
+
+#: src/callbacks.c:1326
+msgid "Done getting index."
+msgstr "Obtenção do índice finalizada."
+
+#: src/callbacks.c:1443
+msgid ""
+"Could not save image. Please make\n"
+"sure that you typed the image\n"
+"extension and that permissions for\n"
+"the directory are correct."
+msgstr ""
+
+#: src/callbacks.c:1503
+msgid "Saving the index is not yet supported"
+msgstr "O salvamento do índice ainda não é suportado"
+
+#: src/callbacks.c:1557
+msgid "Print Image..."
+msgstr "Imprimir imagem..."
+
+#: src/callbacks.c:1564
+msgid "Print Command:"
+msgstr "Comando para Imprimir:"
+
+#: src/callbacks.c:1586
+msgid "Print"
+msgstr "Imprimir"
+
+#: src/callbacks.c:1592 src/callbacks.c:1833 src/callbacks.c:2063
+#: src/gallery.c:647
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/callbacks.c:1610
+msgid "Now spooling..."
+msgstr "Enviando para a fila..."
+
+#: src/callbacks.c:1615
+msgid "Spooling done. Printing may take a minute."
+msgstr "Enviado à fila. A impressão pode levar um minuto."
+
+#: src/callbacks.c:1774
+msgid "Resize Image..."
+msgstr "Redimensionar Imagem..."
+
+#: src/callbacks.c:1781
+msgid "Width:"
+msgstr "Largura:"
+
+#: src/callbacks.c:1803
+msgid "Height:"
+msgstr "Altura:"
+
+#: src/callbacks.c:1828 src/toolbar.c:143 src/toolbar.c:145
+msgid "Resize"
+msgstr "Redimensionar"
+
+#: src/callbacks.c:1854 src/callbacks.c:1973
+#, fuzzy
+msgid "Could not scale the image"
+msgstr "ERRO: Impossível excluir imagem.\n"
+
+#: src/callbacks.c:1924
+msgid "Camera Summary"
+msgstr ""
+
+#: src/callbacks.c:2056
+msgid "Post-Processing Options"
+msgstr "Opções pós-processamento"
+
+#: src/callbacks.c:2058 src/util.c:87
+msgid "OK"
+msgstr "OK"
+
+#: src/callbacks.c:2068
+msgid "Enable post-processing"
+msgstr "Habilitar pós-processamento"
+
+#: src/callbacks.c:2075
+msgid "Post-processing command-line:"
+msgstr "Linha de comando de pós-processameto:"
+
+#: src/callbacks.c:2087
+#, fuzzy, c-format
+msgid ""
+"Note: gPhoto will replace \"%s\"\n"
+"in the script command-line with\n"
+"the full path to the selected image.\n"
+"See the User's Manual\\in the Help menu\n"
+"for more information. "
+msgstr ""
+"Nota: gPhoto substituirá \"%s\" no script de linha de comando pelo caminho "
+"completo à imagem selecionada. Consulte o Manual do Usuário no menu de Ajuda "
+"para mais informações. "
+
+#: src/callbacks.c:2105
+#, fuzzy, c-format
+msgid ""
+"Missing \"%s\" in the post-processing entry. This is required so the "
+"post-processing program knows where the image is located."
+msgstr ""
+"Faltando \"%s\" na entrada pós-processada. Isto é necessário para que o "
+"programa de pós-processamento saiba onde a imagem está localizada."
+
+#: src/gallery.c:280
+msgid "Select an Output Directory..."
+msgstr "Selecione um Diretório de Saída..."
+
+#: src/gallery.c:471
+msgid ""
+"Please retrieve the index first,\n"
+"and select the images to include\n"
+"in the gallery by clicking on them.\n"
+"\n"
+"Then, re-run the HTML Gallery."
+msgstr ""
+
+#: src/gallery.c:487
+msgid ""
+"You need to select images to add\n"
+"to the gallery."
+msgstr ""
+
+#: src/gallery.c:500
+msgid "Gallery Name:"
+msgstr "Nome da Galeria:"
+
+#: src/gallery.c:513
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/gallery.c:526
+#, c-format
+msgid ""
+"HTML gallery themes do not exist at %s.\n"
+"Please install/move gallery themes there."
+msgstr ""
+
+#: src/gallery.c:572
+msgid "Output Directory:"
+msgstr "Diretório de saída:"
+
+#: src/gallery.c:583
+msgid "Change..."
+msgstr "Mudar..."
+
+#: src/gallery.c:641
+msgid "Create"
+msgstr "Criar"
+
+#: src/gallery.c:664
+msgid "You must select a theme!"
+msgstr "Você precisa selecionar um tema!"
+
+#. Get the current thumbnail
+#: src/gallery.c:752
+#, c-format
+msgid "Getting Thumbnail #%i..."
+msgstr "Obtendo Miniatura #%i..."
+
+#: src/gallery.c:769 src/gallery.c:810
+msgid "Not Available"
+msgstr "Não disponível"
+
+#. Get the current image
+#: src/gallery.c:793
+#, c-format
+msgid "Getting Image #%i..."
+msgstr "Obtendo Imagem #%i..."
+
+#: src/gallery.c:814
+#, c-format
+msgid "<img alt=\"%03i\" src=\"picture-%03i.%s\">"
+msgstr "<img alt=\"%03i\" src=\"picture-%03i.%s\">"
+
+#: src/gallery.c:816
+#, c-format
+msgid "picture-%03i.%s"
+msgstr "picture-%03i.%s"
+
+#: src/gallery.c:832 src/gallery.c:837
+#, c-format
+msgid "picture-%03i.html"
+msgstr "picture-%03i.html"
+
+#: src/gallery.c:849
+#, c-format
+msgid "%spicture-%03i.html"
+msgstr "%spicture-%03i.html"
+
+#: src/gallery.c:875
+#, c-format
+msgid "Gallery saved in: %s"
+msgstr "Galeria salva em: %s"
+
+#: src/information.c:10
+#, c-format
+msgid ""
+"This is GPhoto version %s.\n"
+"Built %s by %s on %s.\n"
+"Report bugs to gphoto-devel@gphoto.org"
+msgstr ""
+
+#: src/information.c:14
+#, fuzzy
+msgid "GPhoto Release"
+msgstr "Mensagem gPhoto"
+
+#: src/information.c:24
+#, fuzzy
+msgid "User manual"
+msgstr "Manual do Usuário"
+
+#: src/information.c:43
+#, fuzzy
+msgid "GPhoto License"
+msgstr "Mensagem gPhoto"
+
+#: src/information.c:44
+#, fuzzy
+msgid ""
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"\n"
+"See http://www.gnu.org for more details on the GNU project.\n"
+msgstr ""
+"Este programa é software livre; pode redistribui-lo e/ou modificá-lo dentro "
+"dos termos da Licença Geral Pública GNU (GNU General Public License) tal "
+"como publicado pela Free Software Foundation; quer seja a versão 2 da "
+"licença, ou (pode optar) qualquer versão posterior. Este programa é "
+"distribuido com a esperança de que seja útil, mas SEM QUALQUER GARANTIA; sem "
+"mesmo a garantia implícita de COMERCIALIZAÇÃO ou PREPARAÇÃO PARA UM FIM "
+"ESPECÍFICO. Veja a Licença Geral Pública GNU para mais detalhes. Deverá ter "
+"recebido uma cópia da Licença Geral Pública GNU junto com esta aplicação; se "
+"não recebeu, escreva para a Free Software Foundation, Inc., 675 Mass Ave, "
+"Cambridge, MA 02139, USA. Vejahttp://www.gnu.org para obter mais detalhes "
+"sobre o projeto GNU."
+
+#: src/information.c:78
+msgid "Scott Fritzinger, original implementation."
+msgstr ""
+
+#: src/information.c:79
+msgid "Eugene Crosser, Fujitsu chipset protocol."
+msgstr ""
+
+#: src/information.c:80
+msgid "Matt Martin, Fuji library, bug fixing."
+msgstr ""
+
+#: src/information.c:81
+msgid "Mike Labriola, HTML gallery options."
+msgstr ""
+
+#: src/information.c:82
+msgid "Werner Almesberger, Canon library."
+msgstr ""
+
+#: src/information.c:83
+msgid "Ole W. Saastad, Canon library."
+msgstr ""
+
+#: src/information.c:84
+msgid "Wolfgang Reissnegger, Canon library."
+msgstr ""
+
+#: src/information.c:85
+msgid "Ray Newman, Canon PS350 protocol."
+msgstr ""
+
+#: src/information.c:86
+msgid "Anne Bezemer, Canon PS350 protocol."
+msgstr ""
+
+#: src/information.c:87
+msgid "Philippe Marzouk, Canon library."
+msgstr ""
+
+#: src/information.c:88
+msgid "Edouard Lafargue, Canon library."
+msgstr ""
+
+#: src/information.c:89
+msgid "Rasmus Andersen, Canon library, bugfixing"
+msgstr ""
+
+#: src/information.c:90
+msgid "Gary Ross, Casio QV library."
+msgstr ""
+
+#: src/information.c:91
+msgid "Del Simmons, Kodak DC20/25 library."
+msgstr ""
+
+#: src/information.c:92
+msgid "Timecop, Kodak DC21x library and dc21x_cam utility."
+msgstr ""
+
+#: src/information.c:93
+msgid "Brent D. Metz, Kodak 200/210 library"
+msgstr ""
+
+#: src/information.c:94
+msgid "Brian Hirt, original Kodak DC210 library"
+msgstr ""
+
+#: src/information.c:95
+msgid "Randy D. Scott, Kodak Generic serial library"
+msgstr ""
+
+#: src/information.c:96
+msgid "David Brownell, Kodak Generic USB patch and Linux driver"
+msgstr ""
+
+#: src/information.c:97
+msgid "Phill Hugo, Original Konica Q-M100, HP-C20/30 library"
+msgstr ""
+
+#: src/information.c:98
+msgid "Ed Legowski, Konica Q-M100, HP-C20/30 library hacking"
+msgstr ""
+
+#: src/information.c:99
+msgid "Toshiki Fujisawa, Konica Q-M200, FreeBSD patches"
+msgstr ""
+
+#: src/information.c:100
+msgid "Gus Hartmann, Minolta Dimage V library"
+msgstr ""
+
+#: src/information.c:101
+msgid "Mark Davies, Sony DSC-F55E/505 library"
+msgstr ""
+
+#: src/information.c:102
+msgid "Michael McCormack, Nikon CoolPix 600 library"
+msgstr ""
+
+#: src/information.c:103
+msgid "Henning Zabel, Mustek MDC800 library and Linux driver"
+msgstr ""
+
+#: src/information.c:104
+msgid "Pedro Caria, Original Mustek MDC800 library"
+msgstr ""
+
+#: src/information.c:105
+msgid "Bob Paauwe, Philips library"
+msgstr ""
+
+#: src/information.c:106
+msgid "Cliff Wright, Ricoh RDC 300/300Z library"
+msgstr ""
+
+#: src/information.c:107
+msgid "James McKenzie, Samsung Digimax 800k library"
+msgstr ""
+
+#: src/information.c:108
+msgid "M. Adam Kendall, Sony DSC-F1 library"
+msgstr ""
+
+#: src/information.c:109
+msgid "Warren Baird, Canon G1, bugfixes"
+msgstr ""
+
+#: src/information.c:110
+msgid "Paul S. Jenner, initial GNU autoconf/automake scripts."
+msgstr ""
+
+#: src/information.c:111
+msgid "Tuomas Kuosmanen, toolbar icons"
+msgstr ""
+
+#: src/information.c:112
+msgid "Ole Aamot, bug fixing."
+msgstr ""
+
+#: src/information.c:113
+msgid "Fabrice Bellet, Olympus C3030Z USB support, Index Canvas."
+msgstr ""
+
+#: src/information.c:126
+msgid "GPhoto"
+msgstr ""
+
+#: src/information.c:127
+#, fuzzy
+msgid "(C) 1998-2000 Scott Fritzinger and many others"
+msgstr ""
+"Copyright (C) 1998-2000 Scott Fritzinger <scottf@unr.edu>\n"
+"\n"
+
+#: src/information.c:129
+msgid "The GNOME Digital Camera client"
+msgstr ""
+
+#: src/information.c:133
+msgid "GNU Project"
+msgstr ""
+
+#: src/information.c:134
+msgid "GNOME Project"
+msgstr ""
+
+#: src/information.c:135
+msgid "GPhoto Project"
+msgstr ""
+
+#: src/img_edit.c:1125
+msgid "Color Adjustment"
+msgstr "Ajuste de Cores"
+
+#: src/img_edit.c:1126
+msgid "gPhoto - Color Adjustment"
+msgstr "gPhoto - Ajuste de Cores"
+
+#: src/img_edit.c:1141
+msgid "Colour Settings"
+msgstr "Configurações de Cor"
+
+#: src/img_edit.c:1247
+msgid "Gray Controls"
+msgstr "Controles de Cinza"
+
+#: src/img_edit.c:1287
+msgid "Red Controls"
+msgstr "Controles de Vermelho"
+
+#: src/img_edit.c:1327
+msgid "Green Controls"
+msgstr "Controles de Verde"
+
+#: src/img_edit.c:1367
+msgid "Blue Controls"
+msgstr "Controles de Azul"
+
+#: src/img_edit.c:1408
+msgid "Colour Modifications:"
+msgstr "Modificações de Cores:"
+
+#: src/img_edit.c:1415
+msgid "Apply"
+msgstr "Aplicar"
+
+#: src/img_edit.c:1419
+msgid "Keep"
+msgstr "Manter"
+
+#: src/img_edit.c:1423
+msgid "Reset"
+msgstr "Reinicializar"
+
+#: src/img_edit.c:1424 src/img_edit.c:1425
+msgid "Reset all the color changes to normal values"
+msgstr ""
+"Cancelar todas as modificações de cores e retornar para os valores normais"
+
+#: src/img_edit.c:1427
+msgid "Always Apply"
+msgstr "Sempre Aplicar"
+
+#: src/img_edit.c:1436
+msgid "Close"
+msgstr "Fechar"
+
+#: src/live.c:41 src/live.c:148
+msgid "Done."
+msgstr "OK."
+
+#: src/live.c:80
+msgid "Getting live image..."
+msgstr "Obtendo imagem ao vivo..."
+
+#: src/live.c:82
+msgid "Live Camera!"
+msgstr "Câmera ao Vivo!"
+
+#: src/live.c:121
+msgid "Could not get preview"
+msgstr "Impossível gerar pré-visualização"
+
+#: src/live.c:142
+msgid "Live Preview Error"
+msgstr "Erro na gerar pré-visualização ao vivo"
+
+#: src/live.c:143
+msgid ""
+"Could not retrieve the live preview.\n"
+"The camera either couldn't be accessed\n"
+" or it doesn't support live previews."
+msgstr ""
+"Impossível resgatar a pré-visualização ao vivo.\n"
+"O a câmera não pode ser acessada\n"
+" ou ela não supoprta pré-visualizações ao vivo."
+
+#: src/main.c:193
+msgid "Image Index"
+msgstr "Índice de Imagens"
+
+#: src/main.c:286
+msgid ""
+"Could not load config file.\n"
+"Resetting to defaults.\n"
+"Click on \"Select Port-Camera Model\"\n"
+"in the Configure menu to set your\n"
+"camera model and serial port"
+msgstr ""
+
+#: src/menu.c:188
+msgid "/_File"
+msgstr ""
+
+#: src/menu.c:189
+msgid "/File/_Open"
+msgstr ""
+
+#: src/menu.c:190
+#, fuzzy
+msgid "/File/Open/Directory..."
+msgstr "Selecione um Diretório de Saída..."
+
+#: src/menu.c:191
+msgid "/File/Open/File..."
+msgstr ""
+
+#: src/menu.c:193
+msgid "/File/_Save"
+msgstr ""
+
+#: src/menu.c:194
+#, fuzzy
+msgid "/File/Save/Opened Image(s)..."
+msgstr "Salvar Imagem(ns) Aberta(s)"
+
+#: src/menu.c:195
+msgid "/File/Save/Selected Thumbnails..."
+msgstr ""
+
+#: src/menu.c:196
+#, fuzzy
+msgid "/File/Save/Selected Images..."
+msgstr "Excluir Imagens Selecionadas"
+
+#: src/menu.c:197
+msgid "/File/Save/Selected Thumbnails and Images..."
+msgstr ""
+
+#: src/menu.c:199
+msgid "/File/_Export"
+msgstr ""
+
+#: src/menu.c:200
+msgid "/File/Export/HTML _Gallery"
+msgstr ""
+
+#: src/menu.c:202
+msgid "/File/_Print"
+msgstr ""
+
+#: src/menu.c:204
+msgid "/File/_Close"
+msgstr ""
+
+#: src/menu.c:205
+msgid "/File/_Quit"
+msgstr ""
+
+#: src/menu.c:206
+#, fuzzy
+msgid "/_Camera"
+msgstr "Câmera ao Vivo!"
+
+#: src/menu.c:207
+msgid "/Camera/_Summary"
+msgstr ""
+
+#: src/menu.c:208
+#, fuzzy
+msgid "/Camera/Download _Index"
+msgstr "Fazer Download do Índice Vazio"
+
+#: src/menu.c:209
+#, fuzzy
+msgid "/Camera/Download Index/_Thumbnails"
+msgstr "Fazer Download do Índice de Miniaturas"
+
+#: src/menu.c:210
+msgid "/Camera/Download Index/_No Thumbnails"
+msgstr ""
+
+#: src/menu.c:211
+#, fuzzy
+msgid "/Camera/Download _Selected"
+msgstr "Fazer Download das Imagens Selecionadas"
+
+#: src/menu.c:212
+#, fuzzy
+msgid "/Camera/Download Selected/_Images"
+msgstr "Fazer Download das Imagens Selecionadas"
+
+#: src/menu.c:213
+#, fuzzy
+msgid "/Camera/Download Selected/Images/_Open in window"
+msgstr "Fazer Download das Imagens Selecionadas"
+
+#: src/menu.c:214
+msgid "/Camera/Download Selected/Images/_Open in window (scale 50%)"
+msgstr ""
+
+#: src/menu.c:215
+msgid "/Camera/Download Selected/Images/_Open in window (scale 25%)"
+msgstr ""
+
+#: src/menu.c:216
+#, fuzzy
+msgid "/Camera/Download Selected/Images/_Save to disk..."
+msgstr "Fazer Download das Imagens Selecionadas"
+
+#: src/menu.c:217
+#, fuzzy
+msgid "/Camera/Download Selected/_Thumbnails"
+msgstr "Fazer Download das Imagens Selecionadas"
+
+#: src/menu.c:218
+msgid "/Camera/Download Selected/Thumbnails/_Open in window"
+msgstr ""
+
+#: src/menu.c:219
+msgid "/Camera/Download Selected/Thumbnails/_Save to disk..."
+msgstr ""
+
+#: src/menu.c:220
+#, fuzzy
+msgid "/Camera/Download Selected/_Both"
+msgstr "Fazer Download das Imagens Selecionadas"
+
+#: src/menu.c:221
+msgid "/Camera/Download Selected/Both/_Open in window"
+msgstr ""
+
+#: src/menu.c:222
+msgid "/Camera/Download Selected/Both/_Save to disk..."
+msgstr ""
+
+#: src/menu.c:223
+msgid "/Camera/_Delete"
+msgstr ""
+
+#: src/menu.c:224
+#, fuzzy
+msgid "/Camera/Delete/Selected Images"
+msgstr "Excluir Imagens Selecionadas"
+
+#: src/menu.c:225
+#, fuzzy
+msgid "/Camera/Delete/All Images"
+msgstr "Todas imagens foram excluídas."
+
+#: src/menu.c:226
+#, fuzzy
+msgid "/Camera/_Live Preview!"
+msgstr "Erro na gerar pré-visualização ao vivo"
+
+#: src/menu.c:227
+#, fuzzy
+msgid "/Camera/_Take Picture"
+msgstr "Obter Figura"
+
+#: src/menu.c:229
+msgid "/_Edit"
+msgstr ""
+
+#: src/menu.c:230
+msgid "/Edit/_Size"
+msgstr ""
+
+#: src/menu.c:231
+msgid "/Edit/Size/Scale _Half"
+msgstr ""
+
+#: src/menu.c:232
+msgid "/Edit/Size/Scale _Double"
+msgstr ""
+
+#: src/menu.c:233
+msgid "/Edit/Size/_Scale"
+msgstr ""
+
+#: src/menu.c:235
+msgid "/Edit/_Color Balance"
+msgstr ""
+
+#: src/menu.c:237
+msgid "/_Go"
+msgstr ""
+
+#: src/menu.c:238
+msgid "/Go/_Index page"
+msgstr ""
+
+#: src/menu.c:239
+#, fuzzy
+msgid "/Go/_Next page"
+msgstr "Próxima página"
+
+#: src/menu.c:240
+#, fuzzy
+msgid "/Go/_Previous page"
+msgstr "Página anterior"
+
+#: src/menu.c:241
+msgid "/_Select"
+msgstr ""
+
+#: src/menu.c:242
+#, fuzzy
+msgid "/Select/_All images"
+msgstr "Todas imagens foram excluídas."
+
+#: src/menu.c:243
+msgid "/Select/_Inverse"
+msgstr ""
+
+#: src/menu.c:244
+msgid "/Select/_None"
+msgstr ""
+
+#: src/menu.c:246
+msgid "/_Orientation"
+msgstr ""
+
+#: src/menu.c:247
+#, fuzzy
+msgid "/Orientation/Rotate Clockwise"
+msgstr "&Sentido horário"
+
+#: src/menu.c:248
+#, fuzzy
+msgid "/Orientation/Rotate Counter-Clockwise"
+msgstr "Girar no sentido anti-horário"
+
+#: src/menu.c:250
+#, fuzzy
+msgid "/Orientation/Flip Horizontal"
+msgstr "Virar Horizontalmente"
+
+#: src/menu.c:251
+#, fuzzy
+msgid "/Orientation/Flip Vertical"
+msgstr "Virar Verticalmente"
+
+#: src/menu.c:252
+#, fuzzy
+msgid "/Configu_re"
+msgstr "Confirmar"
+
+#: src/menu.c:253
+msgid "/Configure/_Select Port-Camera Model"
+msgstr ""
+
+#: src/menu.c:254
+msgid "/Configure/_Configure Camera..."
+msgstr ""
+
+#: src/menu.c:255
+#, fuzzy
+msgid "/_Help"
+msgstr "Ajuda"
+
+#: src/menu.c:256
+msgid "/Help/_Authors"
+msgstr ""
+
+#: src/menu.c:257
+msgid "/Help/_License"
+msgstr ""
+
+#: src/menu.c:258
+msgid "/Help/_Version"
+msgstr ""
+
+#: src/menu.c:259
+#, fuzzy
+msgid "/Help/_User's Manual"
+msgstr "Manual do Usuário"
+
+#: src/menu.c:261
+#, fuzzy
+msgid "/Help/_www.gphoto.org"
+msgstr "http://www.gphoto.org/"
+
+#: src/menu.c:262
+#, fuzzy
+msgid "/Help/www.gphoto.org/Hel_p"
+msgstr "http://www.gphoto.org/"
+
+#: src/menu.c:263
+#, fuzzy
+msgid "/Help/www.gphoto.org/Ne_ws"
+msgstr "http://www.gphoto.org/"
+
+#: src/menu.c:264
+#, fuzzy
+msgid "/Help/www.gphoto.org/Updates_"
+msgstr "http://www.gphoto.org/"
+
+#: src/menu.c:265
+#, fuzzy
+msgid "/Help/www.gphoto.org/Cameras_"
+msgstr "http://www.gphoto.org/cameras.php3"
+
+#: src/menu.c:266
+#, fuzzy
+msgid "/Help/www.gphoto.org/Supporting_"
+msgstr "http://www.gphoto.org/supporting.php3"
+
+#: src/menu.c:267
+#, fuzzy
+msgid "/Help/www.gphoto.org/Di_scussion"
+msgstr "http://www.gphoto.org/"
+
+#: src/menu.c:268
+#, fuzzy
+msgid "/Help/www.gphoto.org/Devel. Team_"
+msgstr "http://www.gphoto.org/help.php3"
+
+#: src/menu.c:269
+#, fuzzy
+msgid "/Help/www.gphoto.org/Themes_"
+msgstr "http://www.gphoto.org/themes.php3"
+
+#: src/menu.c:270
+#, fuzzy
+msgid "/Help/www.gphoto.org/Lin_ks"
+msgstr "http://www.gphoto.org/links.php3"
+
+#: src/menu.c:271
+#, fuzzy
+msgid "/Help/www.gphoto.org/To Do_"
+msgstr "http://www.gphoto.org/"
+
+#: src/menu.c:272
+#, fuzzy
+msgid "/Help/www.gphoto.org/Feed_back"
+msgstr "http://www.gphoto.org/feedback.php3"
+
+#: src/toolbar.c:110
+msgid "Open Image"
+msgstr "Abrir imagem"
+
+#: src/toolbar.c:112
+msgid "Save Opened Image(s)"
+msgstr "Salvar Imagem(ns) Aberta(s)"
+
+#: src/toolbar.c:114
+msgid "Print Image"
+msgstr "Imprimir imagem..."
+
+#: src/toolbar.c:116
+msgid "Close Image"
+msgstr "Fechar imagem"
+
+#: src/toolbar.c:135
+msgid "Rotate Clockwise"
+msgstr "&Sentido horário"
+
+#: src/toolbar.c:137
+msgid "Rotate Counter-Clockwise"
+msgstr "Girar no sentido anti-horário"
+
+#: src/toolbar.c:139
+msgid "Flip Horizontal"
+msgstr "Virar Horizontalmente"
+
+#: src/toolbar.c:141
+msgid "Flip Vertical"
+msgstr "Virar Verticalmente"
+
+#: src/toolbar.c:146 src/toolbar.c:148
+msgid "Colors"
+msgstr "Cores"
+
+#: src/toolbar.c:154
+msgid "Camera Configuration"
+msgstr "Configuração da Câmera"
+
+#. add_to_toolbar(mainWin, HELP_BUTTON, N_("Help"), help_xpm,
+#. GTK_SIGNAL_FUNC(usersmanual_dialog), NULL, box, 1);
+#: src/toolbar.c:159
+msgid "Exit gPhoto"
+msgstr "Sair do gPhoto"
+
+#: src/util.c:53
+msgid "GPhoto Error"
+msgstr ""
+
+#: src/util.c:111
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: src/util.c:150
+#, c-format
+msgid "File %s exists. Overwrite?"
+msgstr "Arquivo %s existe. Sobrescrever?"
+
+#: src/util.c:261
+#, c-format
+msgid ""
+"The image couldn't be saved to %s because of the following error:\n"
+"%s"
+msgstr ""
+
+#: src/util.c:351
+msgid "load_image_mem: could not load image\n"
+msgstr "load_image_mem: impossível carregar imagem\n"
+
+#: src/util.c:474
+msgid "Fork failed. Exiting. \n"
+msgstr "Fork falhou. Saindo. \n"
+
+#~ msgid ""
+#~ "Version Information\n"
+#~ "-------------------\n"
+#~ "Current Version: %s\n"
+#~ "As always, report bugs to \n"
+#~ "gphoto-devel@gphoto.net"
+#~ msgstr ""
+#~ "Informação da Versão\n"
+#~ "--------------------\n"
+#~ "Versão Atual: %s\n"
+#~ "Como sempre, reporte erros a \n"
+#~ "gphoto-devel@gphoto.net"
+
+#~ msgid "gPhoto release %s was brought to you by"
+#~ msgstr "gPhoto versão %s fornecida por"
+
+#~ msgid "Web Page"
+#~ msgstr "Página Web"
+
+#~ msgid "Previous"
+#~ msgstr "Anterior"
+
+#~ msgid "Next"
+#~ msgstr "Próximo"
+
+#~ msgid ""
+#~ "The gPhoto AUTHORS file appears to be missing!\n"
+#~ "\t      There should be a file called "
+#~ msgstr ""
+#~ "O arquivo gPhoto AUTHORS parece estar faltando!\n"
+#~ "\t      Deveria haver um arquivo chamado "
+
+#~ msgid "Error: $DISPLAY variable is not set\n"
+#~ msgstr "Erro: variável $DISPLAY não definida\n"
+
+#~ msgid "Please run \"gphoto -h\" for command-line options.\n"
+#~ msgstr "Por favor execute \"gphoto -h\" para opções de linha de comando.\n"
+
+#~ msgid "gPhoto %s (%s)\n"
+#~ msgstr "gPhoto %s (%s)\n"
+
+#~ msgid "Usage: gphoto [-h] [-c] [-n] [-s # filename] [-t # filename]\n"
+#~ msgstr "Uso: gphoto [-h] [-c] [-n] [-s # arquivo] [-t # arquivo]\n"
+
+#~ msgid "              [-d #] [-p filename] [-l filename]\n"
+#~ msgstr "              [-d #] [-p filename] [-l filename]\n"
+
+#~ msgid "Deleting ALL pictures."
+#~ msgstr "Excluindo TODAS figuras."
+
+#~ msgid "Nothing selected to be deleted."
+#~ msgstr "Nada selecionado para ser excluído."
+
+#~ msgid "Are you sure you want to DELETE the selected images?"
+#~ msgstr "Tem certeza que deseja EXCLUIR as imagens selecionadas?"
+
+#~ msgid "Are you sure you want to DELETE all the images from memory?"
+#~ msgstr "Tem certeza que deseja EXCLUIR todas as imagens da memória?"
+
+#~ msgid "Saving Image #%03i..."
+#~ msgstr "Salvando Imagem #%03i..."
+
+#~ msgid "Saving Thumbnail #%03i..."
+#~ msgstr "Salvando Miniatura #%03i..."
+
+#~ msgid "%s-thumbnail-%03i"
+#~ msgstr "%s-thumbnail-%03i"
+
+#~ msgid "%s/gphoto-image-%03i.jpg"
+#~ msgstr "%s/gphoto-image-%03i.jpg"
+
+#~ msgid "Select model/port..."
+#~ msgstr "Selecione model/porta"
+
+#~ msgid "Camera Model:"
+#~ msgstr "Modelo da Câmera:"
+
+#~ msgid ""
+#~ "\n"
+#~ "gPhoto user(s) that reported this model:\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Usuários gPhoto que reportaram este modelo:\n"
+
+#~ msgid "Port:"
+#~ msgstr "Porta:"
+
+#~ msgid "Save"
+#~ msgstr "Salvar"
+
+#~ msgid "Error: failed to open %s"
+#~ msgstr "Erro: falha ao abrir %s"
+
+#~ msgid "Missing Serial Device Permissions"
+#~ msgstr "Faltando Permissões de Dispositivo Serial"
+
+#~ msgid "Please check the permissions (see the manual)."
+#~ msgstr "Por favor verifique as permissões (veja o manual)."
+
+#~ msgid "Opened %s."
+#~ msgstr "%s aberto."
+
+#~ msgid "Could not open $HOME/.gphoto/gphotorc for writing.\n"
+#~ msgstr "Impossível abrir HOME/.gphoto/gphotorc para escrita.\n"
+
+#~ msgid ""
+#~ "Could not open:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Impossível abrir\n"
+#~ "%s"
+
+#~ msgid "Getting thumbnail %i..."
+#~ msgstr "Obtendo miniatura %i..."
+
+#~ msgid "Picture #%i\n"
+#~ msgstr "Figura #%i\n"
+
+#~ msgid "num_pictures_taken is %d\n"
+#~ msgstr "num_pictures_taken é %d\n"
+
+#~ msgid "Nothing selected for download."
+#~ msgstr "Nada selecionado para fazer download"
+
+#~ msgid "Getting Image #%03i..."
+#~ msgstr "Obtendo Imagem #%03i..."
+
+#~ msgid "Getting Thumbnail #%03i..."
+#~ msgstr "Obtendo Miniatura #%03i..."
+
+#~ msgid "Done downloading."
+#~ msgstr "Download terminado."
+
+#~ msgid "Download halted."
+#~ msgstr "Download paralisado."
+
+#~ msgid "Save all opened images"
+#~ msgstr "Salvar todas as imagens abertas"
+
+#~ msgid "Save Image(s)..."
+#~ msgstr "Salvar Imagem(ns)..."
+
+#~ msgid "Open Image..."
+#~ msgstr "Abrir Imagem..."
+
+#~ msgid "Can't print the index yet."
+#~ msgstr "Ainda não é possível imprimir o índice."
+
+#~ msgid "Can't modify the index colors."
+#~ msgstr "Impossível modificar as cores do índice."
+
+#~ msgid "Can't scale the index."
+#~ msgstr "Impossível colocar o índice em escala."
+
+#~ msgid "Can't manipulate the index."
+#~ msgstr "Impossível manipular o índice."
+
+#~ msgid "Can't scale the index!"
+#~ msgstr "Impossível colocar o índice em escala!"
+
+#~ msgid "Scaling image by 50%..."
+#~ msgstr "Colocando imagem em escala por 50%..."
+
+#~ msgid "Scaling image by 200%..."
+#~ msgstr "Colocando imagem em escala por 200%..."
+
+#~ msgid "http://www.gphoto.org/news.php3"
+#~ msgstr "http://www.gphoto.org/news.php3"
+
+#~ msgid "http://www.gphoto.org/download.php3"
+#~ msgstr "http://www.gphoto.org/download.php3"
+
+#~ msgid "http://www.gphoto.org/lists.php3"
+#~ msgstr "http://www.gphoto.org/lists.php3"
+
+#~ msgid "http://www.gphoto.org/team.php3"
+#~ msgstr "http://www.gphoto.org/team.php3"
+
+#~ msgid "http://www.gphoto.org/todo.php3"
+#~ msgstr "http://www.gphoto.org/todo.php3"
+
+#~ msgid ""
+#~ "%s summary:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "%s sumário:\n"
+#~ "%s"
+
+#~ msgid "gPhoto %s (%s) - the GNU digital camera application\n"
+#~ msgstr "gPhoto %s (%s) - a aplicação GNU para câmeras digitais\n"
+
+#~ msgid "\t-h                    display this help screen\n"
+#~ msgstr "\t-h                    mostra esta tela de ajuda\n"
+
+#~ msgid "\t-c                    display camera summary\n"
+#~ msgstr "\t-c                    mostra o resumo da câmera\n"
+
+#~ msgid "\t-n                    display the # of pictures\n"
+#~ msgstr "\t-n                    mostra o número de figuras\n"
+
+#~ msgid "\t-s # filename         save image # as filename\n"
+#~ msgstr "\t-s # arquivo          salva imagem # como arquivo\n"
+
+#~ msgid "\t-t # filename         save thumbnail # as filename\n"
+#~ msgstr "\t-t # arquivo          salva miniatura # como arquivo\n"
+
+#~ msgid "\t-d #                  delete image # from camera\n"
+#~ msgstr "\t-d #                  exclui imagem # da câmera\n"
+
+#~ msgid "\t-p filename           take picture and save as filename\n"
+#~ msgstr "\t-p arquivo            pega figura e salva como arquivo\n"
+
+#~ msgid ""
+#~ "\t-l filename           save live preview as filename\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\t-l arquivo            salva pré-visualização ao vivo como arquivo\n"
+#~ "\n"
+
+#~ msgid "gPhoto is free GNU software; you can redistribute it and/or\n"
+#~ msgstr "gPhoto é software livre GNU; você pode redistribuí-lo e/ou\n"
+
+#~ msgid "modify it under the terms of the GNU General Public License \n"
+#~ msgstr "modificá-lo sob os termos da Licença Pública Geral GNU \n"
+
+#~ msgid "as published by the Free Software Foundation; either version \n"
+#~ msgstr "conforme publicada pela Free Software Foundation; tanto a versão \n"
+
+#~ msgid "2 of the License, or any later version.  Visit gphoto/COPYING\n"
+#~ msgstr ""
+#~ "2 da Licença com qualquer versão posterior.  Consulte gphoto/COPYING\n"
+
+#~ msgid ""
+#~ "in the source distribution to read the GNU GPL license terms.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "na distribuição fonte para ler os termos da licença GPL GNU.\n"
+#~ "\n"
+
+#~ msgid "Report bugs and camera success to gphoto-devel@gphoto.org.\n"
+#~ msgstr "Reporte erros e sucessos a gphoto-devel@gphoto.org.\n"
+
+#~ msgid "See http://www.gphoto.org for the latest news and updates.\n"
+#~ msgstr ""
+#~ "Consulte http://www.gphoto.org para as últimas notícias e atualizações.\n"
+
+#~ msgid "%i\n"
+#~ msgstr "%i\n"
+
+#~ msgid "ERROR: could not get image.\n"
+#~ msgstr "ERRO: impossível obter imagem.\n"
+
+#~ msgid "ERROR: could not save image.\n"
+#~ msgstr "ERRO: impossível salvar imagem.\n"
+
+#~ msgid "ERROR: 'filename' not specified.\n"
+#~ msgstr "ERRO: 'nome do arquivo' não especificado.\n"
+
+#~ msgid "ERROR: '#' and 'filename' not specified.\n"
+#~ msgstr "ERRO: '#' e 'nome do arquivo' não especificados.\n"
+
+#~ msgid "ERROR: '#' not specified.\n"
+#~ msgstr "ERRO: '#' não especificado.\n"
+
+#~ msgid "ERROR: filename not specified.\n"
+#~ msgstr "ERRO: nome do arquivo não especificado.\n"
+
+#~ msgid "Taking picture...\n"
+#~ msgstr "Obtendo figura...\n"
+
+#~ msgid "ERROR: could not take the picture.\n"
+#~ msgstr "ERRO: impossível obter a figura.\n"
+
+#~ msgid "Saving the new image (# %i) as %s: "
+#~ msgstr "Salvando a nova imagem (# %i) como %s: "
+
+#~ msgid ""
+#~ "\n"
+#~ "ERROR: could not get image.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "ERROR: impossível obter imagem.\n"
+
+#~ msgid "Export file as *.shtml?"
+#~ msgstr "Exportar arquivo como *.shtml?"
+
+#~ msgid "Set table border width to zero for thumbnails?"
+#~ msgstr "Ajustar a borda da tabela para zero para as miniaturas?"
+
+#~ msgid ""
+#~ "Set image border width to zero? (so you don't see the link colors...)"
+#~ msgstr ""
+#~ "Ajustar a borda da imagem para zero? (de forma a não ver as cores dos "
+#~ "links...)"
+
+#~ msgid "<a href=\"picture-%03i.html\">Click Me<\\/a>"
+#~ msgstr "<a href=\"picture-%03i.html\">Clique-me<\\/a>"
+
+#~ msgid "thumbnail-%03i.%s"
+#~ msgstr "thumbnail-%03i.%s"
+
+#~ msgid "Loaded file:%s%s in %s"
+#~ msgstr "Arquivo carregado:%s%s in %s"
+
+#~ msgid "Update Picture"
+#~ msgstr "Atualizar Figura"
+
+#~ msgid ""
+#~ "\n"
+#~ "Launching Gnome Bugbuddy...\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Lançando Gnome Bugbuddy...\n"
+
+#~ msgid "gPhoto %s - the GNU digital camera application"
+#~ msgstr "gPhoto %s (%s) - a aplicação GNU para câmeras digitais"
+
+#~ msgid "Halt Download"
+#~ msgstr "Paralisar Download"

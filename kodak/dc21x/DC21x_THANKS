@@ -1,0 +1,8 @@
+Author of kodak_dc21x lib for gphoto - I am not sure if I should thank him,
+				       but I will anyway, even though his
+				       code is really crappy :)
+Kodak DC210 support by Brian Hirt <bhirt@mobygames.com>
+
+Charles Galpin <cgalpin@lighthouse-software.com> - Thought about -D to delete
+						   all images from camera, and
+						   submitted a patch to do so.

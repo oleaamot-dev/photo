@@ -1,0 +1,124 @@
+2001-01-11  Christophe Merlet  <redfox@eikonex.org>
+
+	* fr.po: Added French translation.
+
+2001-01-01  Yukihiro Nakai <nakai@gnome.gr.jp>
+
+	* ja.po: Update Japanese translation.
+
+2000-12-08  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* no.po: Updated Norwegian translation.
+	
+2000-12-05  Christian Rose  <menthos@menthos.com>
+
+	* sv.po: Updated Swedish translation.
+	
+2000-12-02  Szabolcs Ban  <shooby@gnome.hu>
+
+	* hu.po: Updated hu.po (emese).
+
+2000-11-28  Christian Rose  <menthos@menthos.com>
+
+	* sv.po: Updated Swedish translation.
+	
+2000-11-24  Szabolcs Ban  <shooby@gnome.hu>
+
+	* hu.po: Added Hungarian translation.
+
+2000-10-21  Zbigniew Chyla  <cyba@gnome.pl>
+
+	* pl.po: Added Polish translation.
+
+2000-10-10  Yukihiro Nakai  <nakai@gnome.gr.jp>
+
+	* ja.po: Initial Japanese translation.
+
+2000-09-28  Christian Meyer  <cm@ggtt.de>
+
+	* nl.po: Added Dutch translation from sienap.
+	
+2000-09-26  Christian Meyer  <linux@chrisime.de>
+
+	* de.po: Updated German translation.
+	
+2000-09-26  Christian Rose  <menthos@menthos.com>
+
+	* sv.po: Updated Swedish translation.
+	
+2000-09-13  Christian Meyer  <linux@chrisime.de>
+
+	* update.pl: Added perl script from kanikus.
+	* README.tools: Added text file.
+	
+2000-09-08  Christian Rose  <menthos@menthos.com>
+
+	* sv.po: Updated Swedish translation.
+	
+2000-09-04  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* no.po: Updated Norwegian translation.
+	
+2000-07-31 Kai Lahmann <kl@linufaqs.de>
+
+	* de.po: Updated German translation from Christian Meyer <linux@chrisime.de>
+
+2000-08-28 Yuri Syrota <rasta@renome.rovno.ua>
+
+	* uk.po: Updated Ukrainian translation
+	* update.sh: Updated
+
+2000-07-31 Kai Lahmann <kl@linufaqs.de>
+
+	* de.po: Updated German translation
+
+2000-07-22  Christopher R. Gabriel  <cgabriel@softwarelibero.org>
+
+	* it.po: italian translation from Daniele Medri <madrid@linux.it>
+
+2000-07-10  Karl Eichwalder  <ke@suse.de>
+
+	* de.po: From Kai Lahmann.
+
+2000-06-27  Yuri Syrota  <rasta@renome.rovno.ua>
+
+	* uk.po: Added Ukrainian translation
+
+2000-06-11  Benedikt Roth  <Benedikt.Roth@gmx.net>
+
+	* de.po: Added German translation
+
+2000-05-23  Valek Filippov  <frob@df.ru>
+
+	* ru.po: updated russian translation.
+	* update.sh: 1.2.5 version.
+
+2000-05-14  Valek Filippov  <frob@df.ru>
+
+	* ru.po: updated russian translation.
+	* update.sh: added update.sh.
+
+2000-05-07  Andreas Hyden  <a.hyden@cyberpoint.se>
+
+	* sv.po: Updated Swedish translation.
+
+2000-04-29  Kjartan Maraas  <kmaraas@online.no>
+
+	* no.po: Updated Norwegian translation.
+	
+2000-04-21  Andreas Hyden  <a.hyden@cyberpoint.se>
+
+	* sv.po: Added Swedish translation.
+
+2000-04-19  Pablo Saratxaga <pablo@madnrakesoft.com>
+
+	* da: Added Danish file
+
+2000-04-14  Kjartan Maraas  <kmaraas@online.no>
+
+	* no.po: Added Norwegian translation.
+	
+2000-04-10  Kjartan Maraas  <kmaraas@online.no>
+
+	* ru.po: Added Russian translation from Val.
+	

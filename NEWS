@@ -1,0 +1,52 @@
+gPhoto 0.4.4 has been released.  This is an interim release 
+of the current stable branch of gPhoto and is meant for:
+
+ * Users that need a working camera driver that is not yet ported
+   to libgphoto 2.0, the new low-level core library, written from
+   scratch by Scott Fritzinger, basis of the gPhoto 2.0 platform.
+
+   Note: the libgpio and libgphoto2 APIs have not yet been frozen,
+   so significant changes may still occur, before public versions
+   are released.  See http://www.gphoto.org/gphoto2/ for details.
+
+ * Hackers interested in moving development of gPhoto toward 1.0.
+
+gphoto-0.4.4 is available for download from:
+
+ http://www.gphoto.org/dist/gphoto-0.4.4.tar.gz
+
+The release is incompatible with gphoto 2.0.  Software that has not
+been explicitly ported will not compile with this version.   Do not
+send bug reports about such compilation problems to maintainers of
+software that uses libgphoto2, such as GnoCam.
+
+gphoto-0.4.4 is currently the stable version.
+
+Bug reports and comments about this version should be sent to
+
+  gphoto-devel@gphoto.org.
+  http://www.gphoto.org/lists.html
+
+Overview of Changes in gPhoto 0.4.4:
+
+gPhoto:
+
+* GNOME UI support [Fabrice, Ole]
+* autoconf/automake improvements.  [Ole]
+* Bug fixes. [Scott, Ole, Fabrice]
+* i18n support. [Ole]
+
+New translations:
+
+* Danish [Kenneth Christiansen, Keld Simonsen]
+* Dutch [Mendel Mobach, Dennis Smit]
+* German [Christian Meyer, Kai Lahmann, Benedikt Roth]
+* Italian [Daniele Medri]
+* Japanese [Yukihiro Nakai]
+* Norwegian (bokmål) [Kjartan Maraas]
+* Polish [chyla]
+* Brazilian Portuguese [E. A. Tacão]
+* Russian [Valek Filippov]
+* Slovenian [Andraz Tori]
+* Swedish [Andreas Hyden, Christian Rose]
+* Ukrainian [Yuri Syrota]

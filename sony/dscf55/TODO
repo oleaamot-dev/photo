@@ -1,0 +1,21 @@
+
+
+
+Add GPL copyright to files.			Done
+Add ability to download images from camera	Done
+Add ability to upload images to camera
+Add reset after image download			Done
+Add reset on startup				Done
+Add Configure dialog
+Add conf file processing
+
+
+Implement high speed (115k) transfer		Done.
+
+Add ability to download MPEG files.		Done (For standalone)
+
+Check whether we really need two different
+drivers for the Serial Port Adapter.
+
+Tidy source code.				Ongoing
+

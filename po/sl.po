@@ -1,0 +1,1388 @@
+# Slovenian translation file for gphoto.
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Andraz Tori <andraz.tori1@guest.arnes.si> 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gphoto\n"
+"POT-Creation-Date: 2001-02-13 21:59+0100\n"
+"PO-Revision-Date: 2000-06-24 12:30+0200\n"
+"Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/callbacks.c:135 src/callbacks.c:150 src/callbacks.c:173
+#: src/callbacks.c:197 src/callbacks.c:234 src/callbacks.c:348
+#: src/callbacks.c:490 src/callbacks.c:1191 src/callbacks.c:1225
+#: src/callbacks.c:1250 src/callbacks.c:1920 src/gallery.c:755
+#: src/gallery.c:797
+msgid "Camera is already busy"
+msgstr "Fotoaparat je ¾e zaposlen"
+
+#: src/callbacks.c:157
+msgid "No configuration options."
+msgstr "Ni nastavitev."
+
+#: src/callbacks.c:162
+msgid "Mail image needs to be implemented!"
+msgstr "Po¹iljanje slike z e-po¹to ¹e ni narejeno!"
+
+#: src/callbacks.c:170
+msgid "Taking picture..."
+msgstr "Slikam..."
+
+#: src/callbacks.c:181
+msgid "Could not take a picture."
+msgstr "Nisem uspel slikati."
+
+#: src/callbacks.c:186
+#, c-format
+msgid "New picture is #%03i"
+msgstr "Nova slika je #%03i"
+
+#: src/callbacks.c:211
+#, c-format
+msgid "Deleting %i...\n"
+msgstr "Bri¹em %i...\n"
+
+#: src/callbacks.c:216
+#, c-format
+msgid "Could not delete #%i\n"
+msgstr "Ne morem zbrisati #%i\n"
+
+#: src/callbacks.c:239
+msgid "Deleting selected pictures..."
+msgstr "Bri¹em izbrane slike..."
+
+#: src/callbacks.c:250
+#, c-format
+msgid "Could not delete #%i"
+msgstr "Ne morem zbrisati #%i"
+
+#: src/callbacks.c:298 src/util.c:120
+msgid "Yes"
+msgstr "Da"
+
+#: src/callbacks.c:313 src/util.c:125
+msgid "No"
+msgstr "Ne"
+
+#: src/callbacks.c:355
+#, c-format
+msgid "Could not save #%i"
+msgstr "Ne morem shraniti #%i"
+
+#: src/callbacks.c:404
+msgid "Filename prefix:"
+msgstr "Predpona imena datoteke:"
+
+#: src/callbacks.c:453
+#, c-format
+msgid "Done. Images saved in %s"
+msgstr "Opravljeno. Slike shranjene v %s"
+
+#: src/callbacks.c:497 src/callbacks.c:1119 src/gallery.c:766
+#: src/gallery.c:808
+#, c-format
+msgid "Could not retrieve #%i"
+msgstr "Ne morem dobiti #%i"
+
+#: src/callbacks.c:514
+#, c-format
+msgid "Could not load image %s to memory"
+msgstr "Slike %s ne morem nalo¾iti v pomnilnik"
+
+#: src/callbacks.c:523 src/callbacks.c:537 src/callbacks.c:1138
+#, c-format
+msgid "Could not load image #%i to memory"
+msgstr "Slike ¹t. %i ne morem nalo¾iti v pomnilnik "
+
+#: src/callbacks.c:1050
+msgid "Could not open $HOME/.gphoto/gphotorc for writing."
+msgstr "Ne morem odpreti $HOME/.gphoto/gphotorc za pisanje."
+
+#: src/callbacks.c:1064
+#, c-format
+msgid "%s is not yet implemented"
+msgstr "%s ¹e ni implementiran"
+
+#: src/callbacks.c:1144
+#, c-format
+msgid "Could not open #%i"
+msgstr "Ne morem odpreti #%i"
+
+#: src/callbacks.c:1219
+msgid "Getting Index..."
+msgstr "Dobivam kazalo..."
+
+#: src/callbacks.c:1237
+msgid "Could not get the number of pictures"
+msgstr "Ne morem dobiti ¹tevila slik"
+
+#: src/callbacks.c:1260
+msgid "Download cancelled."
+msgstr "Prena¹anje preklicano."
+
+#: src/callbacks.c:1326
+msgid "Done getting index."
+msgstr "Kazalo prene¹eno."
+
+#: src/callbacks.c:1443
+msgid ""
+"Could not save image. Please make\n"
+"sure that you typed the image\n"
+"extension and that permissions for\n"
+"the directory are correct."
+msgstr ""
+"Nisem mogel shraniti slike. Prosim\n"
+"preprièajte se, da ste pravilno\n"
+"napisali pripono in, da vam\n"
+"dovoljenja imenika dovoljujejo shranjevanje."
+
+#: src/callbacks.c:1503
+msgid "Saving the index is not yet supported"
+msgstr "Shranjevanje kazala ¹e ni podprto"
+
+#: src/callbacks.c:1557
+msgid "Print Image..."
+msgstr "Natisni sliko..."
+
+#: src/callbacks.c:1564
+msgid "Print Command:"
+msgstr "Ukaz za tiskanje:"
+
+#: src/callbacks.c:1586
+msgid "Print"
+msgstr "Natisni"
+
+#: src/callbacks.c:1592 src/callbacks.c:1833 src/callbacks.c:2063
+#: src/gallery.c:647
+msgid "Cancel"
+msgstr "Preklièi"
+
+#: src/callbacks.c:1610
+msgid "Now spooling..."
+msgstr "Tiskanje èaka..."
+
+#: src/callbacks.c:1615
+msgid "Spooling done. Printing may take a minute."
+msgstr "Èakanje konèano. Tiskanje lahko traja kak¹no minuto."
+
+#: src/callbacks.c:1774
+msgid "Resize Image..."
+msgstr "Spremeni velikost slike..."
+
+#: src/callbacks.c:1781
+msgid "Width:"
+msgstr "©irina:"
+
+#: src/callbacks.c:1803
+msgid "Height:"
+msgstr "Vi¹ina:"
+
+#: src/callbacks.c:1828 src/toolbar.c:143 src/toolbar.c:145
+msgid "Resize"
+msgstr "Spremeni velikost"
+
+#: src/callbacks.c:1854 src/callbacks.c:1973
+msgid "Could not scale the image"
+msgstr "Ne morem spremeniti velikosti slike"
+
+#: src/callbacks.c:1924
+msgid "Camera Summary"
+msgstr "Povzetek fotoaparata"
+
+#: src/callbacks.c:2056
+msgid "Post-Processing Options"
+msgstr "Mo¾nosti naknadne obdelave"
+
+#: src/callbacks.c:2058 src/util.c:87
+msgid "OK"
+msgstr "V redu"
+
+#: src/callbacks.c:2068
+msgid "Enable post-processing"
+msgstr "Vkljuèi naknandno obdelavo"
+
+#: src/callbacks.c:2075
+msgid "Post-processing command-line:"
+msgstr "Ukazna vrstica za naknadno obdelavo:"
+
+#: src/callbacks.c:2087
+#, c-format
+msgid ""
+"Note: gPhoto will replace \"%s\"\n"
+"in the script command-line with\n"
+"the full path to the selected image.\n"
+"See the User's Manual\\in the Help menu\n"
+"for more information. "
+msgstr ""
+"Opomba: gPhoto bo \"%s\" v ukazni\n"
+"vrstici skripte zamenjal s polno potjo\n"
+"do izbrane slike. Za veè podatkov\n"
+"poglejte v Uporabni¹ki priroènik \n"
+"v menuju Pomoè. "
+
+#: src/callbacks.c:2105
+#, c-format
+msgid ""
+"Missing \"%s\" in the post-processing entry. This is required so the "
+"post-processing program knows where the image is located."
+msgstr ""
+"Pogre¹an \"%s\" v vpisu po-obdelave. To je potrebno, da po-obdelovalni "
+"program ve kje se nahaja slika."
+
+#: src/gallery.c:280
+msgid "Select an Output Directory..."
+msgstr "Izberi izhodni imenik..."
+
+#: src/gallery.c:471
+msgid ""
+"Please retrieve the index first,\n"
+"and select the images to include\n"
+"in the gallery by clicking on them.\n"
+"\n"
+"Then, re-run the HTML Gallery."
+msgstr ""
+"Prosim najprej prenesite kazalo,\n"
+"in s klikanjem izberite slike, ki\n"
+" naj bodo vkljuèene v galerijo.\n"
+"\n"
+"Potem znova po¾enite HTML galerijo."
+
+#: src/gallery.c:487
+msgid ""
+"You need to select images to add\n"
+"to the gallery."
+msgstr ""
+"Izbrati morate slike, ki naj bodo\n"
+"dodane."
+
+#: src/gallery.c:500
+msgid "Gallery Name:"
+msgstr "Ime galerije:"
+
+#: src/gallery.c:513
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/gallery.c:526
+#, c-format
+msgid ""
+"HTML gallery themes do not exist at %s.\n"
+"Please install/move gallery themes there."
+msgstr ""
+"Teme za HTML galerijo ne obstajajo v %s.\n"
+"Prosim namestite/premaknite teme za galerijo tja."
+
+#: src/gallery.c:572
+msgid "Output Directory:"
+msgstr "Izhodni imenik:"
+
+#: src/gallery.c:583
+msgid "Change..."
+msgstr "Spremeni..."
+
+#: src/gallery.c:641
+msgid "Create"
+msgstr "Ustvari"
+
+#: src/gallery.c:664
+msgid "You must select a theme!"
+msgstr "Izbrati morate temo!"
+
+#. Get the current thumbnail
+#: src/gallery.c:752
+#, c-format
+msgid "Getting Thumbnail #%i..."
+msgstr "Dobivam vzorec #%i..."
+
+#: src/gallery.c:769 src/gallery.c:810
+msgid "Not Available"
+msgstr "Ni na voljo"
+
+#. Get the current image
+#: src/gallery.c:793
+#, c-format
+msgid "Getting Image #%i..."
+msgstr "Dobivam sliko #%i..."
+
+#: src/gallery.c:814
+#, c-format
+msgid "<img alt=\"%03i\" src=\"picture-%03i.%s\">"
+msgstr "<img alt=\"%03i\" src=\"slika-%03i.%s\">"
+
+#: src/gallery.c:816
+#, c-format
+msgid "picture-%03i.%s"
+msgstr "slika-%03i.%s"
+
+#: src/gallery.c:832 src/gallery.c:837
+#, c-format
+msgid "picture-%03i.html"
+msgstr "slika-%03i.html"
+
+#: src/gallery.c:849
+#, c-format
+msgid "%spicture-%03i.html"
+msgstr "%sslika-%03i.html"
+
+#: src/gallery.c:875
+#, c-format
+msgid "Gallery saved in: %s"
+msgstr "Galerija shranjena v: %s"
+
+#: src/information.c:10
+#, c-format
+msgid ""
+"This is GPhoto version %s.\n"
+"Built %s by %s on %s.\n"
+"Report bugs to gphoto-devel@gphoto.org"
+msgstr ""
+"To je GPhoto razlièica %s.\n"
+"Zgrajena %s s strani %s %s.\n"
+"Hro¹èe sporoèite na gphoto-devel@gphoto.org"
+
+#: src/information.c:14
+msgid "GPhoto Release"
+msgstr "GPhoto izdaja"
+
+#: src/information.c:24
+msgid "User manual"
+msgstr "Uporabni¹ki priroènik"
+
+#: src/information.c:43
+msgid "GPhoto License"
+msgstr "GPhoto licenca"
+
+#: src/information.c:44
+msgid ""
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"\n"
+"See http://www.gnu.org for more details on the GNU project.\n"
+msgstr ""
+"To je prosto programje -- Lahko ga spremijate in/ali raz¹irjate, vendar v\n"
+"skladu z GNU Splo¹no Javno Licenco, ki jo je objavila Fundacija za prosto\n"
+"programje; lahko uporabite drugo ali (po lastni presoji) katerokoli "
+"kasnej¹o\n"
+"razlièico licence.\n"
+"\n"
+"Ta program se raz¹irja z upanjem, da bi bil uporaben, a BREZ KAKR©NIHKOLI\n"
+"JAMSTEV; celo brez implicitnih jamstev USTREZNOSTI ZA PRODAJO ali "
+"UPRABNOSTI\n"
+"ZA DOLOÈEN NAMEN. Za veè podrobnosti si oglejte GNU Splo¹no Javno Licenco.\n"
+"\n"
+"Zraven tega programa bi morali prejeti GNU Splo¹no javno licenco. Èe\n"
+"je niste,pi¹ite Fundaciji za prosto programje na naslov: Free software\n"
+"fundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"\n"
+"Oglejte si http://www.gnu.org za veè podrobnosti o projektu GNU.\n"
+
+#: src/information.c:78
+msgid "Scott Fritzinger, original implementation."
+msgstr "Scott Fritzinger, izvorna implementacija."
+
+#: src/information.c:79
+msgid "Eugene Crosser, Fujitsu chipset protocol."
+msgstr "Eugene Crosser, protokol nabora èipov Fujitsu."
+
+#: src/information.c:80
+msgid "Matt Martin, Fuji library, bug fixing."
+msgstr "Matt Martin, klnji¾njica Fuji, odpravljanje hro¹èev."
+
+#: src/information.c:81
+msgid "Mike Labriola, HTML gallery options."
+msgstr "Mika Labriola, mo¾nosti HTML galerije."
+
+#: src/information.c:82
+msgid "Werner Almesberger, Canon library."
+msgstr "Werner Almesberger, knji¾nica Canon."
+
+#: src/information.c:83
+msgid "Ole W. Saastad, Canon library."
+msgstr "Ole W. Saastad, knji¾nica Canon."
+
+#: src/information.c:84
+msgid "Wolfgang Reissnegger, Canon library."
+msgstr "Wolfgang Reissnegger, knji¾nica Canon."
+
+#: src/information.c:85
+msgid "Ray Newman, Canon PS350 protocol."
+msgstr "Ray Newman, protokol Canon PS350."
+
+#: src/information.c:86
+msgid "Anne Bezemer, Canon PS350 protocol."
+msgstr "Anne Bezemer, protokol Canon PS350."
+
+#: src/information.c:87
+msgid "Philippe Marzouk, Canon library."
+msgstr "Philippe Marzouk, knji¾nica Canon."
+
+#: src/information.c:88
+msgid "Edouard Lafargue, Canon library."
+msgstr "Edouard Lafargue, knji¾nica Canon."
+
+#: src/information.c:89
+msgid "Rasmus Andersen, Canon library, bugfixing"
+msgstr "Rasmus Andersen, knji¾nica Canon, odpravljanje hro¹èev"
+
+#: src/information.c:90
+msgid "Gary Ross, Casio QV library."
+msgstr "Gary Ross, knji¾nica Casio QV."
+
+#: src/information.c:91
+msgid "Del Simmons, Kodak DC20/25 library."
+msgstr "Del Simmons, knji¾nica Kodak DC20/25."
+
+#: src/information.c:92
+msgid "Timecop, Kodak DC21x library and dc21x_cam utility."
+msgstr "Timecop, knji¾nica Kodak DC21x in orodje dc21x_cam."
+
+#: src/information.c:93
+msgid "Brent D. Metz, Kodak 200/210 library"
+msgstr "Brent D. Metz, knji¾nica Kodak 200/210"
+
+#: src/information.c:94
+msgid "Brian Hirt, original Kodak DC210 library"
+msgstr "Brian Hirt, izvorna knji¾nica Kodak DC210"
+
+#: src/information.c:95
+msgid "Randy D. Scott, Kodak Generic serial library"
+msgstr "Randy D. Scott, generièna knji¾nica Kodak serial"
+
+#: src/information.c:96
+msgid "David Brownell, Kodak Generic USB patch and Linux driver"
+msgstr "David Brownell, popravek Kodak generièen USB in Linux gonilnik"
+
+#: src/information.c:97
+msgid "Phill Hugo, Original Konica Q-M100, HP-C20/30 library"
+msgstr "Phill Hugo, Izvorni knji¾nici Konica Q-M100 in HP-C20/30"
+
+#: src/information.c:98
+msgid "Ed Legowski, Konica Q-M100, HP-C20/30 library hacking"
+msgstr "Ed Legowski, hekanje knji¾nic Q-M100 in HP-C20/30"
+
+#: src/information.c:99
+msgid "Toshiki Fujisawa, Konica Q-M200, FreeBSD patches"
+msgstr "Toshiki Fujisawa, Konika Q-M200, FreeBSD popravki"
+
+#: src/information.c:100
+msgid "Gus Hartmann, Minolta Dimage V library"
+msgstr "Gus Hartmann, knji¾nica Minolta Dimage V"
+
+#: src/information.c:101
+msgid "Mark Davies, Sony DSC-F55E/505 library"
+msgstr "Mark Davies, knji¾nica Sony DSC-F55E/505"
+
+#: src/information.c:102
+msgid "Michael McCormack, Nikon CoolPix 600 library"
+msgstr "Michael McCormack, knji¾nica Nikon CoolPix 600"
+
+#: src/information.c:103
+msgid "Henning Zabel, Mustek MDC800 library and Linux driver"
+msgstr "Hennig Zabel, knjni¾nica Mustek MDC800 in Linux gonilnik"
+
+#: src/information.c:104
+msgid "Pedro Caria, Original Mustek MDC800 library"
+msgstr "Pedro Caria, izvorna knji¾nica Mustek MDC800"
+
+#: src/information.c:105
+msgid "Bob Paauwe, Philips library"
+msgstr "Bob Paauwe, knji¾nica Philips"
+
+#: src/information.c:106
+msgid "Cliff Wright, Ricoh RDC 300/300Z library"
+msgstr "Cliff Wright, knji¾nica Ricoh RDC 300/300Z"
+
+#: src/information.c:107
+msgid "James McKenzie, Samsung Digimax 800k library"
+msgstr "James McKenzie, knji¾nica Samsung Digimax 800k"
+
+#: src/information.c:108
+msgid "M. Adam Kendall, Sony DSC-F1 library"
+msgstr "M. Adam Kendall, knji¾nica Sony DSC-F1"
+
+#: src/information.c:109
+msgid "Warren Baird, Canon G1, bugfixes"
+msgstr "Warren Baird, Canon G1, popravki hro¹èev"
+
+#: src/information.c:110
+msgid "Paul S. Jenner, initial GNU autoconf/automake scripts."
+msgstr "Paul S. Jenner, izvorne skripte GNU autoconf/automake."
+
+#: src/information.c:111
+msgid "Tuomas Kuosmanen, toolbar icons"
+msgstr "Tuomas Kuosmanen, ikone orodne vrstice"
+
+#: src/information.c:112
+msgid "Ole Aamot, bug fixing."
+msgstr "Ole Aamot, odstranjevanje hro¹èev."
+
+#: src/information.c:113
+msgid "Fabrice Bellet, Olympus C3030Z USB support, Index Canvas."
+msgstr "Fabrice Ballet, USB podpora Olympus C3030Z, Index canvas."
+
+#: src/information.c:126
+msgid "GPhoto"
+msgstr "Gphoto"
+
+#: src/information.c:127
+msgid "(C) 1998-2000 Scott Fritzinger and many others"
+msgstr ""
+"Avtorske pravice pridr¾ane (C) 1998-2000 Scott Fritzinger in mnogo drugih"
+
+#: src/information.c:129
+msgid "The GNOME Digital Camera client"
+msgstr "GNOME odjemalec za digitalne fotoaparate"
+
+#: src/information.c:133
+msgid "GNU Project"
+msgstr "Projekt GNU"
+
+#: src/information.c:134
+msgid "GNOME Project"
+msgstr "Projekt GNOME"
+
+#: src/information.c:135
+msgid "GPhoto Project"
+msgstr "Projekt GPhoto"
+
+#: src/img_edit.c:1125
+msgid "Color Adjustment"
+msgstr "Nastavitev barv"
+
+#: src/img_edit.c:1126
+msgid "gPhoto - Color Adjustment"
+msgstr "gPhoto - Nastavitev barv"
+
+#: src/img_edit.c:1141
+msgid "Colour Settings"
+msgstr "Nstavitev barv"
+
+#: src/img_edit.c:1247
+msgid "Gray Controls"
+msgstr "Kontorla sivine"
+
+#: src/img_edit.c:1287
+msgid "Red Controls"
+msgstr "Kontrola rdeèe"
+
+#: src/img_edit.c:1327
+msgid "Green Controls"
+msgstr "Kontrola zelene"
+
+#: src/img_edit.c:1367
+msgid "Blue Controls"
+msgstr "Kontrola modre"
+
+#: src/img_edit.c:1408
+msgid "Colour Modifications:"
+msgstr "Spremembe barv:"
+
+#: src/img_edit.c:1415
+msgid "Apply"
+msgstr "Uporabi"
+
+#: src/img_edit.c:1419
+msgid "Keep"
+msgstr "Obdr¾i"
+
+#: src/img_edit.c:1423
+msgid "Reset"
+msgstr "Ponastavi"
+
+#: src/img_edit.c:1424 src/img_edit.c:1425
+msgid "Reset all the color changes to normal values"
+msgstr "Ponastavi vse spremembe barv na obièajne vrednosti"
+
+#: src/img_edit.c:1427
+msgid "Always Apply"
+msgstr "Vedno uporabi"
+
+#: src/img_edit.c:1436
+msgid "Close"
+msgstr "Zapri"
+
+#: src/live.c:41 src/live.c:148
+msgid "Done."
+msgstr "Opravljeno."
+
+#: src/live.c:80
+msgid "Getting live image..."
+msgstr "Dobivam ¾ivo sliko..."
+
+#: src/live.c:82
+msgid "Live Camera!"
+msgstr "®iva slika!"
+
+#: src/live.c:121
+msgid "Could not get preview"
+msgstr "Ne morem dobiti vzorca"
+
+#: src/live.c:142
+msgid "Live Preview Error"
+msgstr "Napaka pri ¾ivem vzorcu"
+
+#: src/live.c:143
+msgid ""
+"Could not retrieve the live preview.\n"
+"The camera either couldn't be accessed\n"
+" or it doesn't support live previews."
+msgstr ""
+"Ne morem dobiti ¾ivega vzorca.\n"
+"Kamera ali ni dostopna ali pa ne podpira\n"
+"¾ivih vzorcev."
+
+#: src/main.c:193
+msgid "Image Index"
+msgstr "Kazalo slik"
+
+#: src/main.c:286
+msgid ""
+"Could not load config file.\n"
+"Resetting to defaults.\n"
+"Click on \"Select Port-Camera Model\"\n"
+"in the Configure menu to set your\n"
+"camera model and serial port"
+msgstr ""
+"Nisem mogel nalo¾iti nastavitvene datoteke.\n"
+"Ponastavljam na privzete nastavitve.\n"
+"Za nastavitev modela va¹ega fotoaparata \n"
+"in serijskih vrat kliknite v menuju \"Nastavi\" \n"
+"na \"Izberi vrata-model fotoaparata\""
+
+#: src/menu.c:188
+msgid "/_File"
+msgstr "/_Datoteka"
+
+#: src/menu.c:189
+msgid "/File/_Open"
+msgstr "/Datoteka/_Odpri"
+
+#: src/menu.c:190
+msgid "/File/Open/Directory..."
+msgstr "/Datoteka/Odpri/Imenik..."
+
+#: src/menu.c:191
+msgid "/File/Open/File..."
+msgstr "/Datoteka/Odpri/Datoteko..."
+
+#: src/menu.c:193
+msgid "/File/_Save"
+msgstr "/Datoteka/_Shrani"
+
+#: src/menu.c:194
+msgid "/File/Save/Opened Image(s)..."
+msgstr "/Datoteka/Shrani/Odprte slike..."
+
+#: src/menu.c:195
+msgid "/File/Save/Selected Thumbnails..."
+msgstr "/Datoteka/Shrani/Izbrane slièice..."
+
+#: src/menu.c:196
+msgid "/File/Save/Selected Images..."
+msgstr "/Datoteka/Shrani/Izbrane slike..."
+
+#: src/menu.c:197
+msgid "/File/Save/Selected Thumbnails and Images..."
+msgstr "/Datoteka/Shrani/Izbrane slièice in slike..."
+
+#: src/menu.c:199
+msgid "/File/_Export"
+msgstr "/Datoteka/_Izvozi"
+
+#: src/menu.c:200
+msgid "/File/Export/HTML _Gallery"
+msgstr "/Datoteka/Izvozi/HTML _galerijo"
+
+#: src/menu.c:202
+msgid "/File/_Print"
+msgstr "/Datoteka/_Tiskaj"
+
+#: src/menu.c:204
+msgid "/File/_Close"
+msgstr "/Datoteka/_Zapri"
+
+#: src/menu.c:205
+msgid "/File/_Quit"
+msgstr "/Datoteka/_Izhod"
+
+#: src/menu.c:206
+msgid "/_Camera"
+msgstr "/_Fotoaparat"
+
+#: src/menu.c:207
+msgid "/Camera/_Summary"
+msgstr "/Fotoaparat/_Povzetek"
+
+#: src/menu.c:208
+msgid "/Camera/Download _Index"
+msgstr "/Fotoaparat/Nalo¾i _kazalo"
+
+#: src/menu.c:209
+msgid "/Camera/Download Index/_Thumbnails"
+msgstr "/Fotoaparat/Nalo¾i kazalo/_Slièice"
+
+#: src/menu.c:210
+msgid "/Camera/Download Index/_No Thumbnails"
+msgstr "/Fotoaparat/Nalo¾i kazalo/_Brez slièic"
+
+#: src/menu.c:211
+msgid "/Camera/Download _Selected"
+msgstr "/Fotoaparat/Nalo¾i _izbrano"
+
+#: src/menu.c:212
+msgid "/Camera/Download Selected/_Images"
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slike"
+
+#: src/menu.c:213
+msgid "/Camera/Download Selected/Images/_Open in window"
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slike/_Odpri v oknu"
+
+#: src/menu.c:214
+msgid "/Camera/Download Selected/Images/_Open in window (scale 50%)"
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slike/Odpri v oknu (velikost 50%)"
+
+#: src/menu.c:215
+msgid "/Camera/Download Selected/Images/_Open in window (scale 25%)"
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slike/Odpri v oknu (velikost 25%)"
+
+#: src/menu.c:216
+msgid "/Camera/Download Selected/Images/_Save to disk..."
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slike/_Shrani na disk..."
+
+#: src/menu.c:217
+msgid "/Camera/Download Selected/_Thumbnails"
+msgstr "/Fotoaparat/Nalo¾i izbrano/S_lièice"
+
+#: src/menu.c:218
+msgid "/Camera/Download Selected/Thumbnails/_Open in window"
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slièice/_Odpri v oknu"
+
+#: src/menu.c:219
+msgid "/Camera/Download Selected/Thumbnails/_Save to disk..."
+msgstr "/Fotoaparat/Nalo¾i izbrano/Slièice/_Shrani na disk..."
+
+#: src/menu.c:220
+msgid "/Camera/Download Selected/_Both"
+msgstr "/Fotoaparat/Nalo¾i izbrano/_Oboje"
+
+#: src/menu.c:221
+msgid "/Camera/Download Selected/Both/_Open in window"
+msgstr "/Fotoaparat/Nalo¾i izbrano/_Oboje/_Odpri v oknu"
+
+#: src/menu.c:222
+msgid "/Camera/Download Selected/Both/_Save to disk..."
+msgstr "/Fotoaparat/Nalo¾i izbrano/_Oboje/_Shrani na disk..."
+
+#: src/menu.c:223
+msgid "/Camera/_Delete"
+msgstr "/Fotoaprat/_Zbri¹i"
+
+#: src/menu.c:224
+msgid "/Camera/Delete/Selected Images"
+msgstr "/Fotoaprat/_Zbri¹i/Izbrane slike"
+
+#: src/menu.c:225
+msgid "/Camera/Delete/All Images"
+msgstr "/Fotoaprat/_Zbri¹i/Vse slike"
+
+#: src/menu.c:226
+msgid "/Camera/_Live Preview!"
+msgstr "/Fotoaprat/®_iv predogled!"
+
+#: src/menu.c:227
+msgid "/Camera/_Take Picture"
+msgstr "/Fotoaparat/_Posnami sliko"
+
+#: src/menu.c:229
+msgid "/_Edit"
+msgstr "/_Urejanje"
+
+#: src/menu.c:230
+msgid "/Edit/_Size"
+msgstr "/Urejanje/_Velikost"
+
+#: src/menu.c:231
+msgid "/Edit/Size/Scale _Half"
+msgstr "/Urejanje/Velikost/Pre_polovi"
+
+#: src/menu.c:232
+msgid "/Edit/Size/Scale _Double"
+msgstr "/Urejanje/Velikost/Pod_voji"
+
+#: src/menu.c:233
+msgid "/Edit/Size/_Scale"
+msgstr "/Urejanje/Velikost/_Spremeni"
+
+#: src/menu.c:235
+msgid "/Edit/_Color Balance"
+msgstr "/Urejanje/_Uravnote¾enost barv"
+
+#: src/menu.c:237
+msgid "/_Go"
+msgstr "/_Pojdi na"
+
+#: src/menu.c:238
+msgid "/Go/_Index page"
+msgstr "/Pojdi/Na _kazalo"
+
+#: src/menu.c:239
+msgid "/Go/_Next page"
+msgstr "/Pojdi/Stran na_prej"
+
+#: src/menu.c:240
+msgid "/Go/_Previous page"
+msgstr "/Pojdi/Stran na_zaj"
+
+#: src/menu.c:241
+msgid "/_Select"
+msgstr "/_Izberi"
+
+#: src/menu.c:242
+msgid "/Select/_All images"
+msgstr "/Izberi/_Vse slike"
+
+#: src/menu.c:243
+msgid "/Select/_Inverse"
+msgstr "/Izberi/_Obrni izbiro"
+
+#: src/menu.c:244
+msgid "/Select/_None"
+msgstr "/Izberi/_Nièesar"
+
+#: src/menu.c:246
+msgid "/_Orientation"
+msgstr "/_Orientacija"
+
+#: src/menu.c:247
+msgid "/Orientation/Rotate Clockwise"
+msgstr "/Orientacija/Zasuèi v smeri urinega kazalca"
+
+#: src/menu.c:248
+msgid "/Orientation/Rotate Counter-Clockwise"
+msgstr "/Orientacija/Zasuèi v nasprotni smeri urinega kazalca"
+
+#: src/menu.c:250
+msgid "/Orientation/Flip Horizontal"
+msgstr "/Orientacija/Prevrni vodoravno"
+
+#: src/menu.c:251
+msgid "/Orientation/Flip Vertical"
+msgstr "/Orientacija/Prevrni navpièno"
+
+#: src/menu.c:252
+msgid "/Configu_re"
+msgstr "/_Nastavi"
+
+#: src/menu.c:253
+msgid "/Configure/_Select Port-Camera Model"
+msgstr "/Nastavi/_Izberi vrata/model fotoaparata"
+
+#: src/menu.c:254
+msgid "/Configure/_Configure Camera..."
+msgstr "/Nastavi/_Nastavi fotoaparat..."
+
+#: src/menu.c:255
+msgid "/_Help"
+msgstr "/_Pomoè"
+
+#: src/menu.c:256
+msgid "/Help/_Authors"
+msgstr "/Pomoè/_Avtorji"
+
+#: src/menu.c:257
+msgid "/Help/_License"
+msgstr "/Pomoè/_Licenca"
+
+#: src/menu.c:258
+msgid "/Help/_Version"
+msgstr "/Pomoè/_Razlièica"
+
+#: src/menu.c:259
+msgid "/Help/_User's Manual"
+msgstr "/Pomoè/_Uporabni¹ki priroènik"
+
+#: src/menu.c:261
+msgid "/Help/_www.gphoto.org"
+msgstr "/Pomoè/_www.gphoto.org"
+
+#: src/menu.c:262
+msgid "/Help/www.gphoto.org/Hel_p"
+msgstr "/Pomoè/www.gphoto.org/_Pomoè"
+
+#: src/menu.c:263
+msgid "/Help/www.gphoto.org/Ne_ws"
+msgstr "/Pomoè/www.gphoto.org/_Novice"
+
+#: src/menu.c:264
+msgid "/Help/www.gphoto.org/Updates_"
+msgstr "/Pomoè/www.gphoto.org/Pop_ravki"
+
+#: src/menu.c:265
+msgid "/Help/www.gphoto.org/Cameras_"
+msgstr "/Pomoè/www.gphoto.org/_Fotoaparati"
+
+#: src/menu.c:266
+msgid "/Help/www.gphoto.org/Supporting_"
+msgstr "/Pomoè/www.gphoto.org/Po_dpora"
+
+#: src/menu.c:267
+msgid "/Help/www.gphoto.org/Di_scussion"
+msgstr "/Pomoè/www.gphoto.org/_Pogovori"
+
+#: src/menu.c:268
+msgid "/Help/www.gphoto.org/Devel. Team_"
+msgstr "/Pomoè/www.gphoto.org/_Razvojna skupina"
+
+#: src/menu.c:269
+msgid "/Help/www.gphoto.org/Themes_"
+msgstr "/Pomoè/www.gphoto.org/_Theme"
+
+#: src/menu.c:270
+msgid "/Help/www.gphoto.org/Lin_ks"
+msgstr "/Pomoè/www.gphoto.org/Po_vezave"
+
+#: src/menu.c:271
+msgid "/Help/www.gphoto.org/To Do_"
+msgstr "/Pomoè/www.gphoto.org/_Za narediti"
+
+#: src/menu.c:272
+msgid "/Help/www.gphoto.org/Feed_back"
+msgstr "/Pomoè/www.gphoto.org/Povra_tni podatki"
+
+#: src/toolbar.c:110
+msgid "Open Image"
+msgstr "Odpri sliko"
+
+#: src/toolbar.c:112
+msgid "Save Opened Image(s)"
+msgstr "Shrani odprto sliko(e)"
+
+#: src/toolbar.c:114
+msgid "Print Image"
+msgstr "Natisni sliko"
+
+#: src/toolbar.c:116
+msgid "Close Image"
+msgstr "Zapri sliko"
+
+#: src/toolbar.c:135
+msgid "Rotate Clockwise"
+msgstr "Zavrti v smeri urinega kazalca"
+
+#: src/toolbar.c:137
+msgid "Rotate Counter-Clockwise"
+msgstr "Zavrti v nasprotni smeri urinega kazalca"
+
+#: src/toolbar.c:139
+msgid "Flip Horizontal"
+msgstr "Prevrni vodoravno"
+
+#: src/toolbar.c:141
+msgid "Flip Vertical"
+msgstr "Prevrni navpièNo"
+
+#: src/toolbar.c:146 src/toolbar.c:148
+msgid "Colors"
+msgstr "Barve"
+
+#: src/toolbar.c:154
+msgid "Camera Configuration"
+msgstr "Nastaviteve fotoaparata"
+
+#. add_to_toolbar(mainWin, HELP_BUTTON, N_("Help"), help_xpm,
+#. GTK_SIGNAL_FUNC(usersmanual_dialog), NULL, box, 1);
+#: src/toolbar.c:159
+msgid "Exit gPhoto"
+msgstr "Izhod iz gPhota"
+
+#: src/util.c:53
+msgid "GPhoto Error"
+msgstr "Napaka GPhoto"
+
+#: src/util.c:111
+msgid "Confirm"
+msgstr "Potrdi"
+
+#: src/util.c:150
+#, c-format
+msgid "File %s exists. Overwrite?"
+msgstr "Datoteka %s ¾e obstaja prepi¹em?"
+
+#: src/util.c:261
+#, c-format
+msgid ""
+"The image couldn't be saved to %s because of the following error:\n"
+"%s"
+msgstr ""
+"Ta slika ni mogla biti shranjena v %s zaradi sledeèe napake:\n"
+"%s"
+
+#: src/util.c:351
+msgid "load_image_mem: could not load image\n"
+msgstr "load_image_mem: ne morem nalo¾iti slike\n"
+
+#: src/util.c:474
+msgid "Fork failed. Exiting. \n"
+msgstr "Fork ni uspel. Zakljuèujem. \n"
+
+#~ msgid ""
+#~ "Version Information\n"
+#~ "-------------------\n"
+#~ "Current Version: %s\n"
+#~ "As always, report bugs to \n"
+#~ "gphoto-devel@gphoto.net"
+#~ msgstr ""
+#~ "Podatki o razlièici\n"
+#~ "-------------------\n"
+#~ "Trenutna razlièica: %s\n"
+#~ "Kot vedno, sporoèite hro¹èe na\n"
+#~ "gphoto-devel@gphoto.org"
+
+#~ msgid "gPhoto release %s was brought to you by"
+#~ msgstr "gPhoto razlièico %s so ustvarili"
+
+#~ msgid "Web Page"
+#~ msgstr "Spletna stran"
+
+#~ msgid "Previous"
+#~ msgstr "Nazaj"
+
+#~ msgid "Next"
+#~ msgstr "Naprej"
+
+#~ msgid ""
+#~ "The gPhoto AUTHORS file appears to be missing!\n"
+#~ "\t      There should be a file called "
+#~ msgstr ""
+#~ "gPhotova datoteka AUTHORS se zdi pogre¹ana!\n"
+#~ "\t      Morala bi obstajati imenovana "
+
+#~ msgid ""
+#~ " in the\n"
+#~ "\t      %s directory.\n"
+#~ "Please check your installation."
+#~ msgstr ""
+#~ " v\n"
+#~ "\t      imeniku %s.\n"
+#~ "Prosim preverite va¹o namestitev."
+
+#~ msgid "Error: $DISPLAY variable is not set\n"
+#~ msgstr "Napaka: spremenljivka $DISPLAY ni nastavljena\n"
+
+#~ msgid "Please run \"gphoto -h\" for command-line options.\n"
+#~ msgstr "Prosim po¾enite \"gphoto -h\" za mo¾nosti ukazne vrstice.\n"
+
+#~ msgid "gPhoto %s (%s)\n"
+#~ msgstr "gPhoto (%s) (%s)\n"
+
+#~ msgid "Usage: gphoto [-h] [-c] [-n] [-s # filename] [-t # filename]\n"
+#~ msgstr "Uporaba: gphoto [-h] [-c] [-n] [-s # datoteka] [-t # datoteka]\n"
+
+#~ msgid "              [-d #] [-p filename] [-l filename]\n"
+#~ msgstr "              [-d #] [-p datoteka] [-l datoteka]\n"
+
+#~ msgid "Deleting ALL pictures."
+#~ msgstr "Bri¹em VSE slike."
+
+#~ msgid "Nothing selected to be deleted."
+#~ msgstr "Niè ni izbrano za brisanje."
+
+#~ msgid "Are you sure you want to DELETE the selected images?"
+#~ msgstr "Ste preprièani, da ¾elite ZBRISATI izbrane slike?"
+
+#~ msgid "Are you sure you want to DELETE all the images from memory?"
+#~ msgstr "Ste preprièani, da ¾elite ZBRISATI vse slike iz pomnilnika?"
+
+#~ msgid "Saving Image #%03i..."
+#~ msgstr "Sharnjujem sliko #%03i..."
+
+#~ msgid "Saving Thumbnail #%03i..."
+#~ msgstr "Shranjujem vzorec #%03i..."
+
+#~ msgid "%s-thumbnail-%03i"
+#~ msgstr "%s-vzorec-%03i"
+
+#~ msgid "%s/gphoto-image-%03i.jpg"
+#~ msgstr "%s/gphoto-slika-%03i.jpg"
+
+#~ msgid "Could not open $HOME/.gphoto/gphotorc for writing.\n"
+#~ msgstr "Ne morem odpreti $HOME/.gphoto/gphotorc za pisanje.\n"
+
+#~ msgid ""
+#~ "Could not open:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Ne morem odpreti:\n"
+#~ " %s"
+
+#~ msgid "Getting thumbnail %i..."
+#~ msgstr "Dobivam vzorec %i..."
+
+#~ msgid "Picture #%i\n"
+#~ msgstr "Slika #%i\n"
+
+#~ msgid "num_pictures_taken is %d\n"
+#~ msgstr "©t_posnetih_slik je %d\n"
+
+#~ msgid "Nothing selected for download."
+#~ msgstr "Niè ni izbrano za prenos."
+
+#~ msgid "Getting Image #%03i..."
+#~ msgstr "Dobivam sliko #%03i..."
+
+#~ msgid "Getting Thumbnail #%03i..."
+#~ msgstr "Dobivam vzorec #%03i..."
+
+#~ msgid "Done downloading."
+#~ msgstr "Prena¹anje opravljeno."
+
+#~ msgid "Download halted."
+#~ msgstr "Prena¹anje ustavljeno."
+
+#~ msgid "Save all opened images"
+#~ msgstr "Shrani vse odprte slike"
+
+#~ msgid "Save Image(s)..."
+#~ msgstr "Shrani sliko/e..."
+
+#~ msgid "Open Image..."
+#~ msgstr "Odpri Sliko..."
+
+#~ msgid "Can't print the index yet."
+#~ msgstr "Tiskanje kazala ¹e ni podprto."
+
+#~ msgid "Can't modify the index colors."
+#~ msgstr "Barve kazala se ni mogoèe spremeniti."
+
+#~ msgid "Can't scale the index."
+#~ msgstr "Velikosti kazala ni mogoèe spreminjati."
+
+#~ msgid "Can't manipulate the index."
+#~ msgstr "Ne morem manipulirati kazala."
+
+#~ msgid "Can't scale the index!"
+#~ msgstr "Velikosti kazala ni mogoèe spreminjati!"
+
+#~ msgid "Scaling image by 50%..."
+#~ msgstr "Pomanj¹ujem sliko za 50%..."
+
+#~ msgid "Scaling image by 200%..."
+#~ msgstr "Poveèujem sliko za 100%..."
+
+#~ msgid "http://www.gphoto.org/news.php3"
+#~ msgstr "http://www.gphoto.org/news.php3"
+
+#~ msgid "http://www.gphoto.org/download.php3"
+#~ msgstr "http://www.gphoto.org/download.php3"
+
+#~ msgid "http://www.gphoto.org/lists.php3"
+#~ msgstr "http://www.gphoto.org/lists.php3"
+
+#~ msgid "http://www.gphoto.org/team.php3"
+#~ msgstr "http://www.gphoto.org/team.php3"
+
+#~ msgid "http://www.gphoto.org/todo.php3"
+#~ msgstr "http://www.gphoto.org/todo.php3"
+
+#~ msgid "gPhoto %s (%s) - the GNU digital camera application\n"
+#~ msgstr "gPhoto %s (%s) - GNU program za digitalne fotoaparate\n"
+
+#~ msgid "\t-h                    display this help screen\n"
+#~ msgstr "\t-h                    prika¾i to pomoè\n"
+
+#~ msgid "\t-c                    display camera summary\n"
+#~ msgstr "\t-c                    prika¾i povzetek fotoaparata\n"
+
+#~ msgid "\t-n                    display the # of pictures\n"
+#~ msgstr "\t-n                    poka¾i ¹tevilo slik\n"
+
+#~ msgid "\t-s # filename         save image # as filename\n"
+#~ msgstr "\t-s # datoteka         shrani sliko # kot datoteka\n"
+
+#~ msgid "\t-t # filename         save thumbnail # as filename\n"
+#~ msgstr "\t-t # datoteka         shrani vzorec # kot datoteka\n"
+
+#~ msgid "\t-d #                  delete image # from camera\n"
+#~ msgstr "\t-d #                  zbri¹i sliko # iz fotoaparata\n"
+
+#~ msgid "\t-p filename           take picture and save as filename\n"
+#~ msgstr "\t-p datoteka           slikaj in shrani sliko kot datoteka\n"
+
+#~ msgid ""
+#~ "\t-l filename           save live preview as filename\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\t-l datoteka           shrani ¾iv vzorec kot datoteka\n"
+#~ "\n"
+
+#~ msgid "gPhoto is free GNU software; you can redistribute it and/or\n"
+#~ msgstr "gPHoto je prosto GNUjevo programje; lahko ga raz¹irjate in/ali\n"
+
+#~ msgid "modify it under the terms of the GNU General Public License \n"
+#~ msgstr "spreminjate pod pogoji GNU Splo¹ne Javne Licence \n"
+
+#~ msgid "as published by the Free Software Foundation; either version \n"
+#~ msgstr "kot jo je objavila Fundacija za prosto progamje; uporabite lahko\n"
+
+#~ msgid "2 of the License, or any later version.  Visit gphoto/COPYING\n"
+#~ msgstr ""
+#~ "drugo ali katerokoli kasnej¹o razlièico Licence. Licenca se nahaja\n"
+
+#~ msgid ""
+#~ "in the source distribution to read the GNU GPL license terms.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "v datoteki gphoto/COPYING v distribuciji izvorne kode.\n"
+#~ "\n"
+
+#~ msgid "Report bugs and camera success to gphoto-devel@gphoto.org.\n"
+#~ msgstr ""
+#~ "Sporoèite hro¹èe in uspehe s fotoaparati na gphoto-devel@gphoto.org.\n"
+
+#~ msgid "See http://www.gphoto.org for the latest news and updates.\n"
+#~ msgstr ""
+#~ "Na http://www.gphoto.org lahko najdete najnovej¹e novice in popravke.\n"
+
+#~ msgid "%i\n"
+#~ msgstr "%i\n"
+
+#~ msgid "ERROR: could not get image.\n"
+#~ msgstr "NAPAKA: ne morem dobiti slike.\n"
+
+#~ msgid "ERROR: could not save image.\n"
+#~ msgstr "NAPAKA: ne morem shraniti slike.\n"
+
+#~ msgid "ERROR: 'filename' not specified.\n"
+#~ msgstr "NAPAKA: 'datoteka' ni bila navedena.\n"
+
+#~ msgid "Saving image %i from camera as %s: "
+#~ msgstr "S kamere shranjujem sliko %i kot %s: "
+
+#~ msgid "ERROR: '#' and 'filename' not specified.\n"
+#~ msgstr "NAPAKA '#' in 'datoteka' nista bila navedena.\n"
+
+#~ msgid "ERROR: '#' not specified.\n"
+#~ msgstr "NAPAKA: '#' ni bil naveden.\n"
+
+#~ msgid "ERROR: filename not specified.\n"
+#~ msgstr "NAPKA: datoteka ni bila navedena.\n"
+
+#~ msgid "Taking picture...\n"
+#~ msgstr "Slikam...\n"
+
+#~ msgid "ERROR: could not take the picture.\n"
+#~ msgstr "NAPAKA: nisem mogel slikati.\n"
+
+#~ msgid "Saving the new image (# %i) as %s: "
+#~ msgstr "Shranjujem novo sliko (# %i) kot %s: "
+
+#~ msgid ""
+#~ "\n"
+#~ "ERROR: could not get image.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "NAPAKA: ne morem dobiti slike.\n"
+
+#~ msgid "Export file as *.shtml?"
+#~ msgstr "Izvozi datoteko kot *.shtml"
+
+#~ msgid "Set table border width to zero for thumbnails?"
+#~ msgstr "Za vzorce nastavi ¹irino robu tabele na niè?"
+
+#~ msgid ""
+#~ "Set image border width to zero? (so you don't see the link colors...)"
+#~ msgstr "Nastavi ¹irino robu slik na niè? (torej ne vidite barv povezave...)"
+
+#~ msgid "<a href=\"picture-%03i.html\">Click Me<\\/a>"
+#~ msgstr "<a href=\"slika-%03i.html\">Klikni me<\\/a>"
+
+#~ msgid "thumbnail-%03i.%s"
+#~ msgstr "vzorec-%03i.%s"
+
+#~ msgid "Loaded file:%s%s in %s"
+#~ msgstr "Nalo¾ena datoteka %s%s v %s"
+
+#~ msgid "Update Picture"
+#~ msgstr "Obnovi sliko"
+
+#~ msgid ""
+#~ "\n"
+#~ "Launching Gnome Bugbuddy...\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Poganjam Gnome Bug-buddy...\n"
+
+#~ msgid "Failed to set priority\n"
+#~ msgstr "Nisem uspel nastaviti prioritete\n"
+
+#~ msgid ""
+#~ "Copyright (C) 1998-2000 Scott Fritzinger <scottf@gphoto.net>\n"
+#~ "\n"
+#~ "Copyright (C) 2000 Free Software Foundation, Inc."
+#~ msgstr ""
+#~ "Avtorske pravice pridr¾ane (C) 1998-2000 Scott Fritzinger <scottf@unr.edu>\n"
+#~ "\n"
+#~ "Avtorske pravice pridr¾ane (C) 2000 Fundacija za prosto programje"
+
+#~ msgid "gPhoto %s - the GNU digital camera application"
+#~ msgstr "gPhoto %s - GNU program za digitalne fotoaparate"
+
+#~ msgid "Select \"Camera->Get Index\" to preview images."
+#~ msgstr "Izberi \"Kamera->Dobi kazalo\" za predogled slik."
+
+#~ msgid "Halt Download"
+#~ msgstr "Ustavi nalaganje"
+
+#~ msgid "Select model/port..."
+#~ msgstr "Izberi model/vrata..."
+
+#~ msgid "Camera Model:"
+#~ msgstr "Model fotoaparata:"
+
+#~ msgid ""
+#~ "\n"
+#~ "gPhoto user(s) that reported this model:\n"
+#~ msgstr ""
+#~ "\n"
+#~ "gPhoto uporabniki, ki so sporoèili ta model:\n"
+
+#~ msgid "Port:"
+#~ msgstr "Vrata:"
+
+#~ msgid "Save"
+#~ msgstr "Shrani"
+
+#~ msgid "Error: failed to open %s"
+#~ msgstr "Napaka: nisem uspel odpreti %s"
+
+#~ msgid "Missing Serial Device Permissions"
+#~ msgstr "Ni dovoljenja za serijsko napravo"
+
+#~ msgid "Please check the permissions (see the manual)."
+#~ msgstr "Prosim preverite dovoljenja (poglejte priroènik)."
+
+#~ msgid "Opened %s."
+#~ msgstr "Odprl %s."
+
+#~ msgid ""
+#~ "%s summary:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "%s povzetek:\n"
+#~ "%s"

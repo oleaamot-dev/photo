@@ -1,0 +1,382 @@
+Thanks to all the gPhoto beta-testers, and to those individuals, 
+who gave feedback on this project:
+
+A.M. Kuchling 
+Aaron Price 
+Adam Connor 
+Adam Walker 
+Adam Williams 
+Adri Wieman 
+Adrian Blake 
+Alan Cox 
+Alan Knowles 
+Alasdair Allan 
+Aleksandar Bakic 
+Alessio Re 
+Alex Peyser 
+Alexander Larsson 
+Almando Gooden 
+Amaury Jacquot 
+Anders Nordby 
+Andrea Dettori 
+Andrew Burd 
+Andrew Duhan 
+Andrew Gray 
+Andrew N Messent 
+Andy Grundman 
+Andy Pierce 
+Anne Bezemer
+Antti Halko 
+Ayman Haidar, MD 
+Beat Christen 
+Ben Burdick 
+Ben Sinclair 
+Berjoan Damien 
+Bill Rhodes 
+Bob Love 
+Bob Ogden 
+Bob Paauwe 
+Bob Stafford 
+Brad Willson 
+Brandon Phillips 
+Brent Metz 
+Brett Viren 
+Brian Denheyer 
+Brian Hirt 
+Brian Wilson 
+Burkhard Gerlach 
+Charles Durst 
+Chas Lobert 
+Chayim I. Kirshen 
+Chris Benard 
+Chris Colomb 
+Chris Evich 
+Chris Halls 
+Chris Harper 
+Chris Kohler 
+Chris Worley 
+Christer Backstrøm 
+Christian Schneider 
+Christoph Fabianek 
+Christopher A. Craig 
+Christopher Creutzig 
+Clark Rowden 
+Clayton Cottingham 
+Cliff Wright 
+Conrad Sanderson 
+Craig A. Sharp 
+Craig Smith 
+Dag Brattli 
+Dan Mosedale 
+Daniel E. Maddux 
+Daniel Kropveld 
+Daniel Lashua 
+Daniel Martin 
+Danny Barron 
+Darcy Robinson 
+Darren Enns 
+Darren Stalder 
+Daryll Strauss 
+Dave McCann 
+David Brownell 
+David Cary 
+David Dehaney 
+David Krause 
+David Megginson
+David Rysdam 
+Dawid Kuroczko 
+Del Simmons 
+Derek Simkowiak 
+Diego Roque 
+Doug Stevenson 
+Douglas Lau 
+Dwayne Jacques Fontenot 
+Ed Legowski 
+Ednilson Miura 
+Eduardo Caballero 
+Edward Rudd 
+Emiliano Spezi 
+Eric Berenguier 
+Eric Goethals 
+Eric H. Matlis 
+Eric Jorgensen 
+Eric Paquette 
+Ethan James 
+Eugene Crosser 
+Everett Bennett, Jr. 
+Federico Pomi 
+Frank Fenn 
+Frank Taylor 
+Fred Read 
+Gael LeDimet 
+Galen Meurer 
+Gary Ross 
+Gary del Valle 
+Gene Imes 
+Geri Chadwell 
+Gert Dewit 
+Glen Hewlett 
+Grahame M. Kelly 
+Greg Harber 
+Greg Terry 
+Grendel Drago
+Guillaume Proux 
+Gus Hartmann 
+Harri Haanpaa 
+Hartmut Eilers 
+Heikki Lehvaslaiho 
+Helmut Dersch 
+Henning Zabel 
+Henri Bergius 
+Hermann Huettler 
+Holger Mueller 
+Hubert Figuiere 
+Ian Brickwood 
+Igor Sarychkin 
+Ike Hishikawa 
+J.A. Bezemer 
+Jake Greenland 
+James Landis 
+James Lyell 
+Janos Lorincz 
+Jason Reed 
+Jason Tang 
+Jason Van Patten 
+Jason Woodward 
+Jay Cuthrell 
+Jay Novello 
+Jeff Brekke 
+Jeffery Eddings 
+Jeffrey D. Brekke 
+Jeffrey Killberg 
+Jeffrey Perry 
+Jeremiah Cornelious McCarthy 
+Jeremy Fitzhardinge 
+Jesper Skov 
+Jesse Michael 
+Jim Hamann 
+Jim Mintha 
+Jimmy Cederholm 
+Joan Kiesow 
+Jochen Woehrle 
+Joerg Tretter 
+Johannes Erdfelt 
+John Clayton 
+John Davies 
+John Furlong 
+John Goerzen 
+John Ioannidis 
+John Nicholson 
+John Nikolai 
+Jon Cromwell 
+Jon Stroud 
+Jon Winters 
+Jonas Oberg 
+Jonathan Byrne 
+Jonathan Hsieh 
+Jonathan Stockley 
+Josef Wesley Wells 
+Judith Phillips 
+Julien Mulot 
+Kasper van Benten 
+Keith A. Folske 
+Keith Clayton 
+Keith Conger 
+Keith Folske 
+Ken Miller 
+Kenneth P. Persing 
+Kerry Panchoo 
+Kevin Ogden 
+Klaus Moedinger 
+Klaus Petsch 
+Kostarev 
+Kurt Madel 
+Laurent Petroque 
+Leo Dejan 
+Leon Brocard 
+Lisa Koch 
+Lorenzo Trevisan 
+Ludger Berse 
+M. Adam Kendall 
+Manuel Estrada 
+Marc Inglebert 
+Marcel van der Boom 
+Mark Allen Earnest 
+Mark Brazil 
+Mark Brown 
+Mark Davies 
+Mark Deneen 
+Mark Earnest 
+Mark Hodge 
+Mark Montazer 
+Mark Rousseau 
+Mark Staben 
+Mark Swanicke 
+Mark W. Eichin 
+Markku Verkkoniemi 
+Markus Demleitner 
+Martin Anderson, MIS, ADC 
+Martin Preishuber 
+Martin Skjerven 
+Marton Illes 
+Mathieu Lefrancois 
+Mathijs Mohlmann 
+Matija Nalis 
+Matt Martin 
+Matt Mossholder 
+Matthew Geier 
+Matthew Klahn 
+Matthew R. Briggs 
+Matthias Schloegel 
+Michael Agbaglo 
+Michael Bain 
+Michael C. Piantedosi 
+Michael H. Warfield 
+Michael McCormack 
+Michael Nordström 
+Michael Robinson 
+Michael Steinhauser 
+Michael Thänitz 
+Michael_Nordstrøm 
+Michael_Thanitz 
+Miguel de Icaza 
+Mike Anthony 
+Mike Federwisch 
+Mohd Rizal 
+Nathan A. Mourey II 
+Nick Bailey 
+Nick Lamb 
+Nicolas MONNET 
+Nils Faerber 
+Ole Kr. Aamot
+Ole W. Saastad 
+Oliver Graf 
+Oliver Maruhn 
+Oliver Hartmann
+Olivier Crete 
+Olof Aldin 
+Ove Heigre 
+Owen Williams 
+P. Kämpf 
+Paolo Ciccone 
+Patrick Berge 
+Patrik Pira 
+Paul Damer 
+Paul Fox 
+Paul Hanson 
+Paul S Jenner 
+Paul Super 
+Pedro Caria
+Per H. Isaksen 
+Per Stuve Rommetveit 
+Pete Allen 
+Pete Graner 
+Peter Davis 
+Peter Kaempf 
+Peter Mills 
+Peter S Galbraith 
+Peter Todd 
+Peter Van Loock 
+Phil Hagen 
+Philip Carmichael 
+Phill Hugo 
+Phillip Coffelt 
+Philo Vivero 
+Pierre GRENETTE 
+Pierre Grenette 
+Randy D. Scott 
+Raul Zighelboim 
+Ray Newman 
+Redvers Davies 
+Reklaw 
+Rene Adad 
+René Seindal 
+Richard Caley 
+Richard Cooper-Private 
+Richard Stallman 
+Rob Clark 
+Rob Scott 
+Robert Bocksberger 
+Robert Cousins 
+Robert Gadsdon 
+Robert Wittams 
+Roberto Iacone 
+Roberto Javier Vega Harb 
+Rolf Offermanns 
+Russell Nelson 
+Ryan Finnin Day 
+Ryan McBride 
+S Makin 
+Sam Beeslaar 
+Santosh Nair 
+Scott Fritzinger 
+Scott Guilbeaux 
+Scott Kline 
+Scott Matthews 
+Sean 'Shaleh' Perry 
+Shaun Moran 
+Shaun Qualheim 
+Shunsuke Sumitani 
+Simon Walker 
+Simon Wood 
+Spiros Papadimitriou 
+Spyridon Papadimitriou 
+Steffen Zahn 
+Stephan Tijink 
+Stephen Kench 
+Steve Kostecke 
+Steve O'Connor 
+Steve mayer 
+Steven Rodenburg 
+Stilian.Trifonov@icl.com 
+Sven Neumann 
+Sylvia Knight 
+Syv Knight 
+Talal Nehme 
+Terence Rudkin 
+Terry Dwyer 
+Thierry Bousch 
+Thomas Kuehn 
+Thomas Wagner 
+Thorkild Stray 
+Ti Leggett 
+Tilman Hampl 
+Tilmann Preusse 
+Tim Alderson 
+Tim Fletcher 
+Tim Lapawa 
+Tim Preusse 
+Tim Seifert 
+Timothy Hospedales 
+Tobias Corneliussen 
+Todd Courtnage 
+Tom Oude 
+Tomi Ollila 
+Tomm Aldridge 
+Tonny Sejr Kromann 
+Tony Rein 
+Torben Fjerdingstad 
+Tore Halvorsen
+Torfinn Nome
+Toru Hoshina 
+Toshiki Fujisawa 
+Trix Farrar 
+Tuomas 'tigert' Kuosmanen
+Udger Berse 
+Ulrich Bortfeld 
+User Raymond 
+Vincent KONIECZEK 
+Vincent buard 
+Wade Hampton 
+Wade Richards 
+Warren Baird 
+Werner Almesberger 
+Wesley Lemke 
+William R. McDonough 
+Wolfgang Platzer 
+Wolfgang Reissnegger 
+Wylie Swanson 
+Yann Bizeul 
+Yann Vernier 
+Yehuda Graber 
+Zach Fine 

@@ -1,0 +1,9 @@
+There are two things this code makes.
+
+1. A stand alone cli utility "qm100".
+
+2. A gPhoto dynamic library.
+
+"make qm100" does the first.
+
+make in ../dynamic does the second.

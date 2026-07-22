@@ -1,0 +1,14 @@
+08/15/99
+   * Extract and utilize picture metadata, including
+     date/time picture was taken, size and depth, etc.
+   * Better recovery from transmission errors. Currently,
+     errors during large data transfers are handled 
+     fairly well, with near 100% recovery. Errors during
+     control sequences result is termination of the 
+     current command, and probable hung camera.  
+     Fortunately, the latter type of error is rare.
+	* 'Configure Camera' should set baudrate, pacing,
+	  tracing, flash, picture quality, etc., and save 
+     these values in ~/.gphoto/konicarc
+   * "Autoconfigure" tool to locate the camera and 
+     determine optimal baud rate and pacing values.       

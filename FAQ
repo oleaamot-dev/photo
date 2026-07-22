@@ -1,0 +1,319 @@
+-----------------------------------------------------------------------
+gPhoto FAQ (gphoto-devel@gphoto.org) 	http://www.gphoto.org/help.php3
+-----------------------------------------------------------------------
+
+a. Will gPhoto run on my system, without GNOME installed?
+b. Can gPhoto interoperate with other programs, like GIMP?
+c. What hardware and operating systems will gPhoto compile and run on?
+d. What libraries and system files does gPhoto require?
+f. What is the current version of gPhoto?
+g. How do I build and install gPhoto from CVS source?
+h. I get ``Could not open camera''. How do I configure the serial port?
+i. I get ``gphoto: error in loading shared libraries''
+j. I get ``ld: cannot open -lgdk_imlib: No such file or directory''.
+k. How do I use the gPhoto command line interface? How can I use it?
+l. Who has developed gPhoto?
+m. How do I write a gPhoto-supported plugin or new model interfaces?
+n. How do I organize a HTML gallery theme?
+o. What are the future plans for gPhoto?
+p. Does gPhoto aim to be GNOME compliant?
+q. Which digital camera should I buy? Which models do gPhoto support?
+r. How do I take a picture and get a good result?
+s. gPhoto is great! You could earn real money! But why is it *free*?
+
+-----------------------------------------------------------------------
+
+a. Will gPhoto run on my system, without GNOME installed?
+
+   Yes, at the moment gPhoto doesn't require gnome-libs.
+
+b. Can gPhoto interoperate with other programs, like GIMP?
+
+   Yes, it will be able to spawn GIMP as an external editor. gPhoto saves
+   in all the image formats that imlib supports, e.g. JPEG, PNG, TIFF,
+   and GIF.
+
+c. What hardware and operating systems will gPhoto compile and run on?
+
+   The preferred platform of the gPhoto developers is i586-pc-linux-gnu.
+   The gPhoto developers run Slackware 4.x, RedHat 5.x/6.0 & Debian 2.x.
+   We've had reports that gPhoto compiles and runs on the SuSE, FreeBSD,
+   NetBSD and also Sun's proprietary, non-free operating system Solaris.
+
+d. What libraries and system files does gPhoto require?
+
+   gPhoto requires the following innstalled:
+
+      * The GNU C Compiler, the free compiler for the GNU system.
+      * GNU Utils (sed)
+      * GTK+ 1.0+
+      * ImageMagick 4.1+ (Not _needed_ but Imlib uses it)
+      * imlib 1.4+ (incl. libjpeg/libpng/libtiff/libz/libungif)
+
+f. What is the current version of gPhoto?
+
+   The developer version is in GNOME CVS. 
+   See http://www.gphoto.org/download.php3 for current info.
+
+g. How do I build and install gPhoto from CVS source?
+
+           cd gphoto/
+           ./autogen.sh
+           make
+           make install
+
+h. I get ``Could not open camera''. How do I configure the serial port?
+
+   To those of you who get ``Could not open camera'', and your camera is
+   reported to work on the list (see http://www.gphoto.org/cameras.php3),
+   please try this before you report it to <gphoto-devel@gphoto.org> as a
+   library bug:
+
+   Under Linux each serial port may have TWO names:
+
+                   /dev/cua0
+                   /dev/ttyS0
+           and
+                   /dev/cua1
+                   /dev/ttyS1
+
+   If you are using a serial mouse, it is probably on cua0 or ttyS0, so
+   you are probably connecting your camera to cua1 or ttyS1. /dev/ is the
+   correct serial port (ttyS0 or ttyS1).
+
+                   [/root]# ls -l /dev/(serial_device)
+
+   Make sure your camera is connected to the correct port and turned on.
+
+   For now, you either need to be root to use gPhoto (because you need to
+   open a serial device) or you can create a ``serial_dev'' group in
+   /etc/group
+
+   (It's usually wise to backup /etc/group, just in case.)
+
+                   [/root]# cp /etc/group /etc/group.old
+
+   If your user is john_doe, then add a new, unique entry in /etc/group:
+
+                   [/root]# echo "serial_dev:x:234:john_doe" >> /etc/group
+
+   Make sure your new serial_dev group owns /dev/(serial_device)
+
+                   [/root]# chgrp serial_dev /dev/(serial_device)
+
+   Give rw (read/write) permissions to the serial device to that group.
+
+                   [/root]# chmod g+rw /dev/(serial_device)
+
+   If it still doesn't work, check the group permissions:
+
+                   [/root]# ls -l /dev/ttyS0
+                   [/root]# ls -l /dev/ttyS1
+                   [/root]# ls -l /dev/(serial_device)
+
+i. I get ``gphoto: error in loading shared libraries''
+
+   Make sure that you've got required/unique versions of libraries.
+
+                   [/root]# ldconfig -v |grep imlib
+                   [/root]# ldconfig -v |grep gtk
+                   [/root]# ldconfig -v |grep imlib
+
+j. I get ``ld: cannot open -lgdk_imlib: No such file or directory''.
+
+   Make sure that imlib is installed.
+
+                   [/root]# ldconfig -v |grep imlib
+                           libgdk_imlib.so.1 => libgdk_imlib.so.1.8.1
+
+   See http://www.labs.redhat.com/imlib/
+
+k. How do I use the gPhoto command line interface? How can I use it?
+
+   After building the gPhoto binary, type ``gphoto -h'' for command-line
+   options. Here's the low-down:
+
+           Usage: gphoto [-h] [-n] [-s # filename] [-t # filename]
+                         [-d #] [-l filename]
+                   -n                      display the # of pictures
+                   -s # filename           save image # as filename
+                   -t # filename           save thumbnail # as filename
+                   -d #                    delete image # from camera
+                   -l filename             save live preview as filename
+                   -h                      display this help screen
+
+   Only catch is you MUST run gphoto in graphical mode to initially set
+   the camera library before running in command-line mode.
+
+   Web-cam example:
+
+           gphoto -l /home/httpd/html/livepic.jpg
+
+   A simple script set up can automate a lot of things (batch saving,
+   webcam, delete all pics, etc..) - please send in your scripts. :-)
+
+l. Who has developed gPhoto?
+
+   See http://www.gphoto.org/team.php3
+
+m. How do I write a gPhoto-supported plugin or new model interfaces?
+
+   Scott updates the generic camera library docs - see ``PROGRAMMERS''.
+
+   It should be a snap for eager programmers to write gPhoto plugins, and
+   add support for more camera models, not supported by the great photopc
+   library (by Eugene Crosser), through the generic interface.
+
+   We would like to see more people contributing to the development.
+   Please send mail to camera manufacturers, see the CONTACTS file, and
+   encourage them to release free specs to software developers. You could
+   use the template LETTER file distributed with gPhoto.
+
+   Please send mail to <gphoto-devel@gphoto.org>, if you get negative
+   feedback, so we can warn people from buying cameras manufactured by
+   less consumer-friendly companies.
+
+n. How do I organize a HTML gallery theme?
+
+   When a user selects to make an HTML gallery, they must first have the
+   index opened, and the images they want in the gallery selected. Then,
+   they type in the name of the gallery in a text entry, select a gallery
+   theme, and specify the output directory. It's possible to create your
+   own special code, customized to your own heart's desire.
+
+   See http://www.gphoto.org/themes.php3 for details.
+
+o. What are the future plans for gPhoto?
+
+   gPhoto is being actively developed, and version 1.0 will have many new
+   features and support for more popular camera models.
+
+p. Does gPhoto aim to be GNOME compliant?
+
+   Yes, but we will include a plain GTK+ version in the main archive.
+   ATM, gPhoto is not GNOME compliant, so it's not a real issue, yet.
+
+   If you want to make it GNOME compliant, please mail the gphoto
+   developers' list <gphoto-devel@gphoto.org> first.
+
+q. Which digital camera should I buy? Which models do gPhoto support?
+
+   Probably the hardest decision you will have to make is which camera,
+   you will buy. While some expensive ones come with more resolution,
+   they do have tradeoffs. Most cameras are fantastic, making it a tough
+   decision to choose which camera to buy.
+
+   Kodak and Minolta both provide specifications openly for their cameras
+   meaning drivers for them can be written openly. Konica has recently
+   started work on a GPL application for *BSD and GNU/Linux which Phill
+   will incorporate into gPhoto extending the current Konica driver. It
+   is always a great help for potential camera customers to pressure
+   companies into support our work BEFORE you give them your money. Many
+   companies simply don't have time to look at the issues involved unless
+   there is an financial incentive to do so. The more open we can make
+   them, the better gPhoto can be and the more enjoyment you'll get from
+   your camera. The file ``CONTACTS'' contains a list of company members
+   who you can write to asking for GPL drivers or open specifications.
+   There is a sample letter in ``LETTER''. Please adjust it slightly
+   before sending it. 100 copies of one letter is not as persuasive as 25
+   different ones.
+
+   Please forward the feedback to <gphoto-devel@gphoto.org>, also if you
+   get a negative response.
+
+   OK, on with the show... In general, less expensive cameras are usually
+   much better suited for ``general'' purpose work. This is not to say
+   these cameras are not for professionals. It is simply to say that they
+   are better suited to the jobs where you need to get a high quality
+   snapshot, but don't need extremely high resolution prints. A good
+   example is using a camera for web pages photos, or for doing family
+   prints (5x7). For web pages, the 1024x768 size is a manageable size
+   which can be resampled to useable sizes (ie. 320x240, etc.) 1280x1024
+   would be overkill here. Also, the 1024x768 has proven to be more than
+   adequate to print photo quality 5x7 prints using a color printer.
+
+   Additionally, some cameras have a higher ISO equivalency (ISO 180),
+   which means they take better low light photos.
+
+   The expensive ones are more suited towards more sensitive work, where
+   the resolution makes perfect sense. The biggest advantage of the extra
+   resolution is that e.g. 1280x1024 is the perfect size to do high
+   quality 8x10 prints. Graphics professionals will also find the extra
+   resolution gives them more detail to work with. However, all this
+   extra resolution comes at a cost of having a lower ISO rating (ISO
+   100). Lighting needs to be more than adequate or you will have to
+   manual step up the exposure. While most photographers will find this
+   to be no impediment, if you are a casual user, or used to doing work
+   with a point-and-shoot camera, you will mostly likely be disappointed
+   with your indoor shots.
+
+   Unless you really need the resolution, the cheaper alternative make a
+   better choice for an all purpose high-end digital camera. The results
+   are very good, even at 8x10. However, if you are constantly doing 8x10
+   prints, or require a very detailed image, the expensive cameras are
+   probabaly your best shot.
+
+   The higher resolution of the images allows them to be cropped
+   substantially. The cropped images still have high enough resolution
+   for many purposes, and resolution superior to many other digital
+   cameras. The cropped images also are effectively made with a longer
+   focal length than if they were not cropped.
+
+r. How do I take a picture and get a good result?
+
+   Three concepts that you should consider:
+
+      * Auto Focus - Even the best AF camera on the market (and we're not
+        going to start and argument as to who's is best) have limits...
+        Some are sensitive to the information in the frame, and need to
+        have vertical or horizontal lines (or both) to focus on. All (as
+        far as we know) have limitations on the minimum light level that
+        AF will work (and this is affected by actual light level as well
+        as the light reaching the AF sensors, which can be limited by
+        aperture.) That's why AF SLRs have a manual focus mode!
+      * Auto Exposure - All auto exposure systems need a reference. For
+        traditional film cameras, the metering is set to properly expose
+        an 18% gray. If you point even the best 35mm camera at a black
+        card, an 18% gray card and a white card, and let the AE do its
+        stuff, it will try to make the cards all look like 18% gray, and
+        all will come out looking about the same. If you do the same
+        thing, but use an incident light meter to set the exposure
+        (reading actual light levels rather than light reflected off of
+        the subject), then they will come out black, gray and white,
+        respectively.
+      * Blurry photos (not necessarily AF related) - It seems that most
+        of the blurry photos you see on the web are ambient light shots
+        (no flash). It is important to remember that digital cameras are
+        rated at a fairly slow ASA (ISO) equivalent.
+
+s. gPhoto is great! You could earn real money! But why is it *free*?
+
+   gPhoto and everything you'll find in the archive comes under the GNU
+   General Public License (GPL), which means the entire contents of this
+   archive may be distributed freely - without any fees for profit or
+   not, as long as the source to this archive is made freely available to
+   the public. The contents of this archive may even be modified and then
+   re-distributed freely, but all derivative works also come under the
+   same License agreement as do the modifications made. Please see the
+   COPYING file in the source archive for a fully detailed description of
+   the GPL.
+
+   http://www.gnu.org/copyleft/gpl.html
+
+   Let's first thank Richard Stallman, who founded the GNU project in
+   1984, with the goal to create a complete and free operating system.
+
+   Also thanks to Linus Torvalds for starting work on his Linux Kernel
+   and making it available for all to use on standard cheap PC hardware.
+
+   Thanks a lot to Carsten ``Raster'' Haitzler for his work on the imlib
+   library, that gPhoto uses for many image operations.
+
+   Also thanks goes to the entire Kernel devel team, and the rest of the
+   free software community, and to those people who volunteerly work on
+   other useful GNOME applications, the GIMP and it's tool kit, GTK+.
+
+   http://www.gnu.org/
+   http://www.kernel.org/
+   http://www.gimp.org/
+   http://www.gtk.org/

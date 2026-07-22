@@ -1,0 +1,117 @@
+I've rehashed every file to contain only the headers it needs.
+
+The ifdef blah_yada_h stuff is removed becuase it is aweful ;)
+
+gphoto.h is the file to include in Libraries. It'll give you access to the
+globals that libraries can use. DON'T add non library useful libraries to
+this file - put them in main.h if they are really global (but not library
+global) or module.h where module is the code module that needs it.
+
+I've reimplimented Directroy and Konica as dynamic libraries (I'll ifdef
+the files soon for runtime functionality soon). Please convert all
+libraries to dynamics in the same way. It isn't difficult..
+
+1) Remove the include from main.c and ensure this file is included into
+your library. If you get "olympus" or "photopc" not found problems at the
+end of the main gphoto compile, its becuase the library you made does not
+contain the code declaring the _Camera struct.
+
+2) Rehash your makefiles. The camera libs should take the names
+"libgphoto_cameratype" which should make then universally unique.
+
+3) Remove the lib from $LIBS in this makefile and add it to $SH_LIBS
+
+4) Remember to setenv / export your LD_LIBRARY_PATH to include the path to
+the libraries you included. Its much easier to remove libs now, just
+comment the camera.h lines you don't need and remove the -lcameratype from
+the makefile.
+
+That's it really.
+
+Until the real libary API is defined no other changes will be necessary
+although it will be painless if you make you code and makefiles tidy NOW!
+Use libgphoto_konica_qm100 and libgphoto_dir as templates.
+
+---- BELOW IS 100% VAPOURWARE AT THE MOMENT. READ IT BUT DO NOTHING ----
+
+The configure script will be set up to do the following for the following.
+
+#ifdef _runtime_
+
+Code to be used if the build is runtime loading libaries.
+
+#ifdef _dynamic_
+
+Code to be used if the build is dynamically loading libraries.
+
+#ifdef _static_
+
+Code to be used if the build is statically linking libraries.
+
+Generally _static_ and _dynamic_ are assumed and will not need
+differences. Changes for _runtime_ code are listed below. Static and
+Dynamic compile time changes should (WILL!!!) only need Makefile changes.
+
+eg..
+
+#ifdef _runtime_
+ (void)*function(int)=dlsym(cameralib, "open_camera");
+ (*function)(parameter);
+#else /* this is for static and dynamic code */
+ open_camera(parameter);
+#endif
+
+I know it is messier than just doing the static or dynamic compile
+time link where types and whatnot are solved by the compiler but "Billy
+New-to Linux" will love us forever when he buys a new camera and just has
+to download one file, pop it in the folder and select it in the list.
+(I picture the Red Hat / Debian packages containing all the drivers though
+and Billy selecting the right one. Upgrading the library can be done
+alone, as can the app - Billy will avoid source code rememeber!).
+
+You'll notice that all the dlsym thing is really doing is declaring a
+function at runtime.
+
+void function(int); == (void)*function)(int)
+
+The address of function is loaded from dlsym (rather than given by the
+linker at compile time). As such you can define a few pointers to your
+functions - even call them the same thing - at the top of your code, fill
+in the addresses with dlsym, then dlclose the library. From there after
+you can do this...
+
+#ifdef _runtime_
+ void *library = dlopen("library.so", RTLD_LAZY);
+ void (*open_camera)(int, int, *char) = dlsym(library, "open_camera");
+ void (*close_camera)(int, int, *char) = dlsym(library, "close_camera");
+ dlclose(library);
+#else
+ extern void open_camera(int, int, *char);
+ extern void close_camera(int, int, *char);
+#endif
+
+(open_camera)(1, 2, "This works either way now");
+*close_camera(1, 2, "As does this");
+open_camera(1, 2, "And this");
+(*close_camera)(1, 2, "this too);
+
+Neat huh. I've left all the ways of notating it since you may wish to
+distinguish remote runtime calls from locally linked one. There is no
+difference between all the above notations (the 3nd being the normal one)
+but using the first open_camera call style will make code clearer.
+
+Please stick to this convention. It'll aid matters no end.
+
+I'll make this clearer..
+
+All function calls made to external libraries (regardless of how they are
+loaded or linked) should take the form...
+
+(call_to_camera)(parameter);
+
+NOI call_to_camera(paramter);
+
+You will appreciate this when debuggin and only have to search for ")(" to
+find external calls.
+
+Phill

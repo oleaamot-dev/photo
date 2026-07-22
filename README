@@ -1,0 +1,217 @@
+This is a development release of gPhoto, the GNU digital camera utility.
+
+DESCRIPTION
+	gPhoto is an universal, free GTK+ application that will allow
+	downloading, saving, and manipulation of images from several 
+	different digital camera models, or from the local harddrive.
+
+	gPhoto has a basic command line interface, which is handy, 
+	if you want to set up a web camera, and use gphoto in a 
+	script, e.g. with Perl/PHP.  
+
+	gPhoto sports a new HTML engine, that let's you create your
+	gallery "themes" (HTML with special tags), and publish images 
+	to the web.  A directory browse mode has also been implemented.
+
+	gPhoto supports a wide array of digital camera models.
+
+IMPORTANT NOTICES
+	- Remove your old one from your $HOME/.gphoto/ directory
+	  and then run gphoto and select your camera model.
+	
+	- For info about HTML gallery theme support, read THEMES (included).
+
+	- For developer specs, check http://scott.unr.edu/gphoto/
+	  Subscribe to the gphoto-devel@gphoto.org mailinglist by
+	  visiting http://lists.styx.net/
+
+REQUIREMENTS:
+        * GNU sed
+	* Gtk (1.2.x)
+	* Imlib (1.8.x)
+	* ImageMagick (4.1 and up)
+	* libjpeg / libpng / libgif / libtiff / libz
+	  (required by Imlib < 1.8)
+	  
+WHATS IN THE PACKAGE:
+	* GTK+ graphical application, by Scott Fritzinger <scottf@scs.unr.edu>
+	* Canon PowerShot library reverse-engineered by
+          Wolfgang Reissnegger
+          Werner Almesberger <almesber@lrc.di.epfl.ch>
+	  Rasmus Andersen <rasmus@diku.dk>
+	  Edouard Lafargue <lafargue@oslo.geco-prakla.slb.com>
+	  Philippe Marzouk <bullmali@afribone.net.ml>
+          Ole W. Saastad <o.w.saastad@kjemi.uio.no>
+	* Casio QV library implemented by Gary Ross <gdr@hooked.net>
+	* Directory Browse library, by Scott Fritzinger <scottf@scs.unr.edu>
+        * Fuji DS/DX library implemented by Matt Martin <matt.martin@ieee.org>
+        * Kodak DC-2x library implemented by Del Simmons <del@cimedia.com>
+	* Kodak DC-2x0 library and dc21x_cam by Timecop <timecop@japan.co.jp>
+	* Kodak DC-240/280 library by Randy Scott <scottr@wwa.com>
+	* Kodak DC-240/280 USB support by David Brownell <david-b@pacbell.net>
+	* Konica Q M-100 library implemented by Phill Hugo <phill@gphoto.org>
+        * Konica library improvements by Ed Legowski <edlegowski@pobox.com>
+	* Konica Q-M200 library by Toshiki Fujisawa <fujisawa@konica.co.jp>
+        * Minolta Dimage V library by Gus Hartmann <hartmann@cs.wisc.edu> 
+	* New Mustek MDC 800 library by Henning Zabel <pmiguel@maquina.com>
+	* Nikon CP 600 library by M. McCormack <mccormac@aals27.alcatel.com.au>
+	* Philips ESP library written by Bob Paauwe <bpaauwe@bobsplace.com>
+	* PhotoPC library written by Eugene Crosser <crosser@average.org> 
+	* PhotoPC library for gPhoto by Scott Fritzinger <scottf@scs.unr.edu>
+        * Ricoh 300 library implemented by Clifford Wright <cliff@snipe444.org>
+	* Samsung Digimax 800k libr. by James McKenzie <james@fishsoup.dhs.org>
+	* Sony DSC library written by M. Adam Kendall <joker@penguinpub.com>
+	* Sony DSC-F55E library + rsony by Mark Davies <mdavies@dial.pipex.com>
+	* Command line interface, by Scott Fritzinger <scottf@scs.unr.edu>
+        * Autoconf/automake/libtool scripts by Paul Jenner <psj@mustec.eu.org>
+
+FEATURES/CHANGES:
+	* Directory browse mode.
+
+		In the "select model/port", select "Browse directory"
+		then, whenever you click on "get index", a file selector
+		pops up to ask you which directory to open. all images
+		in the directory are opened, and thumbnails are generated
+		for all of them... it's really handy if all the images are
+		already archived on your hard drive and you want to find
+		one... also, this can be used in the HTML gallery!
+
+	* Live Camera! real-time camera preview
+
+		This feature lets you see what your camera sees, 
+		and trigger a snapshot if you like what you see.
+
+	* HTML gallery generator
+
+		The addition of this is a BIGGIE!  This is really the first
+		step in making gPhoto "more" than just a digicam utility.
+		there is a "Default" theme included... to install it, 
+		you MUST do a "make install" to copy all files to the
+		correct location ($PREFIX/share/gphoto/gallery/) after
+		you "make" the package
+	
+		Using it:
+			* Get the index first
+			* Select the images to include in the gallery.
+			* Go to "plugins->HTML Gallery"
+			* Type in a name for the Gallery
+			* Click on "Default" for the theme
+			* "Change" the output directory to where you want it.
+			* Click on "create"
+
+		It will go through the motions, and tell you when it's
+		done. it works the fastest in directory browse mode, 
+		so try that first. or you can go straight for the jugular
+		and use the camera (works fine there too! not as fast
+		though)
+
+		ALSO: it currently requires "sed" to do the parsing of
+		the tags (until i nail down a faster way internally)
+		so you need that on your machine.
+
+	* Configure scripts for building libraries and GTK+ application
+
+		To build/install everything in /usr/local/ -- change to
+		the gphoto source tree and type:
+	
+		./configure --prefix=/usr/local/
+		make
+		make install
+
+		There is also "make clean", "make distclean", and 
+		"make uninstall".
+
+	* Command-line mode
+
+		After building the gPhoto binary, type "gphoto -h" for
+		command-line options. Here's the low-down:
+
+	Usage: gphoto [-h] [-c] [-n] [-s # filename] [-t # filename]
+	              [-d #] [-l filename]
+		-h 			display this help screen
+		-c                      display camera summary
+		-n			display the # of pictures
+		-s # filename		save image # as filename
+		-t # filename		save thumbnail # as filename
+		-d #			delete image # from camera
+		-l filename		save live preview as filename
+
+	Only catch is you MUST run gphoto in graphical
+	mode to initially set the camera library before
+	running in command-line mode!
+
+	A simple script set up can automate a lot of things
+	(batch saving, webcam, delete all pics, etc..), so
+	please send scripts to gphoto-devel@gphoto.org when
+	you have written some.
+
+        ------------------------------------------------------------
+			
+INSTALLATION:
+	1) Untar/zip the archive by:
+
+		tar zxvf gphoto-0.x.y.tgz
+
+	   (but you knew that because you're reading this :-)
+
+	2) Enter the gphoto-0.x.y/ directory, and type './configure'
+	   Then type 'make' to build the camera model libraries, and
+           the gphoto binary.
+
+	3) Type 'make install' to install the camera libraries into
+	   $PREFIX/lib/gphoto/ and the 'gphoto' binary in $PREFIX/bin/
+
+UNINSTALL:
+	In the gphoto-0.x.y/ directory, type 'make uninstall'
+
+BUGS/PROBLEMS:
+	See http://bugs.gnome.org/db/pa/lgphoto.html and ``BUGS''.
+
+REPORT BUGS TO:
+	gphoto-devel@gphoto.org
+	gphoto-kodak@gphoto.org
+
+UPDATES:
+	http://www.gphoto.org/gphoto/download.html
+
+VENDOR SUPPORT:
+	http://www.gphoto.org/gphoto/supporting.html
+
+SUPPORT LETTER TEMPLATE:
+	See ``LETTER''.
+	http://cvs.gnome.org/lxr/source/gphoto/LETTER
+
+DEVELOPMENT DOCUMENTATION:
+	See ``PROGRAMMERS''
+	http://cvs.gnome.org/lxr/source/gphoto/PROGRAMMERS
+
+GALLERY THEMES DOCUMENTATION:
+	See ``THEMES''
+	http://cvs.gnome.org/lxr/source/gphoto/THEMES
+
+COPYING:
+	gPhoto - the GNU Digital Camera Program
+	Copyright (C) 1998-2000 Scott Fritzinger <scottf@unr.edu>
+
+	For each camera library, see the authors' source code.  The authors
+	have been contacted, and the author's permission was kindly granted 
+        to publish derived libraries based on the efforts with gPhoto under
+	terms of the GNU GPL (see COPYING, to read the full license terms):
+
+	gPhoto is free software; you can redistribute it and/or 
+	modify it under the terms of the GNU General Public License as 
+	published by the Free Software Foundation; either version 2 of 
+	the License, or any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+        See the GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+	MA 02111-1307  USA
+
+
+

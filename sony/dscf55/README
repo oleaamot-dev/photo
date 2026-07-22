@@ -1,0 +1,343 @@
+
+
+
+Contents:
+
+1. Description of this package.
+	1.1	Outline
+	1.2	Supported devices.
+
+2. Build instructions
+	2.1	Building on unix
+	2.2	Building on OS/2
+	2.3	Building on Win32
+
+3. Using the driver.
+	3.1	General usage
+	3.2	Running rsony
+	3.3	Using the library
+
+4. Common questions and answers
+	4.1	Serial port configuration
+	4.2	Invalid Sequence and Checksum error
+	4.3	Device protocol
+
+
+5. Known issues.
+
+
+6. Thanks.
+
+
+
+
+			-----------------------------
+
+
+1. Description of this package
+------------------------------
+
+
+	1.1 Outline:
+	------------
+
+
+This packeage contains a driver and stand alone download utility for a range
+of Sony DSC-F??? devices (and also some DCR-??? devices).
+
+
+The library and command line utility are released under the terms of the GNU
+General Public License (please see the file COPYING in this dirctory for
+information).
+
+
+The driver also supports the Serial Port Adaptor MSAC-SR1 which will allow 
+the driver  to read some other types of Sony device that use memory sticks,
+the Sony DCR-PC100 being one such device. 
+
+
+The software has recently (Jan 2000) been upgraded to allow download of 
+MPEG movies as well as JPG images.
+
+
+I have now ported the library to OS/2 so that anyone may write an application
+on OS/2 that accesses the range of Sony devices supported by the driver.
+
+I used Watcom C version 10.0a but any standard ANSI compiler should build the
+software.
+
+
+
+	1.2	Supported devices.
+	--------------------------
+
+Here is a list of Sony devices that I have had confirmation reports on.
+
+Sony DSCF5E
+Sony DSCF505
+Sony MSAC-SR1
+Sony DCR-PC100 (via MSAC-SR1)
+Sony DCR-TRV510 (via MSAC-SR1)
+
+
+If you are trying to get your sony device working, then you may have to use
+the MSAC_SR1 setting for the DSCF55E_MODEL environment variable.
+
+
+
+
+2. Build instructions
+---------------------
+
+
+	2.1 Building on unix:
+	---------------------
+
+
+You now no longer have to have gphoto sources installed/configured to build
+rsony. just type
+
+make -f makefile.unix
+
+to build the program. This works under Linux, but I'm not sure about other
+platforms.
+
+The following can be tried if the above does not work.
+
+Before building the library and standalone you must configure gphoto by 
+following the configure instructions in the main gphoto directory.
+
+Doing this will generate the necessary makefiles and allow you to build
+the standalone utility and library.
+
+
+To build the library and stand alone execute make from the shell prompt
+
+	$ make
+
+
+after make completes, there will be an executable called rsony in the dscf55
+directory.
+
+
+
+	2.2 Building on OS/2:
+	---------------------
+
+
+
+To build the library on OS/2 first edit makefile.os2 and set the compiler
+linker and optimization flags that you require.
+
+then run your version of make (Watcom for instance uses wmake).
+
+wmake -f makefile.os2
+
+after make completes there should be an executable file called rsony.exe
+
+
+        2.3 Building on Win32
+        ---------------------
+
+This is simialar to OS/2, except you type in 
+
+nmake /f makefile.win
+
+This should compile the source into the rsony.exe program. If it reports errors
+make sure that your compiler environment is set correctly. The program should
+compile on any Win32 platform.
+
+
+3. Using the driver:
+--------------------
+
+
+	3.1 General usage:
+	-----------------
+
+The Sony protocol uses a combination of checksum and sequence byte to maintain
+a reliable conncetion between the device and the application. This means that
+both the application and device need to be in a known state when they are first
+connected.
+
+Generally the sequence of events when using the driver (with cameras)
+should be:
+
+
+  1.   Make sure the device is switched off (what about MSAC-R1??)
+  2.   Connect the device to the computer using the cable.
+  3.   Switch on the device and allow it to initialize (1)(2).
+  4.   Run the application on the computer.
+
+
+Notes:-
+
+  1. I have a Sony DSCF-55E and when I switch it on, it accesses the memory
+     stick to initilize it, but sometimes it does this more than once and can
+     take four to five seconds to initialize.
+
+  2. It pays to make sure that the device you are using is connected to a
+     power adapter while using the device when it is connected to your machine.
+
+
+
+	3.2 Running rsony:
+	------------------
+
+
+When you run the utility it will default to certain devices/serial port speeds
+that depend on the platform that you built rsony for (see Table 1).
+
+
+Table 1.
+
+
+                Default                 Default
+Platform        Serial Speed            Serial Device
+----------------------------------------------------------------
+Linux           115200                  /dev/ttyS0
+Sun             38400                   /dev/ttya
+OS/2            9600                    COM1
+Windows         9600                    COM1
+other platforms	9600                    /dev/tty??
+
+
+
+When using as a command line utility, set the cameras serial port using the 
+following shell variable.
+
+	$ export DSCF55E_PORT="/dev/ttyS0" (replace with required port)
+
+
+To select 115200 baud set a shell variable as below.
+
+	$ export DSCF55E_SPEED=115200
+
+This is used in both the standalone and library versions.
+
+
+The driver now supports an expanded range of port speeds which may or may not
+be supported on your device.
+
+
+To use the MSAC-SR1 and Memory Sticks used by the DCR-PC100 set a
+shell variable as below.
+
+ 	$ export DSCF55E_MODEL=MSAC_SR1
+
+The export command is used with bash, other shells have their own method of 
+setting variables, refer to the help for your shell.
+
+The above 'environment variables' also work for OS/2 and Win32, use the SET
+command to set the variables to the required values.
+
+
+Running rsony without any options will produce a list of available options
+that can be used.
+
+Currently these are :
+
+   -device port         Serial device (default: %s)
+   -speed baud          Baud rate (defaults to [see table 1.]
+   -output directory    Path where to store Images & Movies.
+   -list                List Image&Movie directories. (default: download)
+   -verbose             Print dots while downloading.
+   -quiet               Print nothing but names.
+   -force               Overwrite existing files. (default: skip)
+   <name_or_number> selects what to retrieve from the Camera
+   -all                 Download all Images and Movies
+   -jpeg                Download all Images
+   -mpeg                Download all Movies
+   <number>             Download DSC<number>.JPG or MOV<number>.MPG
+   <name>               Download Image or Movie by name
+
+
+
+4. Common questions and answers:
+-------------------------------
+
+
+	4.1 Serial port configuration:
+	------------------------------
+
+By far, the most common problems are related to configuration of the
+serial port.
+
+The driver and standalone have been tested (and made to work) on various 
+platforms.
+
+Before requesting help, please make sure that the serial port you are using
+is actually working.
+
+First check that you are using the serial port you think you are.
+
+For unix users check the device permissions, make sure you have access to the
+device.
+
+Make sure that no other applications/daemons are using that device.
+
+Make sure that the device is configured (on intel/PC that means base address
+and interrupt) and that the configuration does not conflict with another device.
+
+If possible, test the port with another type of serial device (Modem etc..).
+
+
+When you use the driver, error messages stating that a packet was not
+sent/received at startup are generally a sign of an unconfigured port.
+
+
+	4.2 Invalid Sequence and Checksum error:
+	----------------------------------------
+
+The protocl uses a combination of checksum and sequence byte to keep track of
+the packets being transmitted and recieved. If the camera is on when you start
+the application then it is very likely it will use a sequence number that is
+not currently expected by the camera, this causes a list of Seqeunce error/
+Checksum error messages and a failure of the application to start.
+
+
+	4.3 Device protocol:
+	--------------------
+
+I recieve quite a few emails requesting the specification for the protocol.
+When I first wrote the driver a spent time monitoring the conversation
+between my camera and various applications. From this and with the help of
+others I managed to work out the basic protocol and how to access the data on
+the camera. As yet I have not written this down anywhere, I do intend to, but
+it's not one of my priorities.
+
+
+
+
+	5. Known issues:
+	----------------
+
+The OS/2 driver seems to run a little slower than the unix version, I think
+it's because my driver knowledge under OS/2 is not quite as good as it could
+be.
+
+The OS/2 driver may sometimes fail to start downloading, an application and
+camera reset may have to be applied even though the above procedure was
+followed.
+
+
+
+	6. Thanks:
+	----------
+
+During the writing of this driver I have recieved help and advice from a 
+number of people whose help I gratefuly aknowledge. If it were not for them
+there would be no DSCF505, MSAC-R1, DCR-PC100 or mpeg support.
+
+
+
+
+I would be interested in reports on various platforms, or any problems that
+arise from the use of this library/utility.
+
+
+
+
+Contact : mdavies@dial.pipex.com
+
+

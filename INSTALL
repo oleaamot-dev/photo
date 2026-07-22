@@ -1,0 +1,71 @@
+$Id: INSTALL,v 1.4 1999/10/03 01:07:06 ole Exp $
+
+gPhoto is now in GNOME CVS
+
+CVS is a powerful method of allowing many developers work on the same source
+code. This is possible because each developer checks out a copy of the
+current version of the source code. Then they each independently work on
+their personal copy of the sources. When they have made changes, they commit
+them back to the CVS respository. The CVS server takes care of things like
+trying to merge their changes with those of others. When that doesn't work,
+the developer is notified and they do a hand merge of the conflicts.
+
+So that is how developers use CVS. To just try out the latest versions of
+stuff, you don't have to usually worry about all that. You will just need to
+understand how to check out packages. Understand, however, that you are
+looking at the latest and greatest version, and usually it might not even
+build, or it will core dump instantly. That is ok, as the people working on
+it will fix those problems before a stable release is made, and annouced
+publicly.
+
+If you're not familiar with anonymous CVS, check out the cvs.ps file in your
+distrib of CVS. If you have got a Redhat box, it is in /usr/doc/cvs-1.9 (or
+another version number).
+
+For anonymous access to gPhoto in GNOME CVS you should follow these steps:
+
+    1. First you need to setup the CVS environmental variables. 
+       You might want to put this in your login script.
+
+       export CVSROOT=:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome 
+
+    2. Then use CVS as normal like this: 
+
+       cvs login     (There is no password for the 'anonymous' user.)
+       cvs -z3 checkout gphoto
+
+    You can get individual library modules by:
+
+       cvs -z3 checkout gphoto/sony 
+       cvs -z3 checkout gphoto/philips 
+
+Daily snapshots and patches will be available from anonymous FTP 
+ftp://ftp.jimpick.com/pub/gnome/snap/gphoto/ if you prefer this.
+
+Now you will want to go through and build and install gPhoto:
+
+       cd gphoto
+       ./autogen.sh
+       make
+       make install
+
+After you have checked the code out, you can use
+
+       cvs -z3 update gphoto
+
+to update your personal copy of gPhoto to the latest version 
+from the GNOME CVS server and rebuild. 
+
+SETUP on FreeBSD-3.2R:
+   # cd xxx/packages-3.2-release/All
+   # pkg_add gmake-3.77.tgz
+   # pkg_add automake-1.4.tgz
+   # pkg_add autoconf-2.13.tgz
+   # pkg_add jpeg-6b
+   # pkg_add glib-1.2.3
+   # pkg_add gtk-1.2.3
+   # pkg_add imlib-1.9.4
+   # ln -s /dev/cuaa0 /dev/ttyS0
+   # chmod 666 /dev/cuaa0
+
+See http://www.gphoto.org/ for updates.

@@ -1,0 +1,15 @@
+This is a GNU Photo module for connecting to the Minolta Dimage V.
+
+This code is distributed under the GNU General Public License, version 2
+or higher. The copyright on all code is currently held by myself, A Gustav
+Hartmann (hartmann@upl.cs.wisc.edu) (c)1999.
+
+There are (of course) some bugs left in the Minolta module; please read
+the BUGS file.
+
+Thanks to Minolta, who provided me with the protocol. While I did have to
+sign an NDA to get it, I have a signed letter permitting me to "share this
+information among the Linux community". Since the GNU GPL is all about
+sharing, this seems acceptable. The single caveat from Minolta was that
+they would provide no technical support, which meshes nicely with the
+"no warranty implied or actual" clause associated with GNU GPL software.

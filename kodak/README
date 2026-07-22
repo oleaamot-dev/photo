@@ -1,0 +1,13 @@
+This won't compile for some reason. Try it and let me know if you know away around these struct related errors. -Del 01-29-99
+
+
+------------------------------------------------
+
+OK, we're starting over here. For the longest time I was stuck trying
+to get the color thumbnails out of the DC25, but Peter Fales,
+ psfales@earthling.net has saved the day. He has already written a DC25
+patch for the dc20ctrl package. I'm going to start with this now.
+
+-Del
+del@cimedia.com
+

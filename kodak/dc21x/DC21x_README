@@ -1,0 +1,49 @@
+README for dc21x utils
+
+System requirements:
+Kodak digital camera, model DC210 or DC215.  Only tested with DC215Zoom.
+C Compiler
+Serial port
+
+Purpose of this package:
+
+Soon after getting my DC215 I downloaded gPhoto (www.gphoto.org) to use with
+my new camera.  gPhoto is nice, but after using it for a while I found too
+many annoying bugs in the Kodak DC21x library.  One of the possible uses for
+the camera is a webcam, and in current version gPhoto command line mode does
+not produce any images on my camera.  Whoever coded kodak_dc210 library must
+have been one hell of a loser coder.  Anyway, I took that as a base for my
+program, modified almost everything except for the select() read routine,
+and put it together in this little package.  It is not designed to be a
+replacement for gPhoto, but as a general purpose web-cam / camera maintenance
+program.
+
+What you can do with it:
+
+* Display camera or specific picture information;
+* Display number of pictures in the camera;
+* Delete any picture from the camera;
+* Delete all pictures from the camera in one step;
+* Take picture, save to file, delete picture from the camera in one step;
+* Retrieve any picture and save to file;
+* Retrieve all pictures, and save to current directory as imageNNN.jpg;
+* Set resolution to High or Low before taking a picture;
+* Set picture quality before taking a picture;
+* Set Flash mode before taking a picture;
+* Set Zoom value before taking a picture;
+
+Run "cam" without any parameters for a complete list of possible options.
+Some options can be combined to make cam usable inside scripts.
+Please use common sense, and don't combine options like -d and -R, or -t and -d
+
+Why did I write this?
+
+Because I was bored on Dec 31st 1999.
+
+I reverse engineered the zoom, flash and quality settings by running the 16
+bit Windows SDK under wine, and writing a simple patch to the Write16/Read16
+wine routines to display serial reads/writes in hex and in a nice greppable
+order. :)  The 32 bit SDK was so hosed, it didn't even run.  Good thing they
+still had 16 bit (Windows 3.1) stuff available for download.  This was also
+used to confirm the other settings. Names for the flash and quality settings
+were taken from the DC2xx SDK for 32 bit Windows.

@@ -1,0 +1,285 @@
+$Id: PROGRAMMERS,v 1.2 1999/10/02 16:20:40 ole Exp $
+
+$Log: PROGRAMMERS,v $
+Revision 1.2  1999/10/02 16:20:40  ole
+Various changes.
+
+Revision 1.1.1.1  1999/05/27 18:32:01  scottf
+gPhoto- digital camera utility
+
+Revision 1.7  1999/05/05 19:53:03  ole
+Initial revision
+
+gPhoto 0.2 Programmer's Manual
+
+For updates on this document checkout from CVS.
+Details at http://www.gphoto.org/index.php3?cvs
+
+*************************************************************************
+Note added by Del Simmons: you should be using the global called
+serial_port to get the name of the port that the user selected in the
+dialog box. Use that value wherever your code is deciding what serial
+port to try to find the camera on.. 
+
+*************************************************************************
+
+Changes from the previous 0.1 manual:
+
+	* Added an "initialize" function to the interface to allow
+	  for "prepping" of the library. Pretty handy. :)
+
+	* Some new specs for the newest revision to the common library 
+	  interface. Please wait on implementing these until the CVS is 
+	  updated with the newest source (coming soon to a CVS near you ;) 
+	  but maybe start thinking about what would need to be done... :) 
+
+Those of you who are library developers, please write in and suggest new 
+functions in case it is lacking something, or make suggestions about 
+existing functions.  The interface is trying to be as "generic" as
+possible, but also provide functionality. 
+
+*************************************************************************
+
+Introduction
+
+What follows is what you can call a "guide" if you don't want to weed
+through all the gPhoto code. It highlights the common functions to the
+program, along with the camera library interface that gPhoto uses
+(for now).
+
+These functions are available to plug-ins/libraries:
+
+	update_status (char *status);
+		sets the text of the status bar at the bottom of the
+		main window to what is contained in "status."
+
+	update_progress(float percentage);
+		sets the % value of the status bar at the bottom of the
+		main window.
+
+	error_dialog (char *error_msg);
+	        issues a small dialog with an "OK" button to inform the
+                end user when errors occur. (del)
+
+*************************************************************************
+
+Here is the common library that is supported so far. These are the
+functions that are required when adding camera support to gPhoto.  By
+writing these functions, a developer can add camera support to gPhoto.
+
+gPhoto uses function pointers to specify which library to use.
+
+	int initialize (); 
+		This is only called once when the library is selected 
+		and "prepares" the library for use. basically, you can do 
+		whatever needs to be done in order to prepare the library to 
+		be used for the first time.  In the case of the photoPC 
+		library, it is used to set a file descriptor for the 
+		serial port.  If nothing needs to be done, just return 1.  
+		It intialize the library, in case any file pointers need 
+		to be declared and set, or if you need to set the serial 
+		port speed, etc...
+
+		return values: 
+			0: unsuccessful 
+			1: successful 
+
+	char* summary(); 
+		returns a valid char* to a string that contains the 
+		current state of the camera. this could include 
+		# of pictures taken, # of pictures left, battery level, 
+		exposure setting, etc... if you can't get any remote 
+		settings via software, just return "Not Supported." 
+
+		return values: 
+			valid char*: successful 
+			"Not Supported": unsuccessful 
+
+	char* description(); 
+		returns a char* to a string that contains information on 
+		the library (library name, developers, etc..) and 
+		any "issues" with the library. For example: the dc20 
+		camera won't allow individual pictures to be deleted so 
+		that would be included in the description. like: 
+
+			Kodak DC2x/50 gPhoto Library 
+			Del Simmons <del@freespeech.com> 
+			Support for Kodak DC20/25/50 cameras. 
+			* dc20 can not delete individual pictures. 
+			deleting 1 picture from the camera will 
+			remove ALL pictures from the camera. 
+
+		or for the olympus/photopc support: 
+
+			Olympus/PhotoPC 
+			Scott Fritzinger <scottf@unr.edu> using the 
+			PhotoPC library by 
+			Eugene Crosser <crosser@average.org>
+			http://www.average.org/digicam 
+			Support for several Olympus, Agfa, Epson, 
+			Nikon digital cameras, and some other models. 
+
+		This information will be displayed when the users clicks 
+		on a camera model in the "select model/port" (a new 
+		"library info" text box is being placed in the dialog, 
+		which is where it will be displayed). 
+
+	GdkImlibImage *get_picture (int picture_number,
+				    int thumbnail);
+		Retrieves picture #picture_number from the camera.
+		the image is stored in picture in a GdkImlibImage format.
+		If thumbnail = 1, then only a thumbnail of the image is
+		returned. If thumbnail = 0, then the entire image is
+		returned.
+
+		return values:
+			0: unsuccessful
+			If successful, returns a pointer to the
+			image in GdkImlibImage format...
+
+	int delete_image (int picture_number);
+		Deletes picture #picture_number from the camera.
+
+		return values:
+			0: unsuccessful
+			1: successful		
+
+	int number_of_pictures ();
+		Returns the number of pictures on the camera.
+
+		return values:
+			0: unsuccessful, or if 0 pictures on camera.
+			if successful, returns # of pictures.
+
+	int configure ();
+		Sets the configuration options on the camera.
+		Basically, it is "configure's" responsibility to
+		create a dialog, retrieve the dialog settings, and
+		set those options on the camera. The reason this isn't
+		more specific is because cameras have different settings
+		and features, so this is basically a generic call, leaving
+		everything to the function itself.
+
+		return values:
+			0: unsuccessful
+			1: successful		
+
+	GdkImlibImage *get_preview ();
+		After called, "preview" is what the camera currently
+		sees. This can be done with built-in camera functions
+		(photoPC supports this) or you can press the shutter with
+		the software, then retrieve the newly taken image, and
+		then delete it. Couple ways to do this. This is mostly
+		for web-camera functionality, but there are other uses.
+
+		return values:
+			0: unsuccessful
+			If successful, returns the preview in a
+			GdkImlibImage.
+
+	int take_picture ();
+		Presses the shutter on the camera, and returns the
+		picture number of that just-taken picture.
+
+		return values:
+			0: unsuccessful
+			if successful, returns the # of the picture just
+			taken (this may need refining if cameras store
+			images in location #0)...
+
+For each of these functions, preceed your definitions with a library
+prefix. For example, the photoPC/olympus library functions all begin with
+"oly_".
+
+*************************************************************************
+
+/* NOTE - THIS IS NOW OBSOLETED - SEE BELOW */
+
+After writing one or all of these functions, you need to create a struct
+at the bottom of you implementation file that follows the _Camera struct
+declaration. Here is the example that comes with gPhoto for the
+photoPC/Olympus library:
+
+	struct _Camera olympus = {oly_initialize,
+				  oly_get_picture,
+	                          oly_get_preview,
+	                          oly_delete_image,
+	                          oly_take_picture,
+	                          oly_number_of_pictures,
+	                          oly_configure};
+
+See the main.h file for the specific definition. For the name of the
+struct, label it something that is probably unique (in this case, it's
+"olympus", but for the Kodak dc2x, try "kddc2x" or something). Then
+initialize the struct as shown with the names of the functions that do the
+particular task (example: oly_get_picture is the function in the
+photoPC/Olympus library that does "get_picture"). If a function doesn't
+exist yet, just place a "NULL" in for it's name. This way, you can
+incrementally test your library.
+
+Finally, open the cameras.c file, and you'll notice a bunch of camera
+models followed by &olympus. To add model support for you library, enter
+in a new line with the format:
+
+		{"model name", &library_struct},
+
+where "model name" is a model name of a camera that works with your
+library, and libarary_struct is the name of the struct you defined
+above...
+
+before you compile anything though, make sure you place a
+
+		#include libraryname.c
+
+line in the main.c file to compile in your library.
+
+/* END OF OBSOLETE DATA */
+
+The new interface is detailed in the REGISTRATION file.
+
+*************************************************************************
+
+Couple Notes:
+	* If the camera DEFINITELY has no way to perform one of the above
+	  functions, just have it return 0, and write the gPhoto devel
+	  list detailing exactly why it can't work.
+
+	* If the camera stores the pictures and uses filenames instead
+	  of picture #'s, create a function that "hashes" the filenames
+	  to picture #'s. by "hash" i mean try to extract a value
+	  from the filenames that give a # range from 1 to the number
+	  of pictures on the camera. if you need help with this part,
+	  try mailing Scott (scottf@unr.edu).
+
+	* Lot's of GdkImlib calls needed, but it isn't difficult at all
+	  to write using Imlib. It is a GREAT library. (see below)
+
+	* There is a discussion channel open now for developing a 
+	  common digicam API. It may be a long way off or it may be
+	  tomorrow that the calls begin to surface and are implemented.
+	  gPhoto is using a simplistic and basic common interface for
+	  reasons of making it extremely easy to port libraries to work
+	  with gPhoto. BUT, if the API comes about, gPhoto will make the
+	  move to the new API in order to help promote commonality of
+	  functions, and to support the free-software effort.
+
+Imlib is ideal considering all the functionality in the library. If
+you have imlib-devel installed, check out /usr/doc/imlib-devel-1.x/index.html
+for information on using it, or look for "Fun Stuff with Imlib" document
+coming to the gPhoto site, along with "Fun Stuff with Gtk+" doc. Just
+little handy tidbits of information i found while doing some coding. :)
+
+Also, please note that these are not set in stone. There may be functions
+added, or removed. This is the case with most software that is still in
+development. If you write to this interface spec, then it won't be hard to
+update for new changes.
+
+
+-----------------------
+
+Copyright (C) 1998-99 Scott Fritzinger (scottf@scs.unr.edu)
+Copyright (C) 1999    Phill Hugo (phill@gphoto.org)
+
+
+Verbatim copying and distribution of this entire text is permitted 
+in any medium, provided this notice is preserved.

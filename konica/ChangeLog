@@ -1,0 +1,63 @@
+2000-02-29    <EdLegowski@pobox.com>
+	* Fix bug in konical_qm100.c which overrode the 
+	  name of the serial port, with internal default.
+	
+1999-09-27    <EdLegowski@pobox.com>
+	* Change default speed to 57600.
+	* Add progress indicator during downloads.
+	* Miscellaneous code cleanup.
+	
+1999-08-17    <EdLegowski@pobox.com>
+	* Close cvs-bug incidents 1622, 1664 and 1667.
+
+1999-08-16    <EdLegowski@pobox.com>
+	* Add shell-script 'gettraces' to aid the gathering 
+	  of trace data for debugging the camera protocol.
+	* Add several switches to qm100 CLI utility, useful
+	  mostly for debugging.
+
+1999-08-08    <edlegowski@pobox.com>
+	* Reworked the getPacket code in transmission.c 
+	  to make it tolerant of errors.  Reliable use 
+	  of higher baud rates should now be possible.
+	* Added short headers/descriptions to most 
+	  functions.  This should make it easier for others
+	  to understand the code.
+	* Added TODO file to track possible extensions and
+          enhancements.
+	
+1999-08-04    <edlegowski@pobox.com>
+	* Added code to distinguish between C20 and C30 
+	  models, since the packets for getPicInfo and 
+	  getThumbnail are different.  Both models now
+	  work.
+	* 'Take Picture' is fixed, but does not (yet)
+	   have the ability to set flash, quality, etc.
+	* Cleanup/clarify packet definitions in defs.h
+	* Clean up packet handling in transmission.c;
+	  specificaly, rename 'qm100_sendNullCmd' to
+	  qm100_getCmdTermination,  which tries to 
+	  read a command-confirmation packet.  Previously,
+	  we were sending a dummy command request, when
+	  the camera was trying to send us the 
+	  confirmation packet - it worked, but only 
+	  because the camera actually rejected our
+	  transmission, which we didn't notice.
+	* Change default baudrate to 9600
+	* Put check into open.c to treat 'Trace on'
+	  in konicarc as 'Trace ~/.gphoto/konica.trace'.
+	
+1999-07-20    <edlegowski@pobox.com>
+	* Fixed segmentation fault in transmission.c
+	* Fixed abrupt termination with 'Done and exit'
+	  message while retrieving thumbnails or pictures.
+	* Added qm100 as a target in the Makefile.  This
+	  is a command-line utility which supports all
+	  camera options, and is useful for debugging,
+	  and for automating via shell scripts.
+	* Added configuration options for baud-rate,
+  	  pacing, and tracing.  These can be controlled 
+	  via shell environment variables, or via entries
+	  in ~/.gphoto/konicarc. For qm100, command-line
+	  switches are also provided.  Descriptions are
+	  provided in 'konicarc.sample'.

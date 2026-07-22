@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=GPhoto
+Name[sl]=GPhoto
+Name[ja]=GPhoto
+Name[no]=GPhoto
+Name[pt_BR]=GPhoto
+Name[sv]=GPhoto
+Name[uk]=GPhoto
+Comment=GNU Digital Still Camera program
+Comment[sl]=GNU Program za digitalne aparate
+Comment[ja]=GNU╔г╔╦╔©╔К╔╧╔а╔К╔╚╔А╔И╔в╔М╔╟╔И╔Ю
+Comment[no]=GNU Digitalbilde program
+Comment[pt_BR]=Programa para Camera Digital GNU
+Comment[sv]=Digitalt kameraprogram
+Comment[uk]=Програма роботи з цифровою камерою
+TryExec=gphoto
+Exec=gphoto
+Icon=gnome-qeye.png
+Terminal=0
+Type=Application

@@ -1,0 +1,9 @@
+12-31-1999	1.0	Initial release
+01-03-2000	1.01	Added -D to delete all images from camera
+01-04-2000	1.10	Complete protocol support.
+			Added Zoom, Flash, Quality settings.
+			Some delays added according to the protocol spec.
+			Considering patching gphoto to use my nicely stable
+			version :) More code clean-ups on the way, there are
+			way too many if (success) checks, there is no possible
+			way for some of the functions to fail.

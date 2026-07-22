@@ -1,0 +1,37 @@
+# Filename: MakeKodakDev
+# Creates the device files for USB access of Kodak digital cameras.
+# Modified Sat 2000/Dec/02 by Ole Aamot <ole@linpro.no> for GPhoto.
+#
+# Please see the Kodak Digital Camera HOWTO for more information
+# http://marblehorse.sourceforge.net/
+
+#!/bin/sh
+
+bail_root () {
+	echo $0 error!
+        echo
+        echo "Only root (the superuser) can run this script to create the device files."
+        echo "Please use the \"su\" command to get root privileges or contact your system"
+        echo "administrator for assistance."
+
+        exit 1
+}
+
+if [ `id -u` != 0 ]
+then
+    bail_root
+fi
+
+export scrapvar=0
+   echo -n "Running mknod -m 0666 /dev/dc2xx$scrapvar c 180 $(( $scrapvar + 80 ))... "
+   while [ $scrapvar -lt 17 ];
+      do mknod -m 0666 /dev/dc2xx$scrapvar c 180 $(( $scrapvar + 80 ));
+      scrapvar=$(( $scrapvar + 1 ));
+      echo "DONE"
+      echo -n "Running mknod -m 0666 /dev/dc2xx$scrapvar c 180 $(( $scrapvar + 80 ))... "
+   done
+  echo "DONE"
+  echo -n "Sym-linking /dev/dc2xx0 -> /dev/kodak..."
+  ln -fs /dev/dc2xx0 /dev/kodak
+  echo "DONE"
+# EOF

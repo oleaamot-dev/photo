@@ -1,0 +1,55 @@
+#!/bin/bash
+#  This script will run a series of tests using the
+#  command line utility qm100.  
+#
+export QM100_TRACE=./tracefile
+export QM100_TRACE_BYTES=On
+export QM100_SPEED=115200
+rm -f trace.*  ktrace.tgz
+
+./qm100  -? >output
+echo "CameraInfo"
+echo "CameraInfo" >>output
+./qm100  -I >>output
+mv tracefile trace.CameraInfo
+
+echo "Status"
+echo "Status" >>output
+./qm100  -s >>output
+rc=$?
+mv tracefile trace.status
+
+if [ $rc -eq 0 ]; then
+    echo "PicInfo";
+    echo "Info" >>output;
+    ./qm100  -i 1 >>output;
+    rc=$?;
+    mv tracefile trace.info;
+    fi
+
+if [ $rc -eq 0 ]; then 
+    export QM100_TRACE_BYTES=Off;
+    echo "Thumb";
+    echo "Thumb" >>output;
+    ./qm100  -t >>output;
+    rc=$?;
+    mv tracefile trace.thumb;
+    fi
+
+if [ $rc -eq 0 ]; then
+    echo "All" ;
+    echo "All" >>output;
+    ./qm100  -a >>output;
+    rc=$?;
+    mv tracefile trace.all;
+    fi
+
+if [ $rc -eq 0 ]; then
+    echo "All tests successful";
+    fi
+tar -zcvf ktrace.tgz output trace.*
+
+
+
+
+

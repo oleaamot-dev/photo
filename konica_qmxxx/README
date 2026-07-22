@@ -1,0 +1,11 @@
+http://www.konica.co.jp/qscan/open-source-en.html
+
+   This Sample source code works on FreeBSD/Linux to control Konica
+   Q-M100/Q-M200 over serial port. We write it for the developer such as
+   gPhoto ( GNU Photo http://www.gphoto.org/ ) to show how to control our
+   camera. And this sample source code is distributed under GPL in the
+   hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+   the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+   PURPOSE.
+
+http://www.konica.co.jp/qscan/down/konica-qm-sio-sample-1.02.tgz

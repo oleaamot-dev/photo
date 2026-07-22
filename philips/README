@@ -1,0 +1,155 @@
+$Id: README,v 1.5 2000/10/28 10:48:55 ole Exp $
+
+This package includes a library of 'C' functions for accessing
+Ricoh/Philips digital cameras along with an interface to gPhoto and
+several simple command line programs.
+
+Using as part of gPhoto
+-----------------------
+
+To use this library with gPhoto you shouldn't have to do anything
+special. When you do a configure for the main application it
+will build a Makefile that will build a shared library object
+module that gPhoto can load.
+
+Some of the files are specific for the gPhoto shared library.
+They are:
+
+   gphoto_philips.c           - gPhoto interface code
+   gphoto_philips_cfg.c       - The configuration dialog box widget
+   gphoto_philips_setup.c     - Setup the values in the dialog
+   gphoto_philips_callbacks.c - Callback functions for dialog widgets
+   callbacks.h                - function defs
+   philips.glade              - Glade XML source for dialog box
+
+The configuration dialog box was developed with Glade. The XML
+source is included. The gphoto_philips_cfg.c and callbacks.h 
+files are only slightly modified from the code produced by Glade
+(the #includes were tweaked). gphoto_philips_callbacks.c is 
+based on the template file produced by Glade.
+
+
+The command line programs
+-------------------------
+
+Some simple command line programs are included that show how the
+library code can be used. There is also a program that exercises
+most of the camera functions (useful for debugging). 
+
+A simple Makefile (Makefile.extras) is included that can be used
+to compile the programs. 
+
+NOTE: you will have to recompile philips_io if it was compiled
+for gPhoto. Compiling for gPhoto includes calls to functions that
+only exist in gPhoto. Compiling with the "-DGPHOTO" enables these
+functions and you don't want that for the command line programs.
+
+In general, use make -f Makefile.extras <program_name> to make
+one of the command line programs.
+
+The following command line programs are included:
+
+  webcam       - Takes a picture, download to a file, delete from camera
+  dump_pics    - Download all the pictures in the camera to files
+  get_pic      - Download a single picture from the camera to a file
+  upload_test  - Send a picture to the camera
+  check        - Check out most of the camera functions.
+
+For more details on these programs, read the source :)
+
+
+Debugging
+---------
+
+Debugging functions are included in debug.h. Debugging modes can be
+turned on either at compile time or interactively. 
+
+A global variable, philips_debugflag, controls the primary debugging
+mode. Setting it to zero disables debugging, setting to any positive
+value enables it. There is also a variable, philips_dumpstream, that
+will dump the actual data stream between the camera and the computer.
+
+In gPhoto, the debugflag can be turned on and off using the camera
+configuration dialog. There is a toggle button called "Debugging" to
+control this.
+
+If you encounter problems, the first step is to turn on debugging,
+either by compiling with it enabled or turning it on via the GUI.
+Once debugging is enabled, messages will be sent to standard out so
+make sure you start the program from a command line, not from an
+application launcher.
+
+The output will typically look like this:
+
+philips_io.c:1575: get zoom: 51 05  -> 00 00 00
+
+Here's what it means --
+
+philips_io.c  - the source file.
+1575          - the line number of the debugging message in the source
+get zoom      - the command being sent to the camera, in this case
+                we are asking the camera for it's zoom setting.
+51 05         - The hex representation of the command
+-> 00 00 00   - What the camera returned. The first two numbers are
+                the error code (00 00 means no error). See PROTOCOL.TXT
+				for a listing of all the known error codes. The third
+				number is the data, in this case the zoom level.
+
+Another example --
+
+philips_io.c:1575: get # images: 51 00 01  -> 00 00 11 00
+
+Here we ask the camera for the number of images in memory and it 
+returns 0011 hex (17 images).
+
+
+The check program
+-----------------
+
+Another aid to debugging is the 'check' program. It tries to exercise
+all of the know commands of the Ricoh protocol. Depending on the camera
+model, many of the commands will fail. If you send a command that isn't
+recognized, the camera will return an error code. This program can be
+used to determine what features are supported and what the codes are.
+
+For example:
+
+The program will run through various resolution modes. For the modes
+that the camera supports, it will return ok. For those that it doesn't
+it will return an error (00 04).
+
+In debug mode we'd see output like this for the Philips ESP80:
+
+philips_io.c:1575: set resolution: 50 09 01  -> 00 00 
+philips_io.c:1575: set resolution: 50 09 02  -> 00 04 
+philips_io.c:1575: set resolution: 50 09 03  -> 00 04 
+philips_io.c:1575: set resolution: 50 09 04  -> 00 00 
+philips_io.c:1575: set resolution: 50 09 05  -> 00 04 
+
+Setting the mode to 01 and 04 succeeded (640x480 and 1280x96) but
+modes 02, 03, and 05 failed. Mode 05 is 1792x1200 on a Ricoh RDC-5000.
+
+
+How the protocol was discovered
+-------------------------------
+
+The serial protocol used the the Philips ESP80 digital camera was
+determined using a program that ties itself into the serial driver on
+Windows 95/98 and displays the bits going back and forth. The program
+used was ComLite 32 for Windows 95 Beta 5. It is available at:
+
+http://www.endymion.com/portfolio/software/comlite32.htm
+
+The program supplied by Philips (DU-4 Camera Tool) was used to control
+the camera while monitoring the serial port.
+
+The hex data sent back and forth was analyzed for patterns. It was
+pretty easy to determine the format of the packets. Once the packet
+format was known, it was pretty easy to determine what bytes were
+changing for when various camera functions were set or read. 
+Additional commands and data have come from various testers with
+different camera models. Some of the loose ends (like the CRC type)
+were pulled from the work done by Jun-ichiro Itoh for his dc3play
+program. The entire camera library was based on the work done by
+Clifford Wright for the Ricoh RDC-300/300z library.
+

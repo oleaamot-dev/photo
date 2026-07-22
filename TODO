@@ -1,0 +1,16 @@
+The GPhoto 1.0 roadmap
+
+Odd number version are development versions only.  They are not stable
+releases.  All stable releases will use even number versions.
+
+GPhoto 0.6
+   - Remove Imlib dependency, use gdk-pixbuf instead.
+   - Followup and fix bugs reported to bugs.gnome.org.
+   - Write a GPhoto User Guide in either SGML/DocBook or TexInfo
+
+GPhoto 0.8
+   - Write CORBA-based embeddable camera control
+   - Write a proxy for libgphoto2
+   - Add Gnome Print support
+   - Use bugzilla.gnome.org for bug-tracking
+
