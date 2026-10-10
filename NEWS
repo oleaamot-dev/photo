@@ -1,52 +1,40 @@
-gPhoto 0.4.4 has been released.  This is an interim release 
-of the current stable branch of gPhoto and is meant for:
+gPhoto 0.5.0-pre (2026-10-10)
+=============================
 
- * Users that need a working camera driver that is not yet ported
-   to libgphoto 2.0, the new low-level core library, written from
-   scratch by Scott Fritzinger, basis of the gPhoto 2.0 platform.
+First pre-release of gPhoto 0.5.
 
-   Note: the libgpio and libgphoto2 APIs have not yet been frozen,
-   so significant changes may still occur, before public versions
-   are released.  See http://www.gphoto.org/gphoto2/ for details.
+Camera support
+  * All camera drivers now come from libgphoto2 (>= 2.5) instead of
+    being built into gPhoto.  Every camera libgphoto2 supports works,
+    over USB, serial, PTP/IP and mass storage.
+  * Cameras are auto-detected; model and port can also be chosen by
+    hand, with completion over every supported model and port.
+  * Folders on the camera are walked recursively; pictures are
+    numbered from 1 in folder and name order, as in 0.4.
 
- * Hackers interested in moving development of gPhoto toward 1.0.
+User interface (GTK+ 3)
+  * Menu bar, toolbar, thumbnail index and status bar, as in 0.4.
+  * Thumbnails load in the background; the window stays usable.
+  * New picture viewer with rotate, flip, scale and zoom.
+  * New camera configuration dialog, generated from the driver.
+  * Upload to camera, take picture, camera summary, driver manual.
+  * Actions are enabled only when the camera can perform them.
 
-gphoto-0.4.4 is available for download from:
+Command line
+  * 0.4 switches kept: -n, -s, -t, -d.
+  * New: -a, -l, -c, -u, --summary, --manual, --about, --html,
+    --list-cameras, --list-ports.
+  * Ranges such as 1,3,5-9, "last" and "all".
+  * Deleting asks first, or needs --force when not on a terminal.
 
- http://www.gphoto.org/dist/gphoto-0.4.4.tar.gz
+Other
+  * gPhoto makes its own thumbnails for cameras that have none.
+  * Saved pictures keep the camera's time stamp.
+  * HTML gallery output rewritten: responsive, dark-mode aware.
+  * Builds with --disable-gui for a command-line-only gphoto.
+  * Build system: autoconf 2.69 / automake 1.11 or newer.
 
-The release is incompatible with gphoto 2.0.  Software that has not
-been explicitly ported will not compile with this version.   Do not
-send bug reports about such compilation problems to maintainers of
-software that uses libgphoto2, such as GnoCam.
-
-gphoto-0.4.4 is currently the stable version.
-
-Bug reports and comments about this version should be sent to
-
-  gphoto-devel@gphoto.org.
-  http://www.gphoto.org/lists.html
-
-Overview of Changes in gPhoto 0.4.4:
-
-gPhoto:
-
-* GNOME UI support [Fabrice, Ole]
-* autoconf/automake improvements.  [Ole]
-* Bug fixes. [Scott, Ole, Fabrice]
-* i18n support. [Ole]
-
-New translations:
-
-* Danish [Kenneth Christiansen, Keld Simonsen]
-* Dutch [Mendel Mobach, Dennis Smit]
-* German [Christian Meyer, Kai Lahmann, Benedikt Roth]
-* Italian [Daniele Medri]
-* Japanese [Yukihiro Nakai]
-* Norwegian (bokmål) [Kjartan Maraas]
-* Polish [chyla]
-* Brazilian Portuguese [E. A. Tacão]
-* Russian [Valek Filippov]
-* Slovenian [Andraz Tori]
-* Swedish [Andreas Hyden, Christian Rose]
-* Ukrainian [Yuri Syrota]
+Known issues in this pre-release
+  * No live preview window yet.
+  * No translations yet.
+  * The viewer edits in memory; there is no undo.

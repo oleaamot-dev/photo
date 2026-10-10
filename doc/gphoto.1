@@ -1,0 +1,110 @@
+.TH GPHOTO 1 "October 2026" "gPhoto 0.5.0-pre" "User Commands"
+.SH NAME
+gphoto \- the GNU Digital Camera Program
+.SH SYNOPSIS
+.B gphoto
+.RI [ options ]
+.SH DESCRIPTION
+.B gphoto
+downloads, views and manages pictures on digital cameras through
+libgphoto2.
+.PP
+Started without picture or information options, gphoto opens its
+window and connects to the first camera it finds.  With any of them it
+runs on the command line and exits.
+.PP
+Pictures are numbered from 1 in folder and file name order, as in the
+index window.  A
+.I RANGE
+is a comma-separated list of numbers and number ranges, such as
+.BR 1,3,5-9 ,
+or one of the words
+.B last
+and
+.BR all .
+.SH OPTIONS
+.SS Camera selection
+.TP
+.BR \-m ", " \-\-model =\fIMODEL\fR
+Camera model, as listed by \fB\-\-list\-cameras\fR.  Default: auto-detect.
+.TP
+.BR \-p ", " \-\-port =\fIPORT\fR
+Port, for example \fBusb:\fR, \fBserial:/dev/ttyS0\fR, \fBptpip:192.168.1.1\fR
+or \fBdisk:/media/card\fR.
+.SS Information
+.TP
+.BR \-a ", " \-\-auto\-detect
+List cameras connected to this computer.
+.TP
+.B \-\-list\-cameras
+List every camera model libgphoto2 supports.
+.TP
+.B \-\-list\-ports
+List available ports.
+.TP
+.BR \-\-summary ", " \-\-manual ", " \-\-about
+Show the camera summary, the driver manual or information about the driver.
+.TP
+.BR \-v ", " \-\-version
+Show the gPhoto and libgphoto2 versions.
+.SS Pictures
+.TP
+.BR \-n ", " \-\-num\-pictures
+Print the number of pictures on the camera.
+.TP
+.BR \-l ", " \-\-list
+List pictures with number, path, size, date and type.
+.TP
+.BR \-s ", " \-\-get =\fIRANGE\fR
+Save pictures.
+.TP
+.BR \-t ", " \-\-get\-thumbnail =\fIRANGE\fR
+Save thumbnails.  If the camera has none, gphoto makes them.
+.TP
+.BR \-d ", " \-\-delete =\fIRANGE\fR
+Delete pictures.  Done after saving, so \fB\-s all \-d all\fR moves
+everything off the camera.  Asks first; use \fB\-\-force\fR in scripts.
+.TP
+.BR \-c ", " \-\-capture
+Take a picture.  With \fB\-o\fR the new picture is saved.
+.TP
+.BR \-u ", " \-\-upload =\fIFILE\fR
+Upload a file to the camera.  May be repeated.
+.TP
+.BR \-f ", " \-\-folder =\fIFOLDER\fR
+Camera folder for \fB\-\-upload\fR.  Default: /.
+.TP
+.BR \-o ", " \-\-output =\fIPATH\fR
+Where to save.  A directory keeps the camera's file names; when more
+than one picture is saved the directory is created if needed.
+.TP
+.BR \-\-html =\fIDIR\fR
+Publish an HTML gallery of all pictures, or of \fB\-s\fR \fIRANGE\fR, into \fIDIR\fR.
+.TP
+.BR \-\-title =\fITITLE\fR
+Title of the HTML gallery.
+.TP
+.B \-\-force
+Do not ask before deleting.
+.TP
+.BR \-q ", " \-\-quiet
+Print only what was asked for.
+.TP
+.B \-\-no\-gui
+Never start the graphical interface.
+.SH EXAMPLES
+.TP
+Move every picture to a folder:
+.B gphoto \-s all \-d all \-\-force \-o ~/Pictures/2026-10-10
+.TP
+Browse a memory card as a camera:
+.B gphoto \-m "Directory Browse" \-p disk:/media/card
+.SH EXIT STATUS
+0 on success, 1 if a camera operation failed, 2 for a usage error.
+.SH SEE ALSO
+.BR gphoto2 (1)
+.SH AUTHORS
+Ole Kristian Aamot and the gPhoto authors.  See the AUTHORS file.
+.SH COPYRIGHT
+Copyright \(co 1998\-2026 the gPhoto authors.  gPhoto is free software
+under the GNU General Public License, version 2 or later.

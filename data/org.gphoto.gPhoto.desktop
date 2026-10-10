@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=gPhoto
+GenericName=Digital Camera Program
+Comment=Download, view and manage pictures on digital cameras
+Exec=gphoto
+Icon=org.gphoto.gPhoto
+Terminal=false
+Categories=Graphics;Photography;GTK;
+Keywords=camera;photo;picture;download;import;gphoto2;
+StartupNotify=true

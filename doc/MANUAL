@@ -1,0 +1,91 @@
+gPhoto 0.5 Manual
+=================
+
+1. Connecting a camera
+----------------------
+
+Plug in the camera and switch it on, then start gPhoto.  It connects
+to the first camera libgphoto2 detects and reads the picture index.
+
+If nothing is found, choose Camera > Select Camera (Ctrl+O).  The
+Detected list shows cameras found on USB.  For serial cameras type
+the model (it completes as you type) and a port such as
+serial:/dev/ttyS0.  For a memory card or any folder of pictures use
+the model "Directory Browse" and the port disk:/path/to/folder.
+
+On GNOME the desktop may already have claimed the camera; unmount it
+in Files first if gPhoto reports the device as busy.
+
+
+2. The index
+------------
+
+Every picture on the camera appears as a numbered thumbnail.  The
+numbers match the command line.  Thumbnails load one at a time in the
+background; you can work while they load.
+
+  Click            select
+  Ctrl+click       add to selection
+  Shift+click      select a range
+  Double-click     open in the viewer
+  Ctrl+A           select all
+  F5 / Ctrl+R      read the index again
+  Delete           delete selected pictures
+
+The status bar shows the camera and port, information about the
+selection and a progress bar during transfers.
+
+
+3. Saving pictures
+------------------
+
+File > Save Pictures (Ctrl+S) saves the selected pictures, or all of
+them if none is selected, into a folder you choose.  The camera's
+file names and time stamps are kept.  Save Thumbnails does the same
+for thumbnails, prefixing their names with "thumb_".
+
+
+4. The viewer
+-------------
+
+Double-click a picture to download it and open it in a window.  The
+toolbar rotates, flips and scales it, and zooms between fit-to-window
+and actual size.  Pictures are shown the right way up using their
+EXIF orientation.  Save As writes the camera's original bytes if the
+picture was not edited; otherwise it encodes JPEG, PNG, TIFF or BMP
+according to the file name.
+
+
+5. Taking pictures, deleting, uploading
+---------------------------------------
+
+Camera > Take Picture (Ctrl+T) triggers the shutter and selects the
+new picture in the index.  Camera > Delete Pictures removes the
+selection after asking.  File > Upload copies files to the camera.
+These actions are greyed out when the camera's driver cannot do
+them.
+
+
+6. Camera settings
+------------------
+
+Camera > Configure (Ctrl+,) shows the settings the driver reports,
+one tab per section.  Only changed values are sent back to the
+camera when you press Apply.  Camera Summary, Driver Manual and
+About the Driver show the texts from libgphoto2.
+
+
+7. HTML gallery
+---------------
+
+File > Publish HTML Gallery saves the selected pictures (or all),
+their thumbnails, and an index.html in a folder you choose, then
+opens it in the web browser.  From the command line:
+
+  gphoto --html ~/public_html/trip --title "Trip to Lofoten" -s 1-40
+
+
+8. Command line
+---------------
+
+See gphoto --help and the gphoto(1) manual page.

@@ -1,0 +1,34 @@
+Hacking on gPhoto
+=================
+
+Layout
+------
+
+  src/main.c           option parsing; picks GUI or command line
+  src/camera.[ch]      GPhotoCamera: libgphoto2 session, numbered
+                       pictures, ranges, thumbnail fallback
+  src/cli.[ch]         command-line mode
+  src/html.[ch]        HTML gallery export
+  src/gui.[ch]         main window (GTK+ 3)
+  src/viewer.[ch]      picture viewer/editor
+  src/config-dialog.[ch]  camera settings from the CameraWidget tree
+
+Only camera.c talks to libgphoto2 directly, apart from the
+configuration dialog, which walks CameraWidget trees.
+
+Testing without a camera
+------------------------
+
+libgphoto2's "Directory Browse" driver turns any folder into a
+camera, including delete and upload:
+
+  mkdir -p /tmp/card/DCIM/100TEST && cp ~/Pictures/*.jpg /tmp/card/DCIM/100TEST
+  ./src/gphoto -m "Directory Browse" -p disk:/tmp/card -l
+  ./src/gphoto -m "Directory Browse" -p disk:/tmp/card
+
+Style
+-----
+
+GNU style, two-space indent, as in GLib and GTK+.  Keep the
+command-line output stable; scripts depend on it.  "make distcheck"
+must pass before a release.
