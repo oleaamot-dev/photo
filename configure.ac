@@ -4,8 +4,8 @@ dnl gPhoto 0.5.0-pre - the GNU Digital Camera Program
 dnl Copyright (C) 1998-2026 Ole Kristian Aamot and the gPhoto authors
 
 AC_PREREQ([2.69])
-AC_INIT([gphoto], [0.5.0-pre], [ole.aamot@aamotinnovation.com], [gphoto],
-        [http://www.gphoto.org/])
+AC_INIT([gnomephoto], [3.0.1], [ole.aamot@aamotinnovation.com], [gphoto],
+        [http://www.gnomephoto.org/])
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([build-aux])

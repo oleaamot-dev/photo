@@ -547,7 +547,7 @@ action_open_camera (GSimpleAction *a, GVariant *p, gpointer data)
   gtk_grid_attach (GTK_GRID (grid), gtk_label_new ("Port:"), 0, row, 1, 1);
   gtk_grid_attach (GTK_GRID (grid), port_entry, 1, row++, 1, 1);
 
-  hint = gtk_label_new (NULL);
+  hint = gtk_label_new ("gPhoto");
   gtk_label_set_markup (GTK_LABEL (hint),
     "<small>Leave both empty to use the first detected camera.\n"
     "To browse a folder as a camera, use model “Directory Browse”\n"
@@ -556,14 +556,16 @@ action_open_camera (GSimpleAction *a, GVariant *p, gpointer data)
   gtk_widget_set_sensitive (hint, FALSE);
   gtk_grid_attach (GTK_GRID (grid), hint, 1, row++, 1, 1);
 
+#if 0
   for (GList *l = gtk_container_get_children (GTK_CONTAINER (grid)), *h = l; l; l = l->next)
     {
       if (GTK_IS_LABEL (l->data) && l->data != hint)
-        gtk_label_set_xalign (GTK_LABEL (l->data), 1.0);
+	gtk_label_set_xalign (GTK_LABEL (l->data), 1.0);
       if (l->next == NULL)
-        g_list_free (h);
+	g_list_free (h);
     }
-
+#endif
+  
   link[0] = model_entry;
   link[1] = port_entry;
   g_signal_connect (detected, "changed", G_CALLBACK (on_detected_changed), link);
